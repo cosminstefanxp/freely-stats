@@ -16,20 +16,20 @@ class Project:
 
         
     def to_dict(self):
-        dict = []
-        dict["id"] = self.id
-        dict["name"] = self.name
-        dict["start_date"] = self.start_date
-        dict["end_date"] = self.end_date
-        dict["buyer"] = self.buyer
-        dict["state"] = self.state
-        dict["shrt_descr"] = self.shrt_descr
-        dict["jobs"] = self.jobs
-        dict["bid_count"] = self.bid_count
-        dict["avg_bid"] = self.avg_bid
-        dict["seller"] = self.seller
-        dict["bidders"] = self.bidders
-        return dict
+        out = {}
+        out["id"] = self.id
+        out["name"] = self.name
+        out["start_date"] = self.start_date
+        out["end_date"] = self.end_date
+        out["buyer"] = self.buyer
+        out["state"] = self.state
+        out["shrt_descr"] = self.shrt_descr
+        out["jobs"] = self.jobs
+        out["bid_count"] = self.bid_count
+        out["avg_bid"] = self.avg_bid
+        out["seller"] = self.seller
+        out["bidders"] = self.bidders
+        return out
     
 
          

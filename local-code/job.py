@@ -6,11 +6,11 @@ class Job:
         self.projects_count = projects_count
         
     def to_dict(self):
-        dict = []
-        dict["id"] = self.id
-        dict["name"] = self.name
-        dict["projects_count"] = self.projects_count
-        return dict
+        out = {}
+        out["id"] = self.id
+        out["name"] = self.name
+        out["projects_count"] = self.projects_count
+        return out
     
 
          

@@ -8,12 +8,12 @@ class User:
         self.jobs = jobs            #user's skills
         
     def to_dict(self):
-        dict = []
-        dict["id"] = self.id
-        dict["username"] = self.username
-        dict["country"] = self.coutry
-        dict["jobs"] = self.jobs
-        return dict
+        out = {}
+        out["id"] = self.id
+        out["username"] = self.username
+        out["country"] = self.coutry
+        out["jobs"] = self.jobs
+        return out
     
 
          

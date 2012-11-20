@@ -111,4 +111,4 @@ def send_request(url):
     out.close()
     return data
 
-send_request("http://api.freelancer.com/Project/Search.xml?jobs[]=PHP&jobs[]=XML&featured=1")
+#send_request("http://api.freelancer.com/Project/Search.xml?jobs[]=PHP&jobs[]=XML&featured=1")

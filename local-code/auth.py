@@ -105,10 +105,6 @@ def send_request(url):
     fis = urllib2.urlopen(url)
     data = fis.read()
     fis.close()
-    print data
-    out = file('fisier', 'w')
-    out.write(data)
-    out.close()
     return data
 
 #send_request("http://api.freelancer.com/Project/Search.xml?jobs[]=PHP&jobs[]=XML&featured=1")

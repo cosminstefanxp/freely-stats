@@ -26,7 +26,9 @@ Instead, you'll want to create your own subclass of OAuthClient
 or find one that works with your web framework.
 """
 import urlparse
-import oauth2 as oauth
+#import oauth2 as oauth
+import urllib2
+from urllib import urlopen
 
 oauth_token        = 'f5b86bb1ab1390951ae016568af1afd7356dc044'
 oauth_token_secret = 'c308401c010c8db91a4a3c05d57de17df8dcac30'
@@ -99,4 +101,14 @@ def init():
 
 def send_request(url):
     print "Will be implemented"
-    return ""
+    #dummy method which gets a json or xml from the affiliate api, without oauth
+    fis = urllib2.urlopen(url)
+    data = fis.read()
+    fis.close()
+    print data
+    out = file('fisier', 'w')
+    out.write(data)
+    out.close()
+    return data
+
+send_request("http://api.freelancer.com/Project/Search.xml?jobs[]=PHP&jobs[]=XML&featured=1")

@@ -26,7 +26,7 @@ Instead, you'll want to create your own subclass of OAuthClient
 or find one that works with your web framework.
 """
 import urlparse
-#import oauth2 as oauth
+import oauth2 as oauth
 import urllib2
 from urllib import urlopen
 

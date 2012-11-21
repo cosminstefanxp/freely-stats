@@ -38,7 +38,7 @@ access_token_url = 'http://api.sandbox.freelancer.com/RequestAccessToken/request
 authorize_url = 'http://www.sandbox.freelancer.com/users/api-token/auth.php'
 
 #uri for API
-freelancer_com_api_url = 'http://api.sandbox.freelancer.com/'
+freelancer_com_api_url = 'http://api.sandbox.freelancer.com'
 
 class FreelanceOAuthClient:
     '''Class that handles the calls to the Freelancer.com API'''
@@ -119,10 +119,5 @@ class FreelanceOAuthClient:
         
         @return: the response received from server
         '''
-        resp, content = self.client.request(freelancer_com_api_url + relative_url, method)
-        print "[DEBUG] Fetch response for %s: %s" % (relative_url, resp['status'])
-        return content
+        self.client.request(freelancer_com_api_url + relative_url, method)
             
-            
-#client = FreelanceOAuthClient()
-#print client.send_request("Job/getJobList.json")

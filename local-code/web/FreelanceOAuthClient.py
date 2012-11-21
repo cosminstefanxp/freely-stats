@@ -124,5 +124,5 @@ class FreelanceOAuthClient:
         return content
             
             
-client = FreelanceOAuthClient()
-print client.send_request("Job/getJobList.json")
+#client = FreelanceOAuthClient()
+#print client.send_request("Job/getJobList.json")

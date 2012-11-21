@@ -2,6 +2,8 @@ import web.FreelanceOAuthClient as freelance_auth
 import job
 import json
 import foa as FileOA
+import cgi
+import urllib2
 
 class Parser:
     def parseProjects(self, raw_data):
@@ -31,5 +33,13 @@ sorted_jobs = sorted(jobs, key=lambda x: x.projects_count, reverse=True)
 foa = FileOA.Foa()
 foa.writeJobsToFile(jobs)
 
-top_job_ids = [job.id for job in sorted_jobs][:100]
-print top_job_ids
+top_job_names = [job.name for job in sorted_jobs][:100]
+print top_job_names
+escaped_top_job_names = [urllib2.quote(job_name) for job_name in top_job_names]
+joined = ",".join(escaped_top_job_names)
+
+print joined + "\n\n\n\n\n\n\n\n"
+
+url = "Project/searchProjects.json?searchjobtypecsv="+joined
+resp = auth.send_request(url)
+print resp

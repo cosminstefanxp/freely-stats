@@ -9,16 +9,15 @@ class Parser:
     def parseUsers(self, raw_data):
         print "TODO"
     def parseJobs(self, raw_data):
-       
         raw_json = json.loads(raw_data)
         raw_jobs = raw_json['json-result']['items']
         jobs = []
         for raw_job in raw_jobs:
-           
             id = raw_job['id']
             name = raw_job['name']
             count = raw_job['project_count']
-            jobs.append(job.Job(id, name, count))
+            seo_url = raw_job['seo_url']
+            jobs.append(job.Job(id, name, count, seo_url))
         return jobs
    
 auth = freelance_auth.FreelanceOAuthClient()  
@@ -31,3 +30,6 @@ sorted_jobs = sorted(jobs, key=lambda x: x.projects_count, reverse=True)
 
 foa = FileOA.Foa()
 foa.writeJobsToFile(jobs)
+
+top_job_ids = [job.id for job in sorted_jobs][:100]
+print top_job_ids

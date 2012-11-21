@@ -11,6 +11,7 @@ class Job:
         out["id"] = self.id
         out["name"] = self.name
         out["projects_count"] = self.projects_count
+        out["seo_url"] = self.seo_url
         return out
     
 

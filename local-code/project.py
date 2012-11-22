@@ -13,7 +13,7 @@ class Project:
         self.avg_big = avg_bid
         self.seller = seller
         self.bidders = bidders  #no idea how to get them
-        self.accepted_bidder = acepted_bidder
+        self.accepted_bidder = accepted_bidder
         
     def __init__(self, id, name, start_date, jobs, bid_count, avg_bid):
         self.id = id

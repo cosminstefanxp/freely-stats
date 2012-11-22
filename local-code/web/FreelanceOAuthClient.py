@@ -29,23 +29,23 @@ import urlparse
 import oauth2 as oauth
 
 # key and secret granted by the service provider for this consumer application - same as the MockOAuthDataStore
-consumer_key = 'a7b9bb9df9b80aff52f25507a27f64358ca9959c'
-consumer_secret = 'a54ecf41c7627385dff3d68c8b80e973b7ae0fb4'
+consumer_key = 'a929cb338bb38be7da3ee9d30c6db0a7705210f7'
+consumer_secret = 'b43eba15bb402b6b4ede6cf369145b13a217719d'
 
 # uri for obtaining the access tokens
-request_token_url = 'http://api.sandbox.freelancer.com/RequestRequestToken/requestRequestToken.json'
-access_token_url = 'http://api.sandbox.freelancer.com/RequestAccessToken/requestAccessToken.json'
-authorize_url = 'http://www.sandbox.freelancer.com/users/api-token/auth.php'
+request_token_url = 'http://api.freelancer.com/RequestRequestToken/requestRequestToken.json'
+access_token_url = 'http://api.freelancer.com/RequestAccessToken/requestAccessToken.json'
+authorize_url = 'http://www.freelancer.com/users/api-token/auth.php'
 
 #uri for API
-freelancer_com_api_url = 'http://api.sandbox.freelancer.com/'
+freelancer_com_api_url = 'http://api.freelancer.com/'
 
 class FreelanceOAuthClient:
     '''Class that handles the calls to the Freelancer.com API'''
 
     # the access tokens
-    oauth_token = 'f5b86bb1ab1390951ae016568af1afd7356dc044'
-    oauth_token_secret = 'c308401c010c8db91a4a3c05d57de17df8dcac30'
+    oauth_token =           '7ce03cf8c8e89707b536db92dfa1a0ace75fc47b'
+    oauth_token_secret =    '23c34b616ae57180cb5f1869fc4fc856e943677f'
     
     def __init__(self):
         consumer = oauth.Consumer(consumer_key, consumer_secret)
@@ -63,6 +63,8 @@ class FreelanceOAuthClient:
         # said access token.
         
         resp, content = client.request(request_token_url, "GET")
+        print resp 
+        print content
         if resp['status'] != '200':
             raise Exception("Invalid response %s." % resp['status'])
         
@@ -123,6 +125,7 @@ class FreelanceOAuthClient:
         print "[DEBUG] Fetch response for %s: %s" % (relative_url, resp['status'])
         return content
             
-            
+#FreelanceOAuthClient.load_oauth_token()   
 #client = FreelanceOAuthClient()
-#print client.send_request("Job/getJobList.json")
+#print client.send_request("Project/getBidsDetails.json?projectid=2792530")
+#print client.send_request("Project/Properties.json?projectid=2792530")

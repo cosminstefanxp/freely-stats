@@ -43,6 +43,7 @@ parser = Parser()
 
 url = "Job/getJobList.json"
 resp = auth.send_request(url)
+print resp
 jobs = parser.parseJobs(resp)
 sorted_jobs = sorted(jobs, key=lambda x: x.projects_count, reverse=True)
 
@@ -56,7 +57,7 @@ joined = ",".join(escaped_top_job_names)
 
 print joined + "\n\n\n\n\n\n\n\n"
 
-url = "Project/searchProjects.json?searchjobtypecsv="+joined
+url = "Project/searchProjects.json?searchjobtypecsv="#+joined
 resp = auth.send_request(url)
 projects = parser.parseProjects(resp)
 print projects

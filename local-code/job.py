@@ -13,7 +13,3 @@ class Job:
         out["projects_count"] = self.projects_count
         out["seo_url"] = self.seo_url
         return out
-    
-
-        
-         

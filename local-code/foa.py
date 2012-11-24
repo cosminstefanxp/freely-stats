@@ -39,7 +39,7 @@ class Foa:
     def appendProjectsToCSVFile(self, projects, file_name = "projects.csv"):
         file = open(file_name, "a")
         for project in projects.values():
-            file.write("%s, %s, %s, %s, %s, %s\n"%(project.id, project.name, project.start_date, project.jobs, project.bid_count, project.avg_bid))
+            file.write("%s, %s, %s, %s, %s, %s\n"%(project.id, project.name.encode('utf-8'), project.start_date.encode('utf-8'), project.jobs.encode('utf-8'), project.bid_count, project.avg_bid))
         file.close();    
     
     def writeProjectsToFile(self, projects, file_name = "projects.json", type="json"):
@@ -48,7 +48,7 @@ class Foa:
             file.write(json.dumps([x.to_dict() for x in projects.values()], indent = 4))
         else:
             for project in projects.values():
-                file.write("%s, %s, %s, %s, %s, %s\n"%(project.id, project.name, project.start_date, project.jobs, project.bid_count, project.avg_bid))
+                file.write("%s, %s, %s, %s, %s, %s\n"%(project.id, project.name.encode('utf-8'), project.start_date, project.jobs, project.bid_count, project.avg_bid))
 
         file.close()
         

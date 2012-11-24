@@ -139,14 +139,15 @@ class Manager:
         all_projects_in_season = {}
         for base in range(0,2000000,200):
             for i in range(200):
-                url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
-                resp = self.auth.send_request(url)
-                #print "\n"
-               # print resp
-                projects = self.parser.parseProjects(resp)
-                print "\tpage %d of %d"%(i + base, 2000000)
-               
-                self.foa.appendProjectsToCSVFile(projects, file_name="spring_2012.csv")
+                if base != 0 or i > 40 :
+                    url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
+                    resp = self.auth.send_request(url)
+                    #print "\n"
+                   # print resp
+                    projects = self.parser.parseProjects(resp)
+                    print "\tpage %d of %d"%(i + base, 2000000)
+                   
+                    self.foa.appendProjectsToCSVFile(projects, file_name="spring_2012.csv")
             dest = "spring_2012_%d.csv"%(i + base)
             print "COPYING FILE spring_2012.csv to "+dest
             copy_file("spring_2012.csv", dest)

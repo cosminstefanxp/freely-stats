@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+{% block head %}
+	<title>FreelyStats - {% block title %}{% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+{% endblock %}
+</head>
+<body>
+	<div id="header">
+		<div class="title center">Freely Stats</div>
+	</div>
+	<div id="top">
+		<div id="menu">
+			<div class="menu-item">
+				<a href="/index.html">Home</a>
+			</div>
+			<div class="menu-item">
+				<a href="/jobs.html">Categories</a>
+			</div>
+		</div>
+	</div>
+	<div id="content">{% block content %}{% endblock %}</div>
+	<div id="footer">
+		<center>
+		<p>&copy; Copyright 2012 by Constantinescu Marius | Nistor
+			Ruxandra | Stefan-Dobrin Cosmin</p>
+		<p>A project for the Web and Social Interaction class of 2012</p>
+		</center>
+	</div>
+
+
+</body>
+</html>

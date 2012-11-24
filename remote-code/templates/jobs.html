@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %} 
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        td { padding:4px; }
+        th { padding:4px; }
+    </style>
+{% endblock %}
+
+{% block content %}
+<p>These are the job categories on Freelancer.com:</p>
+<table border="1">
+	<tr>
+		<th>Job Category</th>
+		<th>Projects Count</th>
+	</tr>
+	{% for job in jobs %}
+	<tr>
+		<td><a href="https://www.freelancer.com/jobs/{{job.seo_url}}">{{job.name}}</a></td>
+		<td>{{job.project_count}}</td>
+	</tr>
+
+	{% endfor %}
+
+</table>
+{% endblock %}

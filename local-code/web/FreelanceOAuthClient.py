@@ -43,9 +43,13 @@ freelancer_com_api_url = 'http://api.freelancer.com/'
 class FreelanceOAuthClient:
     '''Class that handles the calls to the Freelancer.com API'''
 
-    # the access tokens
+    # Main access tokens (cosminstefanxp)
     oauth_token =           '7ce03cf8c8e89707b536db92dfa1a0ace75fc47b'
     oauth_token_secret =    '23c34b616ae57180cb5f1869fc4fc856e943677f'
+    
+    # Secondary access tokens (uebmasterxp)
+    oauth_token        = 'f6d0c73e4d7b628a335573e7bcca574e76b7e1a5'
+    oauth_token_secret = 'f1c06993bad0be16558e4a17da67561a44f01c5c'
     
     def __init__(self):
         consumer = oauth.Consumer(consumer_key, consumer_secret)

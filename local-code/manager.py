@@ -123,9 +123,10 @@ class Manager:
     def write_projects_for_main_categories(self):
         url = "Job/getCategoryJobList.json"
         resp = self.auth.send_request(url)
+       
         jobs = self.parser.parseMainCategories(resp)
         jobs.sort(key=lambda x: x.projects_count, reverse=True)
-        top_jobs = jobs[:1]
+        top_jobs = jobs[:100]
         #self.foa.writeJobsToFile(top_jobs, file_name="jobs_TOP100_in_main_categories.json")
         
        # print "finished getting top jobs..."
@@ -139,15 +140,14 @@ class Manager:
         all_projects_in_season = {}
         for base in range(0,2000000,200):
             for i in range(200):
-                if base != 0 or i > 40 :
-                    url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
-                    resp = self.auth.send_request(url)
-                    #print "\n"
-                   # print resp
-                    projects = self.parser.parseProjects(resp)
-                    print "\tpage %d of %d"%(i + base, 2000000)
+                url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
+                resp = self.auth.send_request(url)
+                #print "\n"
+                
+                projects = self.parser.parseProjects(resp)
+                print "\tpage %d of %d"%(i + base, 2000000)
                    
-                    self.foa.appendProjectsToCSVFile(projects, file_name="spring_2012.csv")
+                self.foa.appendProjectsToCSVFile(projects, file_name="spring_2012.csv")
             dest = "spring_2012_%d.csv"%(i + base)
             print "COPYING FILE spring_2012.csv to "+dest
             copy_file("spring_2012.csv", dest)

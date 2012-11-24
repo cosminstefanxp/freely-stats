@@ -137,8 +137,8 @@ class Manager:
         #print "Joined job names" + joined + "\n\n\n\n\n"
         
         all_projects_in_season = {}
-        for base in range(0,2000000,200):
-            for i in range(200):
+        for base in range(0,2000000,-200):
+            for i in range(0, 200, -1):
                 url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
                 resp = self.auth.send_request(url)
                 #print "\n"

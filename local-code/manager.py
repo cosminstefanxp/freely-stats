@@ -5,12 +5,14 @@ import foa as FileOA
 import cgi
 import urllib2
 import project
+from distutils.file_util import copy_file
 
 class Parser:
     def parseProjects(self, raw_data):
         raw_json = json.loads(raw_data)
         raw_projects = raw_json['json-result']['items']
         projects = {}
+        flag = 0
         for raw_project in raw_projects:
             id = raw_project['projectid']
             name = raw_project['projectname']
@@ -18,10 +20,14 @@ class Parser:
             avg_bid = raw_project['averagebid']
             jobtypecsv = raw_project['jobtypecsv']
             startdate = raw_project['startdate']
+            if flag == 0:
+                print "NEW" + startdate
+                flag = 1
             #def __init__(self, id, name, start_date, end_date, 
             #buyer, state, shrt_descr, jobs, bid_count, avg_bid, 
             #seller, bidders, accepted_bidder):
             projects[id] = project.Project(id, name, startdate, jobtypecsv, bids, avg_bid)
+        print "OLD " + startdate
         return projects
     
     def parseProjectDetails(self, raw_data):
@@ -82,7 +88,7 @@ class Manager:
         self.parser = Parser()
         self.foa = FileOA.Foa()
         
-    def write_jobs(self):
+    def write_jobs_to_json(self):
         url = "Job/getCategoryJobList.json"
         resp = self.auth.send_request(url)
         
@@ -98,69 +104,58 @@ class Manager:
         top_jobs = jobs[:100]
         self.foa.writeJobsToFile(top_jobs, file_name="jobs_TOP100_in_main_categories.json")
         
-    def write_jobs_for_main_categories(self):
+    def write_jobs_to_csv(self):
+        url = "Job/getCategoryJobList.json"
+        resp = self.auth.send_request(url)
+        
+        jobs = self.parser.parseAllCategories(resp)
+        jobs.sort(key=lambda x: x.projects_count, reverse=True)
+        self.foa.writeJobsToFile(jobs, file_name="jobs_in_all_categories.csv", type="csv")
+        
+        
+        jobs = self.parser.parseMainCategories(resp)
+        jobs.sort(key=lambda x: x.projects_count, reverse=True)
+        self.foa.writeJobsToFile(jobs, file_name="jobs_in_main_categories.csv", type="csv")
+        
+        top_jobs = jobs[:100]
+        self.foa.writeJobsToFile(top_jobs, file_name="jobs_TOP100_in_main_categories.csv", type="csv")
+        
+    def write_projects_for_main_categories(self):
         url = "Job/getCategoryJobList.json"
         resp = self.auth.send_request(url)
         jobs = self.parser.parseMainCategories(resp)
         jobs.sort(key=lambda x: x.projects_count, reverse=True)
-        top_jobs = jobs[:100]
+        top_jobs = jobs[:1]
         #self.foa.writeJobsToFile(top_jobs, file_name="jobs_TOP100_in_main_categories.json")
         
-        print "finished getting top jobs..."
+       # print "finished getting top jobs..."
         top_job_names = [job.name for job in top_jobs]
      #   print top_job_names
         escaped_top_job_names = [urllib2.quote(job_name) for job_name in top_job_names]
         joined = ",".join(escaped_top_job_names)
         
-        print "Joined job names" + joined + "\n\n\n\n\n"
+        #print "Joined job names" + joined + "\n\n\n\n\n"
         
-        url = "Project/searchProjects.json?searchjobtypecsv="+joined
-        resp = self.auth.send_request(url)
-        
-        print "\n"
-        print resp
-        projects = self.parser.parseProjects(resp)
+        all_projects_in_season = {}
+        for base in range(0,2000000,200):
+            for i in range(200):
+                if base != 0 or i > 40 :
+                    url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
+                    resp = self.auth.send_request(url)
+                    #print "\n"
+                   # print resp
+                    projects = self.parser.parseProjects(resp)
+                    print "\tpage %d of %d"%(i + base, 2000000)
+                   
+                    self.foa.appendProjectsToCSVFile(projects, file_name="spring_2012.csv")
+            dest = "spring_2012_%d.csv"%(i + base)
+            print "COPYING FILE spring_2012.csv to "+dest
+            copy_file("spring_2012.csv", dest)
         #print projects
+        
 
 manager = Manager()
-#manager.write_jobs()
-manager.write_jobs_for_main_categories()
+#manager.write_jobs_to_csv()
+manager.write_projects_for_main_categories()
 
 
-
-'''
-auth = freelance_auth.FreelanceOAuthClient()  
-parser = Parser()
-foa = FileOA.Foa()
-
-# 1 2 4
-#
-url = "Job/getCategoryJobList.json"
-resp = auth.send_request(url)
-
-jobs = parser.parseAllCategories(resp)
-jobs.sort(key=lambda x: x.projects_count, reverse=True)
-foa.writeJobsToFile(jobs, file_name="jobs_in_all_categories.json")
-
-
-jobs = parser.parseMainCategories(resp)
-jobs.sort(key=lambda x: x.projects_count, reverse=True)
-foa.writeJobsToFile(jobs, file_name="jobs_in_main_categories.json")
-
-top_jobs = jobs[:100]
-foa.writeJobsToFile(top_jobs, file_name="jobs_TOP100_in_main_categories.json")
-
-
-
-top_job_names = [job.name for job in top_jobs]
-print top_job_names
-escaped_top_job_names = [urllib2.quote(job_name) for job_name in top_job_names]
-joined = ",".join(escaped_top_job_names)
-
-print joined + "\n\n\n\n\n\n\n\n"
-
-url = "Project/searchProjects.json?searchjobtypecsv="+joined
-resp = auth.send_request(url)
-projects = parser.parseProjects(resp)
-print projects
-'''

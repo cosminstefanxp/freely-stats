@@ -21,7 +21,7 @@ class Project:
         self.start_date = start_date
         self.jobs = jobs
         self.bid_count = bid_count
-        self.avg_big = avg_bid
+        self.avg_bid = avg_bid
 
         self.end_date = -1
         self.buyer = -1

@@ -14,8 +14,8 @@ class Foa:
         file = open(file_name, "r")
         #id nume nr_proiecte
         jobs = json.load(file)
-        for job in jobs:
-            self.jobs[raw['id']] =  Job(job['id'], job['name'], job['projects_count'], job['seo_url'])
+        for giob in jobs:
+            self.jobs[giob['id']] =  job.Job(giob['id'], giob['name'], giob['projects_count'], giob['seo_url'])
         return jobs
                      
     def writeJobsToFile(self, jobs, file_name = "jobs.json", type="json"):

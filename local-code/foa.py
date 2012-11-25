@@ -35,7 +35,7 @@ class Foa:
         raw_projects = json.load(file)
         projects = {}
         for project in raw_projects:
-            projects[project['id']] =  Project(project['id'], project['name'], project['start_date'], project['jobs'], project['bid_count'], project['avg_bid'])
+            projects[project['id']] =  project.Project(project['id'], project['name'], project['start_date'], project['jobs'], project['bid_count'], project['avg_bid'])
         return projects
 	
     def loadProjectsFromCSVFile(self, file_name):

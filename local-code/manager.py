@@ -156,6 +156,9 @@ class Manager:
 
 manager = Manager()
 #manager.write_jobs_to_csv()
-manager.write_projects_for_main_categories()
+#manager.write_projects_for_main_categories()
+prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_100.csv")
+for elem in prj:
+    print prj[elem]
 
 

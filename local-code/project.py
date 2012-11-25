@@ -47,6 +47,9 @@ class Project:
         out["bidders"] = self.bidders
         out["accepted_bidder"] = self.accepted_bidder
         return out
+        
+    def __str__(self):
+        return self.id + " || " + self.name + " || " + self.start_date + " || " + self.jobs + " || " + self.bid_count + " || " + self.avg_bid
     
 
          

@@ -62,14 +62,18 @@ class Foa:
         file = open(file_name, "a")
         
         for project in projects_details.values():
-            name = project.name.replace(","," ")
-            name = name.replace("\n", " ")
-            name = name.encode('ascii', 'ignore')
-            
-            description = "".join(project.short_descr.splitlines())
-            description = "".join(description.split(","))
-            description = description.encode('ascii', 'ignore')
-        
+            if project.name:
+                name = project.name.replace(","," ")
+                name = name.replace("\n", " ")
+                name = name.encode('ascii', 'ignore')
+            else:
+                name = project.name
+            if project.short_descr:
+                description = "".join(project.short_descr.splitlines())
+                description = "".join(description.split(","))
+                description = description.encode('ascii', 'ignore')
+            else:
+                description = project.short_descr
             if project.buyer_name:
                 buyer_name = project.buyer_name.replace(",", " ").encode('ascii', 'ignore')
             else:

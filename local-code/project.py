@@ -22,6 +22,9 @@ class Project:
         self.jobs = jobs
         self.bid_count = bid_count
         self.avg_bid = avg_bid
+        
+        self.shrt_date = start_date[:7]     #the date in the 2012-11, 2012-10 etc.. format
+        self.job_list = jobs.split(',')
 
         self.end_date = -1
         self.buyer = -1

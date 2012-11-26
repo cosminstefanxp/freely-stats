@@ -43,19 +43,29 @@ class Foa:
         #id, nume*, start_date, jobs*, bid_count, avg_bid
         projects = {}
         lines = file.readlines()
+        i = 0
+        nr = len(lines)
         for line in lines:
-            parsed = line.split(',',1)
-            id = parsed[0]	#mi-am luat id-ul
-            parsed = parsed[1:]
-            parsed_string = " ".join(parsed)
-            parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}', parsed_string)
-            nume = parsed[0][1:-2]	#numele este primul element din lista, fara primul caracter (spatiu) si ultimele doua (virgula, spatiu)
-            date = " ".join(re.findall('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string))	#mi-am luat data si ora
-            parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string)[1][2:]	#string
-            bid_count = parsed.split(', ')[-2]	#mi-am luat bid_countul ca penultima chestie despartita de virgula din string
-            avg_bid = parsed.split(', ')[-1]	#mi-am luat avg_bidul ca penultima chestie despartita de virgula din string
-            jobs = " ".join(parsed.split(', ')[:-2])	#mi-am luat jobs-urile ca tot de la data pana la sfarsit, mai putin ultimele 2 chestii
-            projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
+            i += 1
+            try:
+                parsed = line.split(',',1)
+                id = parsed[0]	#mi-am luat id-ul
+                parsed = parsed[1:]
+                parsed_string = " ".join(parsed)
+                parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}', parsed_string)
+                nume = parsed[0][1:-2]	#numele este primul element din lista, fara primul caracter (spatiu) si ultimele doua (virgula, spatiu)
+                date = " ".join(re.findall('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string))	#mi-am luat data si ora
+                parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string)[1][2:]	#string
+                bid_count = parsed.split(', ')[-2]	#mi-am luat bid_countul ca penultima chestie despartita de virgula din string
+                avg_bid = parsed.split(', ')[-1]	#mi-am luat avg_bidul ca penultima chestie despartita de virgula din string
+                jobs = " ".join(parsed.split(', ')[:-2])	#mi-am luat jobs-urile ca tot de la data pana la sfarsit, mai putin ultimele 2 chestii
+                projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
+            except IndexError:
+                print line
+            if i % 100000 == 0:
+                print i,
+                print "out of",
+                print nr
         return projects
     
     def appendProjectsDetailsToCSVFile(self, projects_details, file_name = "projects_details.csv"):

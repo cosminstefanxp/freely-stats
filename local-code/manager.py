@@ -5,6 +5,7 @@ import foa as FileOA
 import cgi
 import urllib2
 import project
+import project_details
 from distutils.file_util import copy_file
 
 class Parser:
@@ -32,6 +33,18 @@ class Parser:
     
     def parseProjectDetails(self, raw_data):
         raw_json = json.loads(raw_data)
+        
+        details = raw_json['json-result']
+        seller_id = "-1"
+        seller_username = " "
+        if "seller" in details:
+            for seller in details["seller"]:
+                if seller["awardStatus"] == "awarded":
+                    seller_id = seller["id"]
+                    seller_username = seller["username"]
+                #self, id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username
+        return project_details.Project_details(details["id"], details["name"], details["buyer"]["id"], details["buyer"]["username"], details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username)
+        
         
     def parseUsers(self, raw_data):
         print "TODO"
@@ -153,12 +166,34 @@ class Manager:
             copy_file("spring_2012.csv", dest)
         #print projects
         
+    def write_projects_details(self, ids):
+        print "project details"
+        count = 0
+        projects ={}
+        for id in ids:
+            url = "Project/getProjectDetails.json?projectid="+id
+            resp = self.auth.send_request(url)
+           # print resp
+            project = self.parser.parseProjectDetails(resp);
+            projects[project.id] = project
+            count += 1
+            if count % 100 == 0:
+                self.foa.appendProjectsDetailsToCSVFile(projects)
+                projects = {}
+            if count % 1000 == 0:
+                dest = "project_details_%d.csv"%(count)
+                copy_file("project_details.csv", dest)
+            print "%d of %d\n"%(count, len(ids))
+        return projects
 
 manager = Manager()
 #manager.write_jobs_to_csv()
 #manager.write_projects_for_main_categories()
-prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_100.csv")
+prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_599.csv")
+ids = []
 for elem in prj:
-    print prj[elem]
+    ids.append(prj[elem].id)
+print ids[:3]
+manager.write_projects_details(ids)
 
 

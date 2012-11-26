@@ -44,8 +44,8 @@ class FreelanceOAuthClient:
     '''Class that handles the calls to the Freelancer.com API'''
 
     # Main access tokens (cosminstefanxp)
-    oauth_token =           '7ce03cf8c8e89707b536db92dfa1a0ace75fc47b'
-    oauth_token_secret =    '23c34b616ae57180cb5f1869fc4fc856e943677f'
+    #oauth_token =           '7ce03cf8c8e89707b536db92dfa1a0ace75fc47b'
+    #oauth_token_secret =    '23c34b616ae57180cb5f1869fc4fc856e943677f'
     
     # Secondary access tokens (uebmasterxp)
     oauth_token        = 'f6d0c73e4d7b628a335573e7bcca574e76b7e1a5'

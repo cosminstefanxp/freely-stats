@@ -58,6 +58,43 @@ class Foa:
             projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
         return projects
     
+    def appendProjectsDetailsToCSVFile(self, projects_details, file_name = "projects_details.csv"):
+        file = open(file_name, "a")
+        
+        for project in projects_details.values():
+            name = project.name.replace(","," ")
+            name = name.replace("\n", " ")
+            name = name.encode('ascii', 'ignore')
+            
+            description = "".join(project.short_descr.splitlines())
+            description = "".join(description.split(","))
+            description = description.encode('ascii', 'ignore')
+        
+            if project.buyer_name:
+                buyer_name = project.buyer_name.replace(",", " ").encode('ascii', 'ignore')
+            else:
+                project.buyer_name
+                
+            if project.buyer_country :
+                buyer_country = project.buyer_country.replace(",", " ").encode('ascii', 'ignore')
+            else:
+                buyer_country = project.buyer_country
+                
+            jobs = ";".join(project.jobs).encode('ascii', 'ignore')
+            
+            if project.accepted_bidder_username:
+                accepted_bidder_username = project.accepted_bidder_username.replace(",", " ").encode('ascii', 'ignore')
+            else:
+                accepted_bidder_username = project.accepted_bidder_username
+           # print description
+           
+           
+            #id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username)
+            file.write("%d, %s, %d, %s, %s, %s, %s, %s, %d, %s\n"%(project.id, name, project.buyer_id, buyer_name, buyer_country, project.state, description, jobs, project.accepted_bidder_id, accepted_bidder_username))
+        file.close();  
+    
+    
+    
     def appendProjectsToCSVFile(self, projects, file_name = "projects.csv"):
         file = open(file_name, "a")
         for project in projects.values():

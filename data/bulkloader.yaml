@@ -40,3 +40,12 @@ transformers:
      import_transform: int
      external_name: project_count
 
+- kind: Trend
+  connector: csv
+  property_map:
+   - property: job
+     external_name: job
+   
+   - property: monthly_count
+     external_name: monthly_count
+

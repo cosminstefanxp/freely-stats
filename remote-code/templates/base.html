@@ -5,7 +5,9 @@
 {% block head %}
 	<title>FreelyStats - {% block title %}{% endblock %}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 </head>
 <body>
@@ -20,6 +22,9 @@
 			<div class="menu-item">
 				<a href="/jobs.html">Categories</a>
 			</div>
+			<div class="menu-item">
+				<a href="/trends.html">Monthly Trends</a>
+			</div>			
 		</div>
 	</div>
 	<div id="content">{% block content %}{% endblock %}</div>

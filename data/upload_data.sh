@@ -1,1 +1,19 @@
-~/.appengine_python/appcfg.py upload_data --config_file=bulkloader.yaml --filename=jobs_in_all_categories.csv --kind=Job --url=http://freelystats.appspot.com/_ah/remote_api
+#!/bin/bash
+if [ $# -lt 2 ]
+then
+	echo "***ERROR***"
+    echo "Usage : $0 kind filename <local>"
+    exit
+fi
+
+case "$3" in 
+	"local")
+	echo "Uploading data to local server..."
+	~/.appengine_python/appcfg.py upload_data --config_file=bulkloader.yaml --filename="$2" --kind="$1" --url='http://localhost:8080/_ah/remote_api'
+	;;
+	
+	*)
+	echo "Uploading data to remote server..."
+	 ~/.appengine_python/appcfg.py upload_data --config_file=bulkloader.yaml --filename="$2" --kind="$1" --url='http://freelystats.appspot.com/_ah/remote_api'
+	;;
+esac

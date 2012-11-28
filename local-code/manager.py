@@ -34,6 +34,10 @@ class Parser:
         raw_json = json.loads(raw_data)
         
         details = raw_json['json-result']
+        # print details
+        if "count" in details:
+            if details["count"] == 0:
+                return None 
         seller_id = "-1"
         seller_username = " "
         if "seller" in details:
@@ -42,7 +46,14 @@ class Parser:
                     seller_id = seller["id"]
                     seller_username = seller["username"]
                 #self, id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username
-        return project_details.Project_details(details["id"], details["name"], details["buyer"]["id"], details["buyer"]["username"], details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username)
+        if "buyer" in details:  
+            buyer_id = details["buyer"]["id"]
+            buyer_username = details["buyer"]["username"]
+        else:
+            buyer_id = -1
+            buyer_username = ""
+            
+        return project_details.Project_details(details["id"], details["name"], buyer_id, buyer_username, details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username)
         
         
     def parseUsers(self, raw_data):
@@ -170,18 +181,22 @@ class Manager:
         count = 0
         projects ={}
         for id in ids:
+            if count < 22100:
+                count +=1
+                continue
             url = "Project/getProjectDetails.json?projectid="+id
             resp = self.auth.send_request(url)
            # print resp
             project = self.parser.parseProjectDetails(resp);
-            projects[project.id] = project
+            if project:
+                projects[project.id] = project
             count += 1
             if count % 100 == 0:
                 self.foa.appendProjectsDetailsToCSVFile(projects)
                 projects = {}
             if count % 1000 == 0:
-                dest = "project_details_%d.csv"%(count)
-                copy_file("project_details.csv", dest)
+                dest = "projects_details_%d.csv"%(count)
+                copy_file("projects_details.csv", dest)
             print "%d of %d\n"%(count, len(ids))
         return projects
 

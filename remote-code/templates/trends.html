@@ -6,38 +6,61 @@
     {{ super() }}
 <script>
 	$(document).ready(function() {
-		$("#tagcloud a").tagcloud({
+		// Draw the job cloud
+		$("#job-cloud .job-entry").tagcloud({
 			size : {
-				start : 0.7,
-				end : 4,
+				start : 0.72,
+				end : 1.08,
 				unit : 'em'
 			},
 			color : {
 				start : "#394",
-				end : "#B56"
+				end : "#C56"
 			}
 		});
+		
+		$("#job-cloud .job-entry").click(on_select);
+		
+		$("#job-selected-cloud .job-entry").click(on_deselect);
+		
+		
+		
 	});	
 </script>
-{% endblock %} {% block content %}
-<p>This page shows the job categories on Freelancer.com. Their size
-	is proportional to their number of projects.</p>
-<p>For customizing the number of entries or setting the ordering method:</p>
-<form action="/jobs.html" style="border: 1px solid #999; padding: 10px;">
-	<label for="count">Count: </label>
-	<input type="number" name="count" value="{{count}}" /><br />
-	<label for="randomize">Randomize: </label>
-	<input type="checkbox" name="randomize" value="1" {% if randomize==1 %} checked="checked" {%endif%} />
-	<input type="submit" value="Customize"/><br />
-</form>
 
-<p>These are the job categories on Freelancer.com:</p>
-<div id='tagcloud'>
+{% endblock %} {% block content %}
+<p>This page shows the job categories trends based data acquired
+	from Freelancer.com, for projects between January 2008 and November
+	2012.</p>
+<hr/>
+<p>For adding a new job on the graphs, please select it in the following list:</p>
+<div id='job-cloud'>
 	{% for job in jobs %}
-	<a href="https://www.freelancer.com/jobs/{{job.seo_url}}" rel="{{job.project_count}}" class="tag-entry">
-		{{job.name}}
-	</a>
+	{% if not job[0] in trends %}
+	<div class="job-entry" rel="{{job[1]}}">{{job[0]}}</div>
+	{% endif %}
 	{% endfor %}
 </div>
+<div class="clear"></div>
+<hr/>
+<p>Selected job types:</p>
+<div id="job-selected-cloud">
+	{% for trend in trends %}
+	<div class="job-entry">{{trend}}</div>
+	{% endfor %}
+	<div class="clear"></div>
+</div>
+<form action="trends.html" id="select-jobs-form">
+	<input type="submit" value="Go!"/>
+	{% for trend in trends %}
+	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-trend='{{trend}}'/>
+	{% endfor %}
+</form>
+
+<div class="clear"></div>
+<hr/>
+
+
+<p>These are the job categories on Freelancer.com:</p>
 
 {% endblock %}

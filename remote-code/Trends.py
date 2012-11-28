@@ -8,6 +8,7 @@ import logging
 import jinja2
 import os
 from models import Trend
+from models import TopJobs
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -25,12 +26,13 @@ class Trends(webapp.RequestHandler):
         
         #Get the trends from the database
         trends=Trend.all()
-        trends.filter("job IN",['Delphi','Flash'])
+        trends.filter("job IN",jobs)
         for t in trends:
             logging.info(t);
+        trends_names=[t.job for t in trends]
                 
         #Generate the page
-        template_values = { 'jobs': [], 'count': 0}
+        template_values = { 'jobs': TopJobs, 'trends': trends_names, 'count': 0}
         
         template = jinja_environment.get_template('templates/trends.html')
         self.response.out.write(template.render(template_values))

@@ -6,7 +6,6 @@ Created on Nov 24, 2012
 from google.appengine.ext import db, webapp
 import jinja2
 import os
-from models import Job
 import random
 
 
@@ -22,7 +21,7 @@ class Jobs(webapp.RequestHandler):
         # Compute count
         countV = self.request.get("count")
         if len(countV)==0:
-            count = 600;
+            count = 150;
         else:
             count=int(countV)
             

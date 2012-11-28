@@ -4,6 +4,7 @@
 
 {% block head %}
     {{ super() }}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(document).ready(function() {
 		// Draw the job cloud
@@ -18,15 +19,61 @@
 				end : "#C56"
 			}
 		});
-		
+
 		$("#job-cloud .job-entry").click(on_select);
-		
+
 		$("#job-selected-cloud .job-entry").click(on_deselect);
+
+	}); 
+	
+	// Load the Visualization API and the piechart package.
+	google.load('visualization', '1.0', {
+		'packages' : [ 'corechart' ]
+	});
+
+	// Set a callback to run when the Google Visualization API is loaded.
+	google.setOnLoadCallback(drawChart);
+
+	// Callback that creates and populates the data table,
+	// instantiates the chart, passes in the data and
+	// draws it.
+	function drawChart() {
 		
+		var counts={
+			{% for trend in trends %}
+				'{{trend.job}}': 
+				[ {% for val in trend.values%} {{val}} {% if not loop.last %},{%endif%} {% endfor %} ]
+				{% if not loop.last %},{%endif%}
+
+		  	{% endfor %}
+		}
 		
-		
-	});	
+		var data = google.visualization.arrayToDataTable([
+				[ 'Month', {% for trend in trends %} '{{trend.job}}' {% if not loop.last %},{%endif%} {% endfor %}],
+				{% for month in months %}
+					{% set monthsloop = loop %}
+						[ '{{month}}', 
+						{% for trend in trends %}
+							counts['{{trend.job}}'][{{monthsloop.index0}}] {% if not loop.last %},{%endif%}
+					  	{% endfor %}
+						] 
+					{% if not loop.last %},{%endif%}
+				{% endfor %}
+				]);
+
+		var options = {
+			'legend':'left',
+			'title' : 'Monthly Trends',
+		  	'height':700,
+		  	"backgroundColor": "transparent"
+		};
+
+		var chart = new google.visualization.LineChart(document
+				.getElementById('chart_div'));
+		chart.draw(data, options);
+	}
 </script>
+
 
 {% endblock %} {% block content %}
 <p>This page shows the job categories trends based data acquired
@@ -36,7 +83,7 @@
 <p>For adding a new job on the graphs, please select it in the following list:</p>
 <div id='job-cloud'>
 	{% for job in jobs %}
-	{% if not job[0] in trends %}
+	{% if not job[0] in trends_names %}
 	<div class="job-entry" rel="{{job[1]}}">{{job[0]}}</div>
 	{% endif %}
 	{% endfor %}
@@ -45,14 +92,14 @@
 <hr/>
 <p>Selected job types:</p>
 <div id="job-selected-cloud">
-	{% for trend in trends %}
+	{% for trend in trends_names %}
 	<div class="job-entry">{{trend}}</div>
 	{% endfor %}
 	<div class="clear"></div>
 </div>
 <form action="trends.html" id="select-jobs-form">
 	<input type="submit" value="Go!"/>
-	{% for trend in trends %}
+	{% for trend in trends_names %}
 	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-trend='{{trend}}'/>
 	{% endfor %}
 </form>
@@ -60,7 +107,6 @@
 <div class="clear"></div>
 <hr/>
 
-
-<p>These are the job categories on Freelancer.com:</p>
+<div id="chart_div"></div>
 
 {% endblock %}

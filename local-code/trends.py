@@ -23,7 +23,8 @@ for skill in trends.keys():
     for month in trends[skill]:
         total_dict[month] = 0
 
-file = open("spring_2012_7599.csv", "r")
+file = open("spring_2012_9399_no_duplicates.csv", "r")
+#file = open("spring_2012_100.csv", "r")
 #id, nume*, start_date, jobs*, bid_count, avg_bid
 projects = {}
 lines = file.readlines()
@@ -31,34 +32,37 @@ i = 0
 nr = len(lines)
 for line in lines:
     i += 1
-    try:
-        parsed = line.split(',',1)
-        id = parsed[0]	#mi-am luat id-ul
-        parsed = parsed[1:]
-        parsed_string = " ".join(parsed)
-        parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}', parsed_string)
-        nume = parsed[0][1:-2]	#numele este primul element din lista, fara primul caracter (spatiu) si ultimele doua (virgula, spatiu)
-        date = " ".join(re.findall('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string))	#mi-am luat data si ora
-        parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string)[1][2:]	#string
-        bid_count = parsed.split(', ')[-2]	#mi-am luat bid_countul ca penultima chestie despartita de virgula din string
-        avg_bid = parsed.split(', ')[-1]	#mi-am luat avg_bidul ca penultima chestie despartita de virgula din string
-        jobs = " ".join(parsed.split(', ')[:-2])	#mi-am luat jobs-urile ca tot de la data pana la sfarsit, mai putin ultimele 2 chestii
-        proj = project.Project(id, nume, date, jobs, bid_count, avg_bid)
-        
-        # done reading. now let's process
-        
-        for skill in proj.job_list:
-#        print skill
-            if skill in trends.keys():
-                trends[skill][proj.shrt_date] += 1
-                
-        total_dict[proj.shrt_date] += 1    
-    except IndexError:
-        print line
-    if i % 50000 == 0:
-        print i,
-        print "out of",
-        print nr
+    #problem with id 3440386. it was easier to test here than edit manually the 220 MB text file :)
+    if line.split(',',1)[0] != "3440386":
+        try:
+            parsed = line.split(',',1)
+            id = parsed[0]	#mi-am luat id-ul
+            parsed = parsed[1:]
+            parsed_string = " ".join(parsed)
+            parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}', parsed_string)
+            nume = parsed[0][1:-2]	#numele este primul element din lista, fara primul caracter (spatiu) si ultimele doua (virgula, spatiu)
+            date = " ".join(re.findall('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string))	#mi-am luat data si ora
+            parsed = re.split('20[0-9]{2}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}', parsed_string)[1][2:]	#string
+            bid_count = parsed.split(', ')[-2]	#mi-am luat bid_countul ca penultima chestie despartita de virgula din string
+            avg_bid = parsed.split(', ')[-1]	#mi-am luat avg_bidul ca penultima chestie despartita de virgula din string
+            jobs = " ".join(parsed.split(', ')[:-2])	#mi-am luat jobs-urile ca tot de la data pana la sfarsit, mai putin ultimele 2 chestii
+            proj = project.Project(id, nume, date, jobs, bid_count, avg_bid)
+            
+            # done reading. now let's process
+            
+            for skill in proj.job_list:
+    #        print skill
+                if skill in trends.keys():
+                    if proj.shrt_date != "2007-12" and proj.id != "3440386":
+                        trends[skill][proj.shrt_date] += 1
+            if proj.shrt_date != "2007-12" and proj.id != "3440386":        
+                total_dict[proj.shrt_date] += 1    
+        except IndexError:
+            print line
+        if i % 50000 == 0:
+            print i,
+            print "out of",
+            print nr
 
         
 
@@ -82,21 +86,22 @@ print "Done creating the trends dictionary. Starting to write to file"
 
 file = open("trends2.csv", "w")
 
-luni = ",".join(reversed(months))
+luni = ";".join(reversed(months))
 row = "skill," + luni
 
 file.write(row + "\n")
 row = "total,"
 for month in sorted(total_dict.iterkeys()):
     # print "%s: %s" % (key, trends["total"][key])
-    row = row + str(total_dict[month]) + ","
+    row = row + str(total_dict[month]) + ";"
     
 file.write(row + "\n")
 
 for skill in trends.keys():
-    row = skill
+    row = skill + ","
     for month in sorted(trends[skill].iterkeys()):
-        row = row + "," + str(trends[skill][month])
+        row = row + str(trends[skill][month]) + ";"
+    row = row[:-1]
     file.write(row + "\n")
 
 file.close()

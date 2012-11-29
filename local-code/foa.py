@@ -2,6 +2,7 @@ import job
 import json
 import re
 import project
+import bids
 
 class Foa:
     def __init__(self):
@@ -103,8 +104,52 @@ class Foa:
         file = open(file_name, "a")
         for project in projects.values():
             file.write("%s, %s, %s, %s, %s, %s\n"%(project.id, project.name.encode('utf-8'), project.start_date.encode('utf-8'), project.jobs.encode('utf-8'), project.bid_count, project.avg_bid))
-        file.close();    
-    
+        file.close();   
+        
+    def appendBidsToCSVFile(self, projects_bids, file_name ="projects_bids.csv"): 
+        file = open(file_name, "a")
+        for project_id in projects_bids:
+            bids = projects_bids[project_id]
+            for bid in bids.values():
+                # provider_userid, provider, bid_amount, descr, rating):
+                if bid.descr:
+                    description = "".join(bid.descr.splitlines())
+                    description = "".join(description.split(","))
+                    descr = description.encode('ascii', 'ignore')
+             
+                else:
+                    descr = bid.descr
+                if bid.provider:
+                    provider = bid.provider.encode('ascii', 'ignore')
+                else:
+                    provider = bid.provider
+                
+                file.write("%s, %s, %s, %s, %s, %f\n"%(project_id, bid.provider_userid, provider, bid.bid_amount, descr, bid.rating))
+        file.close()
+         
+    def appendUsersToCSVFile(self, users, file_name ="users.csv"): 
+        file = open(file_name, "a")
+        for user_id in users:
+            user = users[user_id]
+            username = user.username.encode('ascii', 'ignore')
+            if user.country:
+                country = user.country.encode('ascii', 'ignore')
+            else:
+                country = user.country
+            if user.city:
+                city = user.city.encode('ascii', 'ignore')
+            else:
+                city = user.city
+            jobs = user.jobs.encode('ascii', 'ignore')
+            
+         
+            rating = float(user.rating)
+
+            currency = int(user.currency)
+           
+            #id, username, country, city, jobs, rating, currency):    
+            file.write("%d, %s, %s, %s, %s, %f %d\n"%(int(user_id), username, country, city, jobs, rating, currency))
+        file.close()
     def writeProjectsToFile(self, projects, file_name = "projects.json", type="json"):
         file = open(file_name, "w")
         if type == "json":

@@ -6,105 +6,11 @@ import cgi
 import urllib2
 import project
 import project_details
+import bids
 from distutils.file_util import copy_file
+import freelancer_parser
+from freelancer_parser import *
 
-class Parser:
-    def parseProjects(self, raw_data):
-        raw_json = json.loads(raw_data)
-        raw_projects = raw_json['json-result']['items']
-        projects = {}
-        flag = 0
-        for raw_project in raw_projects:
-            id = raw_project['projectid']
-            name = raw_project['projectname']
-            bids = raw_project['bids']
-            avg_bid = raw_project['averagebid']
-            jobtypecsv = raw_project['jobtypecsv']
-            startdate = raw_project['startdate']
-            if flag == 0:
-                print "NEW" + startdate
-                flag = 1
-            #def __init__(self, id, name, start_date, end_date, 
-            #buyer, state, shrt_descr, jobs, bid_count, avg_bid, 
-            #seller, bidders, accepted_bidder):
-            projects[id] = project.Project(id, name, startdate, jobtypecsv, bids, avg_bid)
-        print "OLD " + startdate
-        return projects
-    
-    def parseProjectDetails(self, raw_data):
-        raw_json = json.loads(raw_data)
-        
-        details = raw_json['json-result']
-        # print details
-        if "count" in details:
-            if details["count"] == 0:
-                return None 
-        seller_id = "-1"
-        seller_username = " "
-        if "seller" in details:
-            for seller in details["seller"]:
-                if seller["awardStatus"] == "awarded":
-                    seller_id = seller["id"]
-                    seller_username = seller["username"]
-                #self, id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username
-        if "buyer" in details:  
-            buyer_id = details["buyer"]["id"]
-            buyer_username = details["buyer"]["username"]
-        else:
-            buyer_id = -1
-            buyer_username = ""
-            
-        return project_details.Project_details(details["id"], details["name"], buyer_id, buyer_username, details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username)
-        
-        
-    def parseUsers(self, raw_data):
-        print "TODO"
-        
-    def parseAllCategories(self, raw_data):
-        raw_json = json.loads(raw_data)
-        raw_categories = raw_json['json-result']['items']["category"]
-        jobs = []
-        for raw_category in raw_categories:
-            cat_id = raw_category["id"]
-            print raw_category["id"],
-            print "    " + raw_category['name'] 
-            raw_jobs = raw_category["job"]
-            for raw_job in raw_jobs:  
-                print "\t",
-                print  raw_job['name'],
-                print "  ",
-                print raw_job['project_count']            
-                id = raw_job['id']
-                name = raw_job['name']
-                count = int(raw_job['project_count'])
-                seo_url = raw_job['seo_url']
-                jobs.append(job.Job(id, name, count, seo_url))
-            print "\n\n"
-        return jobs
-    
-    def parseMainCategories(self, raw_data):
-        raw_json = json.loads(raw_data)
-        raw_categories = raw_json['json-result']['items']["category"]
-        jobs = []
-        for raw_category in raw_categories:
-            cat_id = raw_category["id"]
-            print raw_category["id"],
-            print "    " + raw_category['name'] 
-            if cat_id == 1 or cat_id == 2 or cat_id == 4:
-                raw_jobs = raw_category["job"]
-                for raw_job in raw_jobs:  
-                    print "\t",
-                    print  raw_job['name'],
-                    print "  ",
-                    print raw_job['project_count']            
-                    id = raw_job['id']
-                    name = raw_job['name']
-                    count = int(raw_job['project_count'])
-                    seo_url = raw_job['seo_url']
-                    jobs.append(job.Job(id, name, count, seo_url))
-                    
-            print "\n\n"
-        return jobs
 
 class Manager:
     def __init__(self):
@@ -182,7 +88,7 @@ class Manager:
         count = 0
         projects ={}
         for id in ids:
-            if count < 22100:
+            if count < 25100:
                 count +=1
                 continue
             url = "Project/getProjectDetails.json?projectid="+id
@@ -200,15 +106,77 @@ class Manager:
                 copy_file("projects_details.csv", dest)
             print "%d of %d\n"%(count, len(ids))
         return projects
-
+    
+    
+    
+    
+    def write_bids(self, ids):
+        count = 0
+        projects_bids ={}
+        for id in ids:
+            if count < 28830:
+                count +=1
+                continue
+            url = "Project/getBidsDetails.json?projectid="+id
+            resp = self.auth.send_request(url)
+#            print resp
+            bids = self.parser.parseBids(resp);
+            if bids:
+                projects_bids[id] = bids
+            count += 1
+            if count % 10 == 0:
+                self.foa.appendBidsToCSVFile(projects_bids)
+                projects_bids = {}
+            if count % 1000 == 0:
+                dest = "projects_bids_%d.csv"%(count)
+                copy_file("projects_bids.csv", dest)
+            print "%d of %d\n"%(count, len(ids))
+        return projects_bids
+    
+    def write_user(self, ids):
+        count = 0
+        users ={}
+        for id in ids:
+            if count < 21630:
+                count +=1
+                continue
+            val = int(id)
+            url = "User/getUserDetails.json?userid=%d"%(val)
+            resp = self.auth.send_request(url)
+            #print resp
+            
+            user = self.parser.parseUsers(resp);
+            if user:
+                users[val] = user
+            count += 1
+            if count % 10 == 0:
+                self.foa.appendUsersToCSVFile(users)
+                users = {}
+            if count % 1000 == 0:
+                dest = "users_%d.csv"%(count)
+                copy_file("users.csv", dest)
+            print "%d of %d\n"%(count, len(ids))
+           
+        return users
+        
 manager = Manager()
 #manager.write_jobs_to_csv()
 #manager.write_projects_for_main_categories()
+
+'''
 prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_599.csv")
 ids = []
 for elem in prj:
     ids.append(prj[elem].id)
-print ids[:3]
-manager.write_projects_details(ids)
+#manager.write_projects_details(ids)
+manager.write_bids(ids)
+'''
+file = open("users.txt", "r")
+ids = file.readlines();
+file.close()
+manager.write_user(ids)
+
+
+
 
 

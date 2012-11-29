@@ -1,29 +1,43 @@
 {% extends "templates/base.html" %} 
-
-{% block title %}Home{% endblock %}
+{% set active_page = "jobs" %}
+{% block title %}Jobs{% endblock %}
 
 {% block head %}
     {{ super() }}
-    <style type="text/css">
-        td { padding:4px; }
-        th { padding:4px; }
-    </style>
-{% endblock %}
+<script>
+	$(document).ready(function() {
+		$("#tagcloud a").tagcloud({
+			size : {
+				start : 0.7,
+				end : 4,
+				unit : 'em'
+			},
+			color : {
+				start : "#394",
+				end : "#B56"
+			}
+		});
+	});	
+</script>
+{% endblock %} {% block content %}
+<p>This page shows the job categories on Freelancer.com. Their size
+	is proportional to their number of projects.</p>
+<p>For customizing the number of entries or setting the ordering method:</p>
+<form action="/jobs.html" style="border: 1px solid #999; padding: 10px;">
+	<label for="count">Count: </label>
+	<input type="number" name="count" value="{{count}}" /><br />
+	<label for="randomize">Randomize: </label>
+	<input type="checkbox" name="randomize" value="1" {% if randomize==1 %} checked="checked" {%endif%} />
+	<input type="submit" value="Customize"/><br />
+</form>
 
-{% block content %}
 <p>These are the job categories on Freelancer.com:</p>
-<table border="1">
-	<tr>
-		<th>Job Category</th>
-		<th>Projects Count</th>
-	</tr>
+<div id='tagcloud'>
 	{% for job in jobs %}
-	<tr>
-		<td><a href="https://www.freelancer.com/jobs/{{job.seo_url}}">{{job.name}}</a></td>
-		<td>{{job.project_count}}</td>
-	</tr>
-
+	<a href="https://www.freelancer.com/jobs/{{job.seo_url}}" rel="{{job.project_count}}" class="tag-entry">
+		{{job.name}}
+	</a>
 	{% endfor %}
+</div>
 
-</table>
 {% endblock %}

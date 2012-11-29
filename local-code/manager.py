@@ -63,14 +63,14 @@ class Manager:
         top_job_names = [job.name for job in top_jobs]
      #   print top_job_names
         escaped_top_job_names = [urllib2.quote(job_name) for job_name in top_job_names]
-        joined = ",".join(escaped_top_job_names)
+        result = ",".join(escaped_top_job_names)
         
-        #print "Joined job names" + joined + "\n\n\n\n\n"
+        #print "Joined job names" + result + "\n\n\n\n\n"
         
         all_projects_in_season = {}
         for base in range(0,2000000,200):
             for i in range(200):
-                url = "Project/searchProjects.json?searchjobtypecsv="+joined+"&status=Closed&count=200&page=%d"%(i + base)
+                url = "Project/searchProjects.json?searchjobtypecsv="+result+"&status=Closed&count=200&page=%d"%(i + base)
                 resp = self.auth.send_request(url)
                 #print "\n"
                 
@@ -106,8 +106,7 @@ class Manager:
                 copy_file("projects_details.csv", dest)
             print "%d of %d\n"%(count, len(ids))
         return projects
-    
-    
+
     
     
     def write_bids(self, ids):
@@ -177,6 +176,16 @@ file.close()
 manager.write_user(ids)
 
 
+
+#manager = Manager()
+##manager.write_jobs_to_csv()
+##manager.write_projects_for_main_categories()
+#prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_599.csv")
+#ids = []
+#for elem in prj:
+#    ids.append(prj[elem].id)
+#print ids[:3]
+#manager.write_projects_details(ids)
 
 
 

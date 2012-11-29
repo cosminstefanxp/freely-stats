@@ -1,5 +1,6 @@
 body {
-	background-color: #dc8; </ a > font-size : 16px;
+	background-color: #dc8; 
+	font-size : 16px;
 	margin: 0;
 	padding: 0;
 }
@@ -7,6 +8,7 @@ body {
 #header {
 	background-color: #333;
 	height: 120px;
+	min-width: 300px;
 }
 
 #header .title {
@@ -45,6 +47,11 @@ body {
 	background-color: #333;
 }
 
+#top #menu .menu-item.active {
+	color: white;
+	background-color: #333;	
+}
+
 #content {
 	background-color: #eec;
 	min-height: 600px; /* for modern browsers */
@@ -67,4 +74,64 @@ body {
 .center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#tagcloud {
+	border: 1px solid #aaa;
+	padding: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 8px #888;
+	-webkit-box-shadow: 0px 0px 8px #888;
+	box-shadow: 0px 0px 8px #888;
+}
+
+#tagcloud .tag-entry {
+	text-decoration: none;
+	color: #33a;
+	padding: 4px;
+}
+
+#tagcloud .tag-entry:HOVER {
+	padding: 3px;
+	border: 1px solid #bbb;
+	-moz-box-shadow: 0px 0px 4px #888;
+	-webkit-box-shadow: 0px 0px 4px #888;
+	box-shadow: 0px 0px 4px #888;
+}
+
+.job-entry {
+	padding: 4px;
+	margin: 2px;
+	font-size: 0.9em;
+	float: left;
+	background: #cceecc;
+	border: thin solid #888;
+	cursor: pointer;
+	height: 18px;
+	font-weight: bold;
+
+}
+
+.job-entry:HOVER {
+	background: #ccccee;
+	-moz-box-shadow: 0px 3px 4px #888;
+	-webkit-box-shadow: 0px 3px 4px #888;
+	box-shadow: 0px 3px 4px #888;
+}
+
+#job-selected-cloud {
+	padding: 10px;
+	border: 1px solid #888;
+	border-radius: 4px;
+}
+
+#job-selected-cloud .job-entry{
+}
+
+#job-selected-cloud .job-entry:HOVER{
+	background: #eaa;
+}
+
+.clear {
+	clear: both;
 }

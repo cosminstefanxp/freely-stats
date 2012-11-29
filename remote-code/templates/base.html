@@ -11,21 +11,25 @@
 	<script src="/js/jobcloud.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 </head>
+
+{% set navigation_bar = [
+    ('/', 'home', 'Home'),
+    ('/jobs.html', 'jobs', 'Categories'),
+    ('/trends.html', 'trends', 'Monthly Trends')
+] -%}
+{% set active_page = active_page|default('index') -%}
+
 <body>
 	<div id="header">
 		<div class="title center">Freely Stats</div>
 	</div>
 	<div id="top">
 		<div id="menu">
-			<div class="menu-item">
-				<a href="/index.html">Home</a>
-			</div>
-			<div class="menu-item">
-				<a href="/jobs.html">Categories</a>
-			</div>
-			<div class="menu-item">
-				<a href="/trends.html">Monthly Trends</a>
-			</div>			
+			{% for href, id, caption in navigation_bar %}
+  			<div class = "menu-item {% if id == active_page %}active{% endif%}">
+  				<a href="{{ href|e }}">{{ caption }}</a>
+  			</div>
+			{% endfor %}
 		</div>
 	</div>
 	<div id="content">{% block content %}{% endblock %}</div>

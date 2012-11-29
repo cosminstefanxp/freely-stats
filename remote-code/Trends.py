@@ -35,7 +35,7 @@ class Trends(webapp.RequestHandler):
         "2008-12", "2008-11", "2008-10", "2008-09", "2008-08", "2008-07",
         "2008-06", "2008-05", "2008-04", "2008-03", "2008-02", "2008-01"]
         months.reverse()
-
+ 
         #Get jobs for trends
         jobs = self.request.get_all("job")
         jobs = [j for j in jobs if len(j) > 0]
@@ -52,7 +52,7 @@ class Trends(webapp.RequestHandler):
         trends_names=[t.job for t in trends]
         
         #Generate the page
-        template_values = { 'jobs': TopJobs, 'trends': split_trends, 'trends_names': trends_names, 'count': 0, 'months': months}
+        template_values = { 'jobs': TopJobs, 'trends': split_trends, 'trends_names': trends_names, 'count': len(split_trends), 'months': months}
         
         template = jinja_environment.get_template('templates/trends.html')
         self.response.out.write(template.render(template_values))

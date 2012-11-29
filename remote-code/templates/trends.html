@@ -1,5 +1,5 @@
 {% extends "templates/base.html" %} 
-
+{% set active_page = "trends" %}
 {% block title %}Trends{% endblock %}
 
 {% block head %}
@@ -24,7 +24,9 @@
 
 		$("#job-selected-cloud .job-entry").click(on_deselect);
 
-	}); 
+	});
+	
+	{% if count > 0 %}
 	
 	// Load the Visualization API and the piechart package.
 	google.load('visualization', '1.0', {
@@ -41,10 +43,7 @@
 		
 		var counts={
 			{% for trend in trends %}
-				'{{trend.job}}': 
-				[ {% for val in trend.values%} {{val}} {% if not loop.last %},{%endif%} {% endfor %} ]
-				{% if not loop.last %},{%endif%}
-
+				'{{trend.job}}': [ {% for val in trend.values%} {{val}} {% if not loop.last %},{%endif%} {% endfor %} ] {% if not loop.last %},{%endif%}
 		  	{% endfor %}
 		}
 		
@@ -62,7 +61,6 @@
 				]);
 
 		var options = {
-			'legend':'left',
 			'title' : 'Monthly Trends',
 		  	'height':700,
 		  	"backgroundColor": "transparent"
@@ -72,6 +70,8 @@
 				.getElementById('chart_div'));
 		chart.draw(data, options);
 	}
+	{% endif%}
+
 </script>
 
 
@@ -84,7 +84,7 @@
 <div id='job-cloud'>
 	{% for job in jobs %}
 	{% if not job[0] in trends_names %}
-	<div class="job-entry" rel="{{job[1]}}">{{job[0]}}</div>
+	<div class="job-entry" rel="{{job[1]}}">{{job[0]|e}}</div>
 	{% endif %}
 	{% endfor %}
 </div>
@@ -93,7 +93,7 @@
 <p>Selected job types:</p>
 <div id="job-selected-cloud">
 	{% for trend in trends_names %}
-	<div class="job-entry">{{trend}}</div>
+	<div class="job-entry">{{trend|e}}</div>
 	{% endfor %}
 	<div class="clear"></div>
 </div>

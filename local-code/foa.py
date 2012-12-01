@@ -200,7 +200,8 @@ class Foa:
                 currency = last[2]              #mi-am luat currency-ul
                 parsed = parsed[:-1]
                 skills = "".join(parsed).strip().split(';')   #skills-urile
-                users[user_id] = user.User(user_id, user_name, user_country, user_city, skills, rating, currency)
+                u = user.User(user_id, user_name, user_country, user_city, skills, rating, currency)
+                users[u.id]=u
             except IndexError:
                 print line
             if i % 5000 == 0:

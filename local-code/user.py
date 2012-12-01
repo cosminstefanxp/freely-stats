@@ -1,7 +1,7 @@
 
 class User:
     def __init__(self, uid, username, country, city, jobs, rating, currency):
-        self.id = uid
+        self.id = int(uid)
         self.username = username
         self.country = country
         self.city = city

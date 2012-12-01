@@ -38,8 +38,9 @@ class ProjectDetails:
         return out
         
     def __str__(self):
-        out = "%d || %s || %d" % (self.id, self.name, self.buyer_id)
-        out = out + self.buyer_name + " || " + self.buyer_country + " || " + self.state + " || " + self.short_descr
+        out = "%d || %s || %d" % (self.id, self.name, self.buyer_id) 
+        out += " || " + self.buyer_name + " || " + self.buyer_country + " || " + self.state + " || " + self.short_descr
+        out += " || " + str(self.accepted_bidder_id) + " || " + self.accepted_bidder_username
         return out.encode('utf-8')
     
 

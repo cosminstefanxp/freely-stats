@@ -1,5 +1,5 @@
 body {
-	background-color: #dc8; 
+	background-color: #48c; 
 	font-size : 16px;
 	margin: 0;
 	padding: 0;
@@ -19,7 +19,7 @@ body {
 
 #top {
 	width: 100%;
-	background-color: #dc8;
+	background-color: #48c;
 	height: 50px;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 #content {
-	background-color: #eec;
+	background-color: #efefff;
 	min-height: 600px; /* for modern browsers */
 	height: auto !important; /* for modern browsers */
 	height: 600px; /* for IE5.x and IE6 */
@@ -91,7 +91,7 @@ body {
 	padding: 4px;
 }
 
-#tagcloud .tag-entry:HOVER {
+#tagcloud .tag-entry:HOVER#48c {
 	padding: 3px;
 	border: 1px solid #bbb;
 	-moz-box-shadow: 0px 0px 4px #888;
@@ -104,7 +104,7 @@ body {
 	margin: 2px;
 	font-size: 0.9em;
 	float: left;
-	background: #cceecc;
+	background: #cfefff;
 	border: thin solid #888;
 	cursor: pointer;
 	height: 18px;
@@ -113,7 +113,8 @@ body {
 }
 
 .job-entry:HOVER {
-	background: #ccccee;
+	background: #6ae;
+	color: #fff;
 	-moz-box-shadow: 0px 3px 4px #888;
 	-webkit-box-shadow: 0px 3px 4px #888;
 	box-shadow: 0px 3px 4px #888;
@@ -129,7 +130,7 @@ body {
 }
 
 #job-selected-cloud .job-entry:HOVER{
-	background: #eaa;
+	background: #d66;
 }
 
 .clear {

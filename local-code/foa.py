@@ -172,6 +172,40 @@ class Foa:
         
     def loadUsersFromFile(self, file_name = "users.json"):
         print "TODO: "
+        
+    def load_users_from_csv(self, filename):
+        file = open(file_name, "r")
+        #id, nume, tara, oras, lista_separata_cu_;_de_skilluri, rating currency
+        useri = {}
+        lines = file.readlines()
+        i = 0
+        nr = len(lines)
+        for line in lines:
+            i += 1
+            try:
+                parsed = line.split(',',4)
+                user_id = parsed[0]	            #mi-am luat user_id-ul
+                user_name = parsed[1]	        #mi-am luat user_name-ul
+                user_country = parsed[2]        #mi-am luat user_country-ul
+                user_city = parsed[3]           #mi-am luat user_city-ul
+                parsed = parsed[4:] 
+                parsed_string = "".join(parsed)
+                parsed = parsed_string.rsplit(',',1)
+                last = parsed[-1].split(' ')
+                rating = last[1]                #mi-am luat rating-ul
+                currency = last[2]              #mi-am luat currency-ul
+                parsed = parsed[:-1]
+                skills = "".join(parsed).strip()   #skills-urile
+                
+                #to be continued
+                projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
+            except IndexError:
+                print line
+            if i % 10000 == 0:
+                print i,
+                print "out of",
+                print nr
+        return projects
     
     def writeUsersToFile(self, users, file_name = "users.json"):
         self.users = users

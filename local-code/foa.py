@@ -185,10 +185,10 @@ class Foa:
             i += 1
             try:
                 parsed = line.split(',',4)
-                user_id = parsed[0]	            #mi-am luat user_id-ul
-                user_name = parsed[1]	        #mi-am luat user_name-ul
-                user_country = parsed[2]        #mi-am luat user_country-ul
-                user_city = parsed[3]           #mi-am luat user_city-ul
+                user_id = parsed[0].strip()	            #mi-am luat user_id-ul
+                user_name = parsed[1].strip()	        #mi-am luat user_name-ul
+                user_country = parsed[2].strip()        #mi-am luat user_country-ul
+                user_city = parsed[3].strip()           #mi-am luat user_city-ul
                 parsed = parsed[4:] 
                 parsed_string = "".join(parsed)
                 parsed = parsed_string.rsplit(',',1)

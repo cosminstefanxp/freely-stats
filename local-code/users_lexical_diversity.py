@@ -9,42 +9,58 @@ import foa as FileOA
 foa = FileOA.Foa()
 
 
-def get_user_city(user_id, big_use_structure):
-    return big_user_structure[user_id][3]
+def get_user_city(user_id, big_user_structure):
+    return big_user_structure[user_id].city
 
-def get_user_country(user_id, big_use_structure):
-    return big_user_structure[user_id][2]
+def get_user_country(user_id, big_user_structure):
+    return big_user_structure[user_id].country
 
-def read_bids_from_csv(filename):
-    file = open(file_name, "r")
+def read_bids_from_csv(filename, big_user_structure):
+    file = open(filename, "r")
     #project_id, user_id, user_name, bid_amount, message, rating
     tari = {}
     lines = file.readlines()
     i = 0
     nr = len(lines)
+    number_of_missing_users = 0
     for line in lines:
         i += 1
         try:
             parsed = line.split(',',4)
-            project_id = parsed[0]	    #mi-am luat project_id-ul
-            user_id = parsed[1]	        #mi-am luat user_id-ul
-            user_name = parsed[2]       #mi-am luat user_name-ul
-            bid_amount = parsed[3]      #mi-am luat bid_amount-ul
+            project_id = parsed[0].strip()	    #mi-am luat project_id-ul
+            user_id = parsed[1].strip()	        #mi-am luat user_id-ul
+            user_name = parsed[2].strip()       #mi-am luat user_name-ul
+            bid_amount = parsed[3].strip()      #mi-am luat bid_amount-ul
             parsed = parsed[4:] 
             parsed_string = "".join(parsed)
             parsed = parsed_string.rsplit(',',1)
-            rating = parsed[-1]      #mi-am luat rating-ul
+            rating = parsed[-1].strip()         #mi-am luat rating-ul
             parsed = parsed[:-1]
-            message = "".join(parsed)   #mi-am luat message-ul
+            message = "".join(parsed).strip()   #mi-am luat message-ul
             #to be continued
-            projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
-        except IndexError:
-            print line
+            user_country = get_user_country(user_id, big_user_structure)            
+            if user_country in tari.keys():
+                tari[user_country][0] += 1
+            else:
+                valoare = [1, []]
+                #valoare[0] = 1
+                #valoare[1] = []
+                tari[user_country] = valoare
+            tari[user_country][1] += message
+        except KeyError:
+            #print "ERROR AT",
+            #print line
+            number_of_missing_users += 1
         if i % 10000 == 0:
             print i,
             print "out of",
             print nr
-    return projects
+    return tari, number_of_missing_users
 
 users = foa.load_users_from_csv("data\users_uniq.csv")
-print users["1000800"]
+#print users["1193992"]
+tari, number_of_missing_users = read_bids_from_csv("data\projects_bids_uniq.csv", users)
+print tari["Norway"]
+#print tari[tari.keys()[0]]
+print number_of_missing_users
+#print tari.keys()

@@ -3,6 +3,7 @@ import json
 import re
 import project
 import bids
+import user
 
 class Foa:
     def __init__(self):
@@ -176,7 +177,7 @@ class Foa:
     def load_users_from_csv(self, filename):
         file = open(file_name, "r")
         #id, nume, tara, oras, lista_separata_cu_;_de_skilluri, rating currency
-        useri = {}
+        users = {}
         lines = file.readlines()
         i = 0
         nr = len(lines)
@@ -195,17 +196,15 @@ class Foa:
                 rating = last[1]                #mi-am luat rating-ul
                 currency = last[2]              #mi-am luat currency-ul
                 parsed = parsed[:-1]
-                skills = "".join(parsed).strip()   #skills-urile
-                
-                #to be continued
-                projects[id] = project.Project(id, nume, date, jobs, bid_count, avg_bid)
+                skills = "".join(parsed).strip().split(';')   #skills-urile
+                users[user_id] = user.User(user_id, user_name, user_country, skills, rating, currency)
             except IndexError:
                 print line
-            if i % 10000 == 0:
+            if i % 5000 == 0:
                 print i,
                 print "out of",
                 print nr
-        return projects
+        return users
     
     def writeUsersToFile(self, users, file_name = "users.json"):
         self.users = users

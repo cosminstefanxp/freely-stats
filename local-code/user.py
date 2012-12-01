@@ -21,5 +21,7 @@ class User:
         out["currency"] = self.currency
         return out
     
+    def __str__(self):
+        return self.id + " || " + self.username + " || " + self.country + " || " + self.city + " || " + self.jobs_string + " || " + self.rating + " || " + self.currency
 
          

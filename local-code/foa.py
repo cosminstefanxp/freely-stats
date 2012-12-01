@@ -175,7 +175,7 @@ class Foa:
         print "TODO: "
         
     def load_users_from_csv(self, filename):
-        file = open(file_name, "r")
+        file = open(filename, "r")
         #id, nume, tara, oras, lista_separata_cu_;_de_skilluri, rating currency
         users = {}
         lines = file.readlines()
@@ -197,7 +197,7 @@ class Foa:
                 currency = last[2]              #mi-am luat currency-ul
                 parsed = parsed[:-1]
                 skills = "".join(parsed).strip().split(';')   #skills-urile
-                users[user_id] = user.User(user_id, user_name, user_country, skills, rating, currency)
+                users[user_id] = user.User(user_id, user_name, user_country, user_city, skills, rating, currency)
             except IndexError:
                 print line
             if i % 5000 == 0:

@@ -47,3 +47,4 @@ def read_bids_from_csv(filename):
     return projects
 
 users = foa.load_users_from_csv("data\users_uniq.csv")
+print users["1000800"]

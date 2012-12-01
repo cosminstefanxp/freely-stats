@@ -1,7 +1,7 @@
 
 class User:
-    def __init__(self, id, username, country, city, jobs, rating, currency):
-        self.id = id
+    def __init__(self, uid, username, country, city, jobs, rating, currency):
+        self.id = uid
         self.username = username
         self.country = country
         self.city = city
@@ -23,5 +23,3 @@ class User:
     
     def __str__(self):
         return self.id + " || " + self.username + " || " + self.country + " || " + self.city + " || " + self.jobs_string + " || " + self.rating + " || " + self.currency
-
-         

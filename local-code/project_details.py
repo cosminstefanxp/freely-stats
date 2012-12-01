@@ -1,18 +1,27 @@
 
-class Project_details:
-    def __init__(self, id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username):
-        self.id = int(id)
+class ProjectDetails:
+    def __init__(self, pid, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username):
+        self.id = int(pid)
         self.name = name
         self.buyer_id = int(buyer_id)
         self.buyer_name = buyer_name
         self.buyer_country = buyer_country
         self.state = state
         self.short_descr = short_descr
-
         self.jobs = jobs
         self.accepted_bidder_id = int(accepted_bidder_id)
-      #  self.bidders = bidders  #no idea how to get them
+        #  self.bidders = bidders  #no idea how to get them
         self.accepted_bidder_username = accepted_bidder_username
+          
+    @staticmethod
+    def fromCSV(csv_line):
+        try:
+            pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username = csv_line.split(",", 10)
+        except ValueError:
+            print csv_line
+            return None
+        return ProjectDetails(pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username)
+       
           
     def to_dict(self):
         out = {}
@@ -29,9 +38,9 @@ class Project_details:
         return out
         
     def __str__(self):
-        str = "%d || %s || %d"%(self.id, self.name, self.buyer_id)
-        str = str + self.buyer_name + " || " + self.buyer_country + " || "+ self.state + " || " + self.short_descr
-        return  str.encode('utf-8')
+        out = "%d || %s || %d" % (self.id, self.name, self.buyer_id)
+        out = out + self.buyer_name + " || " + self.buyer_country + " || " + self.state + " || " + self.short_descr
+        return out.encode('utf-8')
     
 
          

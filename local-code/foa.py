@@ -4,6 +4,8 @@ import re
 import project
 import bids
 import user
+from project import Project
+from project_details import ProjectDetails
 
 class Foa:
     def __init__(self):
@@ -175,6 +177,7 @@ class Foa:
         print "TODO: "
         
     def load_users_from_csv(self, filename):
+        print "Loading users from:", filename
         file = open(filename, "r")
         #id, nume, tara, oras, lista_separata_cu_;_de_skilluri, rating currency
         users = {}
@@ -201,11 +204,26 @@ class Foa:
             except IndexError:
                 print line
             if i % 5000 == 0:
-                print i,
-                print "out of",
-                print nr
+                print "Processed",i,"out of",nr
+        print "Loaded users details."
         return users
     
+    def loadProjectDetailsFromCSV(self, filename="project_details.csv"):
+        print "Loading projects details from:", filename
+        fin = open(filename, "r")
+        projects = {}
+        lines = fin.readlines()
+        i = 0
+        nr = len(lines)
+        for line in lines:
+            i += 1
+            p = ProjectDetails.fromCSV(line)
+            projects[p.id] = p
+            if i % 5000 == 0:
+                print "Processed", i, "out of", nr
+        print "Loaded projects details."
+        return projects
+        
     def writeUsersToFile(self, users, file_name = "users.json"):
         self.users = users
         file = open(file_name, "w")

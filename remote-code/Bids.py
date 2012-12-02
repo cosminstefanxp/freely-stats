@@ -21,7 +21,6 @@ class SplitAcceptedBidders:
         self.accepted = []
         accepted_split = behavior.accepted.split(";")
         for accepted_entry in accepted_split:
-            log.info(accepted_entry)
             a_country, a_count = accepted_entry.split(":", 2)
             self.accepted.append((a_country, a_count))
     
@@ -52,7 +51,6 @@ class Bids(webapp.RequestHandler):
         #Get the behaviors from the database
         behaviors = AcceptedBidderBehavior.all()
         behaviors.filter("country IN", countries)
-        log.info(behaviors.fetch(10))
         split_behaviors = []
         for b in behaviors:
             s = SplitAcceptedBidders(b)

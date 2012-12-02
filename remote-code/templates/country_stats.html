@@ -1,5 +1,5 @@
-{% extends "templates/base.html" %} {% set active_page = "bids" %} {%
-block title %}Bids{% endblock %} {% block head %} {{ super() }}
+{% extends "templates/base.html" %} {% set active_page = "country_stats" %} {%
+block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 <script type='text/javascript'>
 	$(document).ready(function() {
@@ -29,7 +29,34 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 
 	function drawCharts(){
 		drawRegionsMap();
+		drawFrequentWords();
 		drawAcceptedBids();
+	}
+
+	function drawFrequentWords(){
+        var data, options, chart;
+        
+        {% for stat in stats %}
+        // Drawing chart for {{stat.country}}
+        data = google.visualization.arrayToDataTable([
+			['Word', 'Word Frequency'],
+			{% for w in stat.frequent_words_expanded%} 
+			['{{w[0]}}', {{w[1]}} ] {%if not loop.last %},{%endif%}
+			{% endfor %}
+		]);
+		
+		options = { 
+				title: 'Most frequent words for {{stat.country}}', 
+				legend: {position: 'left'}, 
+	            hAxis: {slantedText: true,  showTextEvery:1},
+	            height: 250,
+	            chartArea: {left: 80, width: '90%'}
+	            };
+		
+		chart = new google.visualization.ColumnChart(document.getElementById('wordfreq-chart-{{loop.index}}'));
+		chart.draw(data, options);
+		{% endfor %}
+		
 	}
 	
 	function drawAcceptedBids(){
@@ -78,9 +105,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
  };
     </script>
 {% endblock %} {% block content %} {{ super() }}
-<p>This page shows the correlations between the nationality of the
-	buyers (people who submitted a project) and the nationality of the
-	accepted bidder.</p>
+<p>This page shows statistics about the bids submitted by a freelancer of a given nationality.</p>
 <hr />
 <div id='selection-cloud'>
 	{% for country in selectable_countries %}
@@ -100,7 +125,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 	<div class="clear"></div>
 </div>
-<form action="bids.html" id="select-form"  data-filter='country'>
+<form action="country_stats.html" id="select-form"  data-filter='country'>
 	<input type="submit" value="Go!" /> 
 	{% for country in countries %} 
 	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
@@ -109,9 +134,21 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 
 <div class="clear"></div>
 <hr />
-{% for bid in accepted_bids %}
-<!-- Chart for accepted bids for {{bid.country}} -->
-<div class="country-entry" id="accepted-chart-{{loop.index}}"></div>
+{% for stat in stats %}
+<!-- Chart for bids for {{stat.country}} -->
+<div class="country-entry">
+	<div class="stats">
+		<h2 class="title">{{stat.country}}</h2>
+		<ul>
+			<li>Outbound bids: {{stat.bids_count}}</li>
+			<li>Word count: {{stat.word_count}}</li>
+			<li>Unique word count: {{stat.unique_word_count}}</li>
+			<li>Average rating: {{"%.2f"|format(stat.average_rating)}}</li>
+		</ul>
+	</div>
+	<div id="wordfreq-chart-{{loop.index}}" class="chart" style="width: 100%;"></div>
+	<div id="biddings-chart-{{loop.index}}"></div>
+</div>
 {% endfor%}
 <div class="clear"></div>
 

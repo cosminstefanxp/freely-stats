@@ -1,6 +1,6 @@
 body {
-	background-color: #48c; 
-	font-size : 16px;
+	background-color: #48c;
+	font-size: 16px;
 	margin: 0;
 	padding: 0;
 }
@@ -49,7 +49,7 @@ body {
 
 #top #menu .menu-item.active {
 	color: white;
-	background-color: #333;	
+	background-color: #333;
 }
 
 #content {
@@ -109,7 +109,6 @@ body {
 	cursor: pointer;
 	height: 18px;
 	font-weight: bold;
-
 }
 
 .select-entry:HOVER {
@@ -126,11 +125,37 @@ body {
 	border-radius: 4px;
 }
 
-#selected-list .select-entry{
+#selected-list .select-entry {
+	
 }
 
-#selected-list .select-entry:HOVER{
+#selected-list .select-entry:HOVER {
 	background: #d66;
+}
+
+.country-entry {
+	background-color: white;
+	margin: 5px 0;
+	float: left;
+	width: 100%;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+}
+
+.country-entry .stats{
+	float: left;
+	width: 50%;
+	padding: 15px;
+	margin-left: 40px;
+}
+
+.country-entry .stats .title{
+	margin: 0 20px;
+}
+
+.country-entry .chart{
+	float:left;
+	padding: 0 0 20px 0;
 }
 
 .clear {

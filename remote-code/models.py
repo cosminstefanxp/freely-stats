@@ -64,4 +64,28 @@ class AcceptedBidderBehavior(db.Model):
     accepted = db.StringProperty()
     
     def __str__(self):
-        return "%s [%d]: %s" % (self.country, self.bids_count, self.accepted)    
+        return "%s [%d]: %s" % (self.country, self.bids_count, self.accepted)   
+    
+class CountryStats(db.Model):
+    '''
+    Class used to store statistics about a particular country, in the Appengine datastore.
+    ''' 
+    country = db.StringProperty()
+    bids_count = db.IntegerProperty()
+    frequent_words = db.TextProperty()
+    word_count = db.IntegerProperty()
+    unique_word_count = db.IntegerProperty()
+    average_rating = db.FloatProperty() # Can be 0 if no user in that country has received a rating
+
+    def __str__(self):
+        return "%s [%d]: %d/%d (%s), %f - %s" % (self.country, self.bids_count, self.unique_word_count,
+             self.word_count, str(self.lexical_diversity), self.average_rating, self.frequent_words_expanded)   
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        self.lexical_diversity = self.word_count * 1.0 / self.unique_word_count
+        words = self.frequent_words.split(";")
+        self.frequent_words_expanded = []
+        for w in words:
+            word, count = w.split(':', 2)
+            self.frequent_words_expanded.append((word, int(count)))

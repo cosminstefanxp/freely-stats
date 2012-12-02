@@ -5,6 +5,7 @@ import os
 from Jobs import Jobs
 from Trends import Trends
 from Bids import Bids
+from CountriesStats import CountriesStats
  
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -18,5 +19,6 @@ app = webapp2.WSGIApplication([('/', Home),
                                ('/index.html', Home),
                                ('/trends.html', Trends),
                                ('/jobs.html', Jobs),
-                               ('/bids.html', Bids)],
+                               ('/bids.html', Bids),
+                               ('/country_stats.html', CountriesStats)],
                               debug=True)

@@ -69,3 +69,24 @@ transformers:
    - property: patterns
      external_name: patterns
      import_transform: db.Text
+     
+- kind: CountryStats
+  connector: csv
+  property_map:
+   - property: country
+     external_name: country
+   - property: bids_count
+     external_name: bids_count
+     import_transform: int
+   - property: frequent_words
+     external_name: frequent_words
+     import_transform: db.Text
+   - property: word_count
+     external_name: word_count
+     import_transform: int
+   - property: unique_word_count
+     external_name: unique_word_count
+     import_transform: int
+   - property: average_rating
+     external_name: average_rating
+     import_transform: float

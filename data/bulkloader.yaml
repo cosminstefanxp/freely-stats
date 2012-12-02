@@ -60,3 +60,12 @@ transformers:
    - property: accepted
      external_name: accepted
     
+- kind: ReccommendationPatterns
+  connector: csv
+  property_map:
+   - property: __key__
+     external_name: ref
+     export_transform: transform.key_id_or_name_as_string
+   - property: patterns
+     external_name: patterns
+     import_transform: db.Text

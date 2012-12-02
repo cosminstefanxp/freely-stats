@@ -55,6 +55,8 @@ class Compute_Recommendations:
         '''
         return 1.0/(1.0 + v1.hamming_distance(v2)*1.0)
     
+    #def topMatchDist(self, v1, v2):
+        
     def topMatches(self, vectors,person_vector, counts, n=5):
         scores=[(self.sim_distance(person_vector,other),other)
             for other in vectors]
@@ -65,9 +67,9 @@ class Compute_Recommendations:
         for score in scores:
             count = counts[score[1].intValue()]
             jobs = self.get_jobs(score[1])
-            job_scores.append((count, jobs))
+            job_scores.append((score[0], count, jobs))
         job_scores = job_scores[0:n]
-        job_scores.sort( key=lambda x : x[0], reverse=True)
+     #   job_scores.sort( key=lambda x : x[0], reverse=True)
         return job_scores
     
     

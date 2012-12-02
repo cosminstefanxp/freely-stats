@@ -59,16 +59,16 @@ class Recommendations:#(webapp.RequestHandler):
             job_count[int(line[0])] = int(line[1][:-2])
         
         #TODO:
-        my_jobs = ["PHP", "SQL"]
+        my_jobs = ["Objective C"]
         my_vector = self.compute_pattern(my_jobs)
         
         recommendation_computer = Compute_Recommendations()
         
-        #scores = recommendation_computer.topMatches(all_jobs, my_vector, job_count)
-        #print scores
+        scores = recommendation_computer.topMatches(all_jobs, my_vector, job_count)
+        print scores
         
-        recommendation = recommendation_computer.getRecommendations(all_jobs, my_vector)
-        print recommendation
+       # recommendation = recommendation_computer.getRecommendations(all_jobs, my_vector)
+       # print recommendation
         
 rec = Recommendations()
 rec.get()     

@@ -79,7 +79,7 @@ class CountryStats(db.Model):
 
     def __str__(self):
         return "%s [%d]: %d/%d (%s), %f - %s" % (self.country, self.bids_count, self.unique_word_count,
-             self.word_count, str(self.lexical_diversity), self.average_rating, self.frequent_words_expanded)   
+             self.word_count, str(self.lexical_diversity), self.average_rating, str(self.frequent_words_expanded))   
     
     def expand(self):
         ''' Expands the serialized data in the object '''
@@ -89,3 +89,9 @@ class CountryStats(db.Model):
         for w in words:
             word, count = w.split(':', 2)
             self.frequent_words_expanded.append((word, int(count)))
+
+class RecommendationPatterns(db.Model):
+    ''' 
+    Class used to store the patterns used for recommendations, in the Appengine datastore.
+    '''
+    pattern = db.TextProperty()

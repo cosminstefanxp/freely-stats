@@ -54,53 +54,52 @@ class Compute_Recommendations:
         sum_of_squares=sum([pow(v1[item]-v2[item],2)
                           for item in v1 if item in v2])
         '''
-        return 1.0/(1.0 + v1.hamming_distance(v2)*1.0)
+        return 1.0 / (1.0 + v1.hamming_distance(v2) * 1.0)
     
     def topMatchDist(self, v1, v2):
         differences = v1 & ~v2
-        count_differences = differences.hamming_distance(BitVector( size = 200 ))
-        return 1.0/(1.0 + (v1.hamming_distance(v2) )*1.0)
+        count_differences = differences.hamming_distance(BitVector(size=200))
+        return 1.0 / (1.0 + (v1.hamming_distance(v2)) * 1.0)
     
-    def topMatches(self, vectors,person_vector, counts, n=5):
-        scores=[(self.topMatchDist(person_vector,other),other)
+    def topMatches(self, vectors, person_vector, counts, n=5):
+        scores = [(self.topMatchDist(person_vector, other), other)
             for other in vectors]
         # Sort the list so the highest scores appear at the top 
-        scores.sort( )
-        scores.reverse( )
+        scores.sort()
+        scores.reverse()
         job_scores = []
         for score in scores:
             count = counts[score[1].intValue()]
             jobs = self.get_jobs(score[1])
             job_scores.append((score[0], count, jobs))
         job_scores = job_scores[0:n]
-     #   job_scores.sort( key=lambda x : x[0], reverse=True)
+        # scores.sort( key=lambda x : x[0], reverse=True)
         return job_scores
     
     
     # Gets recommendations for a person by using a weighted average
-         # of every other user's rankings
-    def getRecommendations(self, vectors,person):
-        totals={}
-        simSums={}
+    # of every other user's rankings
+    def getRecommendations(self, vectors, person):
+        totals = {}
         for other in vectors:
-            if (other&person).intValue() == 0: 
+            if (other & person).intValue() == 0: 
                 continue
-            sim=self.sim_distance(person,other)
+            sim = self.sim_distance(person, other)
             # ignore scores of zero or lower
-            if sim<0: continue
+            if sim < 0: continue
             differences = other & ~person
             jobs = self.get_jobs(differences)
 
             for job in jobs:
                 # Similarity * Score 
-                totals.setdefault(job,0.0)
-                totals[job]+= sim 
+                totals.setdefault(job, 0.0)
+                totals[job] += sim 
                 # Sum of similarities 
-               # simSums.setdefault(job,0.0) 
+                # simSums.setdefault(job,0.0) 
                 #simSums[job]+=sim
                 # Create the normalized list
-        rankings=[(total,job)  for job,total in totals.items()]
+        rankings = [(total, job)  for job, total in totals.items()]
         # Return the sorted list 
-        rankings.sort( ) 
-        rankings.reverse( ) 
+        rankings.sort() 
+        rankings.reverse() 
         return rankings[:10]

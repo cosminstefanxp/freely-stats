@@ -4,7 +4,7 @@ Created on Dec 2, 2012
 @author: cosmin
 '''
 
-from google.appengine.ext import webapp
+from google.appengine.ext import webapp, db
 import jinja2
 import logging as log
 import os
@@ -20,18 +20,18 @@ class CountriesStats(webapp.RequestHandler):
         The class serving the page for showing statistics about countries.
         '''
         # Init selectable countries
-        selectable_countries = ['India', 'Pakistan', 'Bangladesh', 'United States', 'Vietnam', 'Romania', 'United Kingdom',
-            'Philippines', 'China', 'Sri Lanka', 'Ukraine', 'Canada', 'Egypt', 'Australia', 'Indonesia',
-            'Serbia and Montenegro', 'Bulgaria', 'Nepal', 'Poland', 'Russian Federation', 'Argentina', 'Italy',
-            'Spain', 'Brazil', 'Portugal', 'Germany', 'Turkey', 'Malaysia', 'Kenya', 'United Arab Emirates', 'Florida',
-            'Mexico', 'Nigeria', 'France', 'Greece', 'Morocco', 'Bolivia', 'Moldova', 'Croatia', 'South Africa',
-            'Sweden', 'Iran', 'Bosnia and Herzegovina', 'Macedonia', 'Singapore', 'Belarus', 'Hungary', 'Tunisia',
-            'Algeria', 'Peru', 'Netherlands', 'Hong Kong', 'Saudi Arabia', 'Israel', 'New Zealand', 'Ahmedabad',
-            'Estonia', 'Colombia', 'Denmark', 'Lithuania', 'Thailand', 'Armenia', 'Switzerland', 'Austria', 'Uruguay',
-            'Japan', 'Cyprus', 'Venezuela', 'Czech Republic', 'Kazakhstan', 'Slovak Republic', 'Albania',
-            'Dominican Republic', 'Lebanon', 'Slovenia', 'Chile', 'Mauritius', 'Ireland', 'Belgium', 'Latvia', 'Palestine',
-            'Jamaica', 'Georgia', 'Cameroon', 'Gambia', 'Puerto Rico', 'Qatar', 'Jordan', 'Costa Rica', 'Finland',
-            'El Salvador', 'Panama', 'Ethiopia', 'Norway', 'Afghanistan'];
+        selectable_countries = ['India','Pakistan','Bangladesh','United States','Vietnam','Romania',
+            'United Kingdom','Philippines','China','Sri Lanka','Ukraine','Canada','Egypt','Australia',
+            'Indonesia','Serbia and Montenegro','Bulgaria','Nepal','Poland','Russian Federation',
+            'Argentina','Italy','Spain','Brazil','Portugal','Germany','Turkey','Malaysia','Kenya',
+            'United Arab Emirates','Florida','Mexico','Nigeria','France','Greece','Morocco','Bolivia',
+            'Moldova','Croatia','South Africa','Sweden','Iran','Bosnia and Herzegovina','Macedonia',
+            'Singapore','Belarus','Hungary','Tunisia','Algeria','Peru','Netherlands','Hong Kong',
+            'Saudi Arabia','Israel','New Zealand','Estonia','Colombia','Denmark','Lithuania','Thailand',
+            'Armenia','Switzerland','Austria','Uruguay','Japan','Cyprus','Venezuela','Czech Republic',
+            'Kazakhstan','Slovak Republic','Albania','Dominican Republic','Lebanon','Slovenia','Chile',
+            'Mauritius','Ireland','Belgium','Latvia','Palestine','Jamaica','Georgia','Cameroon','Gambia',
+            'Puerto Rico','Qatar','Jordan','Costa Rica','Finland','El Salvador','Panama','Ethiopia','Norway'];
         selectable_countries.sort();
         
         # Get the selected countries

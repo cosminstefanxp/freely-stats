@@ -41,7 +41,7 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
         data = google.visualization.arrayToDataTable([
 			['Word', 'Word Frequency'],
 			{% for w in stat.frequent_words_expanded%} 
-			['{{w[0]}}', {{w[1]}} ] {%if not loop.last %},{%endif%}
+			["{{w[0]}}", {{w[1]}} ] {%if not loop.last %},{%endif%}
 			{% endfor %}
 		]);
 		

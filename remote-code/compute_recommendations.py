@@ -1,3 +1,4 @@
+from BitVector import *
 class Compute_Recommendations:
     def __init__(self):
         self.top_200 = [ 'PHP', 'Website Design', 'Graphic Design', 'HTML', 'Software Architecture', 'MySQL', 'Software Testing', 'SEO',
@@ -55,10 +56,13 @@ class Compute_Recommendations:
         '''
         return 1.0/(1.0 + v1.hamming_distance(v2)*1.0)
     
-    #def topMatchDist(self, v1, v2):
-        
+    def topMatchDist(self, v1, v2):
+        differences = v1 & ~v2
+        count_differences = differences.hamming_distance(BitVector( size = 200 ))
+        return 1.0/(1.0 + (v1.hamming_distance(v2) )*1.0)
+    
     def topMatches(self, vectors,person_vector, counts, n=5):
-        scores=[(self.sim_distance(person_vector,other),other)
+        scores=[(self.topMatchDist(person_vector,other),other)
             for other in vectors]
         # Sort the list so the highest scores appear at the top 
         scores.sort( )
@@ -88,7 +92,6 @@ class Compute_Recommendations:
             jobs = self.get_jobs(differences)
 
             for job in jobs:
-                print job
                 # Similarity * Score 
                 totals.setdefault(job,0.0)
                 totals[job]+= sim 

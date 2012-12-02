@@ -49,7 +49,7 @@ class Recommendations:#(webapp.RequestHandler):
             'NoSQL Couch &amp; Mongo', 'x86/x64 Assembler', '3D Printing', 'Dreamweaver', 'Landing Pages', 'Typography',
             'Agile Development', 'BigCommerce', 'Boonex Dolphin']
         
-        #TODO: all_jobs_int
+        #TODO: in loc de citire din fis => citire din BD
         all_jobs = []
         job_count = {}
         fin = open("patterns_400.dict", "r")
@@ -58,8 +58,11 @@ class Recommendations:#(webapp.RequestHandler):
             all_jobs.append(BitVector(intVal = int(line[0]), size = 200))
             job_count[int(line[0])] = int(line[1][:-2])
         
-        #TODO:
-        my_jobs = ["Objective C"]
+        #TODO:top 103 vor fi afisate si din ele va putea sa isi aleaga userul
+        self.top_103 = ['PHP', 'Website Design', 'Graphic Design', 'HTML', 'Software Architecture', 'MySQL', 'Software Testing', 'SEO', 'Mobile Phone', 'Website Management', 'Website Testing', 'Web Hosting', 'CSS', 'Wordpress', 'Javascript', 'Link Building', 'iPhone', 'Logo Design', 'Photoshop', 'Social Networking', 'Facebook', 'Amazon Web Services', 'eCommerce', 'Windows Desktop', 'C Programming', 'Android', '.NET', 'AJAX', 'User Interface / IA', 'Java', 'C# Programming', 'Shopping Carts', 'Joomla', 'Linux', 'Script Install', 'Flash', 'jQuery / Prototype', 'XML', 'SQL', 'Web Scraping', 'Video Services', 'C++ Programming', 'Animation', 'Shell Script', 'Magento', 'iPad', 'Objective C', 'ASP', '3D Animation', 'Templates', 'Illustration', 'Icon Design', 'Visual Basic', 'Twitter', '3D Modelling', 'Banner Design', 'Arts &amp; Crafts', 'Database Administration', 'Game Design', 'Blog Design', 'Embedded Software', 'Illustrator', 'System Admin', 'Visual Arts', 'UNIX', '3D Rendering', 'Drupal', 'Mac OS', 'Microsoft', 'Python', 'PSD to HTML', 'Videography', 'Cocoa', 'YouTube', 'Paypal API', 'ActionScript', 'Photoshop Design', 'Audio Services', 'Prestashop', 'Ruby &amp; Ruby on Rails', 'Usability Testing', 'Brochure Design', 'Voice Talent', 'CMS', 'Photo Editing', 'Word', 'Web Security', 'Advertisement Design', 'Music', 'Delphi', 'Microsoft Access', 'Blackberry', 'Corporate Identity', 'Perl', 'Photography', 'Chrome OS', 'Flyer Design', 'Business Cards', 'XSLT', 'Microsoft Exchange', 'OSCommerce', 'T-Shirts', 'Virtuemart']
+        
+        #TODO: in my_jobs vor fi joburile alese de catre users
+        my_jobs = ["AJAX", "Android", "Facebook"]
         my_vector = self.compute_pattern(my_jobs)
         
         recommendation_computer = Compute_Recommendations()
@@ -67,8 +70,8 @@ class Recommendations:#(webapp.RequestHandler):
         scores = recommendation_computer.topMatches(all_jobs, my_vector, job_count)
         print scores
         
-       # recommendation = recommendation_computer.getRecommendations(all_jobs, my_vector)
-       # print recommendation
+        recommendation = recommendation_computer.getRecommendations(all_jobs, my_vector)
+        print recommendation
         
 rec = Recommendations()
 rec.get()     

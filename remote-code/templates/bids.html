@@ -1,0 +1,118 @@
+{% extends "templates/base.html" %} {% set active_page = "bids" %} {%
+block title %}Bids{% endblock %} {% block head %} {{ super() }}
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+	$(document).ready(function() {
+		
+		// Add the click handlers for selecting and deselecting the jobs for the filter
+		$("#selection-cloud .select-entry").click(on_select);
+		$("#selected-list .select-entry").click(on_deselect);
+		
+		// Add the click listener for showing the map
+		$("#show-map").click(function() {
+			if($("#map-chart").is(":visible"))
+			{
+				$("#map-chart").slideUp('normal');
+				$(this).text("Show map...");
+			}
+			else
+			{
+				$("#map-chart").slideDown('normal');
+				$(this).text("Hide map...");
+			}
+		});
+	});
+	
+	
+	google.load('visualization', '1', {'packages': ['geochart', 'corechart']});
+	google.setOnLoadCallback(drawCharts);
+
+	function drawCharts(){
+		drawRegionsMap();
+		drawAcceptedBids();
+	}
+	
+	function drawAcceptedBids(){
+        var data, options, chart;
+        
+        {% for bid in accepted_bids %}
+        // Drawing chart for {{bid.country}}
+        data = google.visualization.arrayToDataTable([
+			['Country', 'Bids Accepted'],
+			{% for c in bid.accepted%} 
+			['{{c[0]}}', {{c[1]}} ] {%if not loop.last %},{%endif%}
+			{% endfor %}
+		]);
+		
+		options = { 
+				title: 'Accepted bidders for {{bid.country}}', 
+				legend: {position: 'left'}, 
+				height: 250};
+		
+		chart = new google.visualization.PieChart(document.getElementById('accepted-chart-{{loop.index}}'));
+		chart.draw(data, options);
+		{% endfor %}
+		
+	}
+	
+	function drawRegionsMap() {
+		// Fill in the data
+		var dataTable = new google.visualization.DataTable();
+		dataTable.addColumn('string', 'Country');
+		dataTable.addColumn('number', 'Selected?');
+		// A column for custom tooltip content
+		dataTable.addColumn({type: 'string', role: 'tooltip'});
+		dataTable.addRows([
+			{% for c in selectable_countries%} 
+			{% if c in countries %} ['{{c}}', 0 , "Selected"] {% else %} ['{{c}}', 100 , ""] {%endif%} {% if not loop.last %},{%endif%}
+			{% endfor %}
+		]);
+
+		// Draw the chart
+		var options = {
+				enableRegionInteractivity: true, height: 500,
+				tooltip: {trigger: 'focus'}, legend: 'none',
+				colors: ['orange', '#005500'] };
+		var chart = new google.visualization.GeoChart(document.getElementById('map-chart'));
+		chart.draw(dataTable, options);
+ };
+    </script>
+{% endblock %} {% block content %} {{ super() }}
+<p>This page shows the correlations between the nationality of the
+	buyers (people who submitted a project) and the nationality of the
+	accepted bidder.</p>
+<hr />
+<div id='selection-cloud'>
+	{% for country in selectable_countries %}
+	{% if not country in countries %}
+	<div class="select-entry">{{country}}</div>
+	{% endif %}
+	{% endfor %}
+</div>
+<div class="clear"></div>
+<p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
+<div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
+<hr/>
+<p class="clear">Selected countries:</p>
+<div id="selected-list">
+	{% for country in countries %}
+	<div class="select-entry">{{country|e}}</div>
+	{% endfor %}
+	<div class="clear"></div>
+</div>
+<form action="bids.html" id="select-form"  data-filter='country'>
+	<input type="submit" value="Go!" /> 
+	{% for country in countries %} 
+	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
+	{% endfor %}
+</form>
+
+<div class="clear"></div>
+<hr />
+{% for bid in accepted_bids %}
+<!-- Chart for accepted bids for {{bid.country}} -->
+<div id="accepted-chart-{{loop.index}}" style="margin: 5px 0; float: left; width: 50%"></div>
+{% endfor%}
+<div class="clear"></div>
+
+{% endblock %}

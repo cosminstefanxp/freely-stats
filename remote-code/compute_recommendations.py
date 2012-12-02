@@ -77,31 +77,25 @@ class Compute_Recommendations:
         totals={}
         simSums={}
         for other in vectors:
-        # don't compare me to myself
-            print "ICII"
             if (other&person).intValue() == 0: 
-                print "CONT"
                 continue
             sim=self.sim_distance(person,other)
-            print sim
             # ignore scores of zero or lower
-            print "BLA"
             if sim<0: continue
-            print "CUCU"
             differences = other & ~person
             jobs = self.get_jobs(differences)
 
             for job in jobs:
                 print job
                 # Similarity * Score 
-                totals.setdefault(job,0)
+                totals.setdefault(job,0.0)
                 totals[job]+= sim 
                 # Sum of similarities 
-                simSums.setdefault(job,0) 
-                simSums[job]+=sim
+               # simSums.setdefault(job,0.0) 
+                #simSums[job]+=sim
                 # Create the normalized list
-        rankings=[(total/simSums[job],job)  for job,total in totals.items()]
+        rankings=[(total,job)  for job,total in totals.items()]
         # Return the sorted list 
         rankings.sort( ) 
         rankings.reverse( ) 
-        return rankings
+        return rankings[:10]

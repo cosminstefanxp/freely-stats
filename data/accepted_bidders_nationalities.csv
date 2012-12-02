@@ -1,20 +1,20 @@
- United States,4744,India:1428;Pakistan:549;Bangladesh:438;United States:390;Romania:171;Vietnam:162;
- Australia,1527,India:479;Pakistan:180;Bangladesh:98;United States:94;Vietnam:70;Romania:67;
- United Kingdom,1497,India:435;Pakistan:163;Bangladesh:98;United Kingdom:85;United States:80;Vietnam:68;
- Canada,742,India:198;Pakistan:88;United States:59;Bangladesh:52;Vietnam:36;Romania:33;
- India,683,India:331;Bangladesh:73;Pakistan:45;United States:32;Vietnam:26;China:13;
- None,328,India:103;Pakistan:54;Romania:18;United States:16;Vietnam:13;Bangladesh:12;
- Germany,293,India:89;Bangladesh:26;Vietnam:24;Pakistan:20;United States:14;Romania:9;
- Pakistan,264,Pakistan:88;India:55;Bangladesh:45;Nepal:7;Romania:7;Egypt:7;
- Bangladesh,251,Bangladesh:121;India:37;Pakistan:28;Faisalabad:14;Nepal:7;Russian Federation:5;
- Netherlands,231,India:59;Pakistan:34;Bangladesh:28;Romania:14;Vietnam:13;United States:12;
- France,172,India:53;Bangladesh:25;Pakistan:18;United States:9;Vietnam:9;Romania:7;
- Italy,170,India:47;Pakistan:22;Bangladesh:17;Italy:10;Vietnam:9;Romania:6;
- Singapore,144,India:47;Pakistan:17;Bangladesh:15;Vietnam:11;United States:8;Romania:7;
- Spain,139,India:43;Pakistan:12;Vietnam:9;United States:8;Bangladesh:6;Romania:5;
- Sweden,129,India:31;Pakistan:18;Bangladesh:8;Vietnam:8;Ukraine:6;United States:6;
- Denmark,127,India:37;Pakistan:15;Romania:11;Bangladesh:8;United States:7;Ukraine:6;
- Israel,125,India:45;Pakistan:13;Bangladesh:11;Romania:7;Ukraine:4;United States:4;
- Norway,114,India:35;Bangladesh:12;Vietnam:11;China:7;Romania:7;Indonesia:4;
- Malaysia,108,India:28;Pakistan:13;Vietnam:10;Bangladesh:9;Romania:6;Sri Lanka:6;
- Hong Kong,104,India:27;Bangladesh:22;Pakistan:7;Romania:7;Sri Lanka:6;Philippines:4;
+country,bids_count,accepted
+United States,4744,India:1428;Pakistan:549;Bangladesh:438;United States:390;Romania:171;Vietnam:162
+Australia,1527,India:479;Pakistan:180;Bangladesh:98;United States:94;Vietnam:70;Romania:67
+United Kingdom,1497,India:435;Pakistan:163;Bangladesh:98;United Kingdom:85;United States:80;Vietnam:68
+Canada,742,India:198;Pakistan:88;United States:59;Bangladesh:52;Vietnam:36;Romania:33
+India,683,India:331;Bangladesh:73;Pakistan:45;United States:32;Vietnam:26;China:13
+Germany,293,India:89;Bangladesh:26;Vietnam:24;Pakistan:20;United States:14;Romania:9
+Pakistan,264,Pakistan:88;India:55;Bangladesh:45;Nepal:7;Romania:7;Egypt:7
+Bangladesh,251,Bangladesh:121;India:37;Pakistan:28;Faisalabad:14;Nepal:7;Russian Federation:5
+Netherlands,231,India:59;Pakistan:34;Bangladesh:28;Romania:14;Vietnam:13;United States:12
+France,172,India:53;Bangladesh:25;Pakistan:18;United States:9;Vietnam:9;Romania:7
+Italy,170,India:47;Pakistan:22;Bangladesh:17;Italy:10;Vietnam:9;Romania:6
+Singapore,144,India:47;Pakistan:17;Bangladesh:15;Vietnam:11;United States:8;Romania:7
+Spain,139,India:43;Pakistan:12;Vietnam:9;United States:8;Bangladesh:6;Romania:5
+Sweden,129,India:31;Pakistan:18;Bangladesh:8;Vietnam:8;Ukraine:6;United States:6
+Denmark,127,India:37;Pakistan:15;Romania:11;Bangladesh:8;United States:7;Ukraine:6
+Israel,125,India:45;Pakistan:13;Bangladesh:11;Romania:7;Ukraine:4;United States:4
+Norway,114,India:35;Bangladesh:12;Vietnam:11;China:7;Romania:7;Indonesia:4
+Malaysia,108,India:28;Pakistan:13;Vietnam:10;Bangladesh:9;Romania:6;Sri Lanka:6
+Hong Kong,104,India:27;Bangladesh:22;Pakistan:7;Romania:7;Sri Lanka:6;Philippines:4

@@ -8,7 +8,7 @@
 <script>
 	$(document).ready(function() {
 		// Draw the job cloud
-		$("#job-cloud .job-entry").tagcloud({
+		$("#selection-cloud .select-entry").tagcloud({
 			size : {
 				start : 0.72,
 				end : 1.08,
@@ -20,18 +20,15 @@
 			}
 		});
 
-		$("#job-cloud .job-entry").click(on_select);
-
-		$("#job-selected-cloud .job-entry").click(on_deselect);
-
+		// Add the click handlers for selecting and deselecting the jobs for the filter
+		$("#selection-cloud .select-entry").click(on_select);
+		$("#selected-list .select-entry").click(on_deselect);
 	});
 	
 	{% if count > 0 %}
 	
 	// Load the Visualization API and the piechart package.
-	google.load('visualization', '1.0', {
-		'packages' : [ 'corechart' ]
-	});
+	google.load('visualization', '1.0', { 'packages' : [ 'corechart' ] });
 
 	// Set a callback to run when the Google Visualization API is loaded.
 	google.setOnLoadCallback(drawChart);
@@ -66,8 +63,7 @@
 		  	"backgroundColor": "transparent"
 		};
 
-		var chart = new google.visualization.LineChart(document
-				.getElementById('chart_div'));
+		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 		chart.draw(data, options);
 	}
 	{% endif%}
@@ -81,26 +77,26 @@
 	2012.</p>
 <hr/>
 <p>For adding a new job on the graphs, please select it in the following list:</p>
-<div id='job-cloud'>
+<div id='selection-cloud'>
 	{% for job in jobs %}
 	{% if not job[0] in trends_names %}
-	<div class="job-entry" rel="{{job[1]}}">{{job[0]|e}}</div>
+	<div class="select-entry" rel="{{job[1]}}">{{job[0]|e}}</div>
 	{% endif %}
 	{% endfor %}
 </div>
 <div class="clear"></div>
 <hr/>
 <p>Selected job types:</p>
-<div id="job-selected-cloud">
+<div id="selected-list">
 	{% for trend in trends_names %}
-	<div class="job-entry">{{trend|e}}</div>
+	<div class="select-entry">{{trend|e}}</div>
 	{% endfor %}
 	<div class="clear"></div>
 </div>
-<form action="trends.html" id="select-jobs-form">
+<form action="trends.html" id="select-form" data-filter='job'>
 	<input type="submit" value="Go!"/>
 	{% for trend in trends_names %}
-	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-trend='{{trend}}'/>
+	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-select='{{trend}}'/>
 	{% endfor %}
 </form>
 

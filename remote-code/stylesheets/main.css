@@ -91,7 +91,7 @@ body {
 	padding: 4px;
 }
 
-#tagcloud .tag-entry:HOVER#48c {
+#tagcloud .tag-entry:HOVER {
 	padding: 3px;
 	border: 1px solid #bbb;
 	-moz-box-shadow: 0px 0px 4px #888;
@@ -99,7 +99,7 @@ body {
 	box-shadow: 0px 0px 4px #888;
 }
 
-.job-entry {
+.select-entry {
 	padding: 4px;
 	margin: 2px;
 	font-size: 0.9em;
@@ -112,7 +112,7 @@ body {
 
 }
 
-.job-entry:HOVER {
+.select-entry:HOVER {
 	background: #6ae;
 	color: #fff;
 	-moz-box-shadow: 0px 3px 4px #888;
@@ -120,16 +120,16 @@ body {
 	box-shadow: 0px 3px 4px #888;
 }
 
-#job-selected-cloud {
+#selected-list {
 	padding: 10px;
 	border: 1px solid #888;
 	border-radius: 4px;
 }
 
-#job-selected-cloud .job-entry{
+#selected-list .select-entry{
 }
 
-#job-selected-cloud .job-entry:HOVER{
+#selected-list .select-entry:HOVER{
 	background: #d66;
 }
 

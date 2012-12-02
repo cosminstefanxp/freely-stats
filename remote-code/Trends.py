@@ -3,7 +3,7 @@ Created on Nov 28, 2012
 
 @author: cosmin
 '''
-from google.appengine.ext import db, webapp
+from google.appengine.ext import webapp
 import logging
 import jinja2
 import os
@@ -15,8 +15,8 @@ jinja_environment = jinja2.Environment(
 
 class SplitTrend:
     def __init__(self, job, values):
-        self.job=job
-        self.values=values
+        self.job = job
+        self.values = values
 
 class Trends(webapp.RequestHandler):
     
@@ -42,14 +42,14 @@ class Trends(webapp.RequestHandler):
         logging.info("Trends for jobs: " + ','.join(jobs))
         
         #Get the trends from the database
-        trends=Trend.all()
-        trends.filter("job IN",jobs)
-        split_trends=[]
+        trends = Trend.all()
+        trends.filter("job IN", jobs)
+        split_trends = []
         for t in trends:
-            nt=SplitTrend(t.job, t.monthly_count.split(';'))
+            nt = SplitTrend(t.job, t.monthly_count.split(';'))
             split_trends.append(nt)
             logging.info(t);
-        trends_names=[t.job for t in trends]
+        trends_names = [t.job for t in trends]
         
         #Generate the page
         template_values = { 'jobs': TopJobs, 'trends': split_trends, 'trends_names': trends_names, 'count': len(split_trends), 'months': months}

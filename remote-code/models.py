@@ -28,7 +28,7 @@ TopJobs = [('PHP', 1855), ('Website Design', 1248), ('Graphic Design', 1132),
     ('YouTube', 39), ('After Effects', 39), ('VoIP', 37), ('Paypal API', 36),
     ('ActionScript', 36), ('Photoshop Design', 36), ('Audio Services', 34), ('Game Consoles', 33),
     ('Cisco', 30), ('Prestashop', 30), ('Ruby & Ruby on Rails', 29), ('Usability Testing', 28),
-    ('Brochure Design', 28), ('Voice Talent', 28), ('CMS', 26), ('Photo Editing', 26), 
+    ('Brochure Design', 28), ('Voice Talent', 28), ('CMS', 26), ('Photo Editing', 26),
     ('Caricature & Cartoons', 25), ('Word', 24), ('Web Security', 23), ('3ds Max', 22),
     ('Advertisement Design', 22), ('Music', 22), ('Delphi', 21), ('Print', 21),
     ('Microsoft Access', 20), ('Blackberry', 20)];
@@ -52,6 +52,16 @@ class Trend(db.Model):
     monthly_count = db.StringProperty(indexed=False);
     
     def __str__(self, *args, **kwargs):
-        return self.job+": "+self.monthly_count;
+        return self.job + ": " + self.monthly_count;
     
-        
+class AcceptedBidderBehavior(db.Model):
+    ''' 
+    Class used to store info about how the accepted bidders are chosen for projects, 
+    based on their nationality, in the Appengine datastore.
+    '''
+    country = db.StringProperty()
+    bids_count = db.IntegerProperty()
+    accepted = db.StringProperty()
+    
+    def __str__(self):
+        return "%s [%d]: %s" % (self.country, self.bids_count, self.accepted)    

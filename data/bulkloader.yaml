@@ -49,3 +49,14 @@ transformers:
    - property: monthly_count
      external_name: monthly_count
 
+- kind: AcceptedBidderBehavior
+  connector: csv
+  property_map:
+   - property: country
+     external_name: country
+   - property: bids_count
+     import_transform: int
+     external_name: bids_count
+   - property: accepted
+     external_name: accepted
+    

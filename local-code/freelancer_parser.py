@@ -50,8 +50,11 @@ class Parser:
         else:
             buyer_id = -1
             buyer_username = ""
+        exch = ""
+        if "currencyDetails" in details:
+            exch = details["currencyDetails"]["exchangerate"]
             
-        return project_details.Project_details(details["id"], details["name"], buyer_id, buyer_username, details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username)
+        return project_details.ProjectDetails(details["id"], details["name"], buyer_id, buyer_username, details["buyer"]["address"]["country"], details["state"], details["short_descr"],details["jobs"], seller_id, seller_username, exch)
         
         
     def parseUsers(self, raw_data):
@@ -129,3 +132,14 @@ class Parser:
                     
             print "\n\n"
         return jobs
+    def parseCurrencies(self, raw_data):
+        raw_json = json.loads(raw_data)
+        currencies = {}
+        raw_currencies = raw_json["json-result"]["currencies"]["currency"]
+        for raw_currency in raw_currencies:
+            _id = int(raw_currency["id"])
+            currencies[_id] = float(raw_currency["exchangerate"])
+        print currencies   
+        return currencies 
+        
+        

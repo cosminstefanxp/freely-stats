@@ -1,6 +1,6 @@
 
 class ProjectDetails:
-    def __init__(self, pid, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username):
+    def __init__(self, pid, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username, exchg):
         self.id = int(pid)
         self.name = name
         self.buyer_id = int(buyer_id)
@@ -12,6 +12,7 @@ class ProjectDetails:
         self.accepted_bidder_id = int(accepted_bidder_id)
         #  self.bidders = bidders  #no idea how to get them
         self.accepted_bidder_username = accepted_bidder_username
+        self.exchg = exchg
           
     @staticmethod
     def fromCSV(csv_line):

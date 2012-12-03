@@ -104,7 +104,7 @@ body {
 	margin: 2px;
 	font-size: 0.9em;
 	float: left;
-	background: #cfefff;
+	background: #99c3ff;
 	border: thin solid #888;
 	cursor: pointer;
 	height: 18px;
@@ -112,7 +112,7 @@ body {
 }
 
 .select-entry:HOVER {
-	background: #6ae;
+	background: #4a7;
 	color: #fff;
 	-moz-box-shadow: 0px 3px 4px #888;
 	-webkit-box-shadow: 0px 3px 4px #888;
@@ -144,13 +144,12 @@ body {
 
 .country-entry .stats{
 	float: left;
-	width: 50%;
-	padding: 15px;
-	margin-left: 40px;
+	width: 40%;
+	padding: 25px 15px 15px 65px;
 }
 
-.country-entry .stats .title{
-	margin: 0 20px;
+.country-entry .title{
+	margin: 25px 65px 5px 65px;
 }
 
 .country-entry .chart{

@@ -30,7 +30,7 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 	function drawCharts(){
 		drawRegionsMap();
 		drawFrequentWords();
-		drawAcceptedBids();
+		drawOutBids();
 	}
 
 	function drawFrequentWords(){
@@ -59,24 +59,24 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 		
 	}
 	
-	function drawAcceptedBids(){
+	function drawOutBids(){
         var data, options, chart;
         
-        {% for bid in accepted_bids %}
+        {% for bid in bids %}
         // Drawing chart for {{bid.country}}
         data = google.visualization.arrayToDataTable([
-			['Country', 'Bids Accepted'],
-			{% for c in bid.accepted%} 
+			['Country', 'Bids'],
+			{% for c in bid.bids_expanded%} 
 			['{{c[0]}}', {{c[1]}} ] {%if not loop.last %},{%endif%}
 			{% endfor %}
 		]);
 		
 		options = { 
-				title: 'Accepted bidders for {{bid.country}}', 
+				title: 'Countries of people submitting projects on which freelancers from \'{{bid.country}}\' bid', 
 				legend: {position: 'left'}, 
 				height: 250};
 		
-		chart = new google.visualization.PieChart(document.getElementById('accepted-chart-{{loop.index}}'));
+		chart = new google.visualization.PieChart(document.getElementById('bids-chart-{{loop.index}}'));
 		chart.draw(data, options);
 		{% endfor %}
 		
@@ -138,7 +138,7 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 <!-- Chart for bids for {{stat.country}} -->
 <div class="country-entry">
 	<div class="stats">
-		<h2 class="title">{{stat.country}}</h2>
+		<h2 class="title" style="margin-left:15px">{{stat.country}}</h2>
 		<ul>
 			<li>Outbound bids: {{stat.bids_count}}</li>
 			<li>Word count: {{stat.word_count}}</li>
@@ -146,8 +146,9 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 			<li>Average rating: {{"%.2f"|format(stat.average_rating)}}</li>
 		</ul>
 	</div>
+	<div id="bids-chart-{{loop.index}}" class="chart" style="width: 50%;"></div>
 	<div id="wordfreq-chart-{{loop.index}}" class="chart" style="width: 100%;"></div>
-	<div id="biddings-chart-{{loop.index}}"></div>
+
 </div>
 {% endfor%}
 <div class="clear"></div>

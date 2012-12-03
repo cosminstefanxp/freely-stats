@@ -64,7 +64,43 @@ class AcceptedBidderBehavior(db.Model):
     accepted = db.StringProperty()
     
     def __str__(self):
-        return "%s [%d]: %s" % (self.country, self.bids_count, self.accepted)   
+        return "%s [%d]: %s" % (self.country, self.bids_count, str(self.accepted_expanded))
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        self.accepted_expanded = []
+        accepted_split = self.accepted.split(";")
+        left = self.bids_count
+        for accepted_entry in accepted_split:
+            a_country, a_count = accepted_entry.split(":", 2)
+            self.accepted_expanded.append((a_country, int(a_count)))
+            left-=int(a_count)
+        if left > 0:
+            self.accepted_expanded.append(('Others', left))    
+
+class OutBidderBehavior(db.Model):
+    '''
+    Class used to store info about the project's countries to which a particular nationality bids most,
+    in the Appengine datastore.
+    '''
+    country = db.StringProperty()
+    bids_count = db.IntegerProperty()
+    bids = db.StringProperty()
+    
+    def __str__(self):
+        return "%s [%d]: %s" % (self.country, self.bids_count, str(self.bids_expanded))
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        split_bids = self.bids.split(";")
+        self.bids_expanded = []
+        left = self.bids_count
+        for bid in split_bids:
+            b_country, b_count = bid.split(":", 2)
+            self.bids_expanded.append((b_country, int(b_count)))
+            left -= int(b_count)
+        if left > 0:
+            self.bids_expanded.append(('Others', left))
     
 class CountryStats(db.Model):
     '''

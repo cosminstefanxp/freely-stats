@@ -1,94 +1,187 @@
 country,bids_count,bids
-India,158017,United States:46119;Australia:17365;United Kingdom:16723;India:11164;Canada:7436;None:4846;Germany:3228;Netherlands:2587;Pakistan:1959;Singapore:1809
-Pakistan,38044,United States:11537;Australia:4183;United Kingdom:4149;Canada:1951;India:1684;None:1100;Pakistan:792;Germany:789;Netherlands:636;Singapore:427
-Bangladesh,25277,United States:7399;United Kingdom:2606;Australia:2317;India:1376;Canada:1132;None:593;Pakistan:589;Germany:586;Bangladesh:554;Netherlands:447
-United States,22347,United States:7625;Australia:2411;United Kingdom:2267;Canada:1210;India:1056;None:658;Germany:382;Netherlands:314;Pakistan:253;Spain:249
-Vietnam,10615,United States:3095;United Kingdom:1208;Australia:1153;Canada:517;India:510;None:270;Germany:255;Netherlands:187;Pakistan:149;Spain:148
-Romania,10009,United States:2924;United Kingdom:1212;Australia:1074;Canada:510;India:466;None:267;Germany:252;Netherlands:216;Pakistan:169;Spain:108
-United Kingdom,8089,United States:2327;United Kingdom:1101;Australia:892;India:460;Canada:439;None:239;Germany:178;Netherlands:107;Spain:104;Pakistan:100
-Philippines,7231,United States:2204;Australia:966;United Kingdom:704;Canada:361;India:254;None:251;Germany:144;Pakistan:111;Singapore:108;Netherlands:98
-China,6594,United States:2077;Australia:801;United Kingdom:598;Canada:317;India:223;None:220;Netherlands:148;Germany:138;United Arab Emirates:90;France:77
-Sri Lanka,4073,United States:1142;Australia:462;United Kingdom:391;India:301;Canada:207;Bangladesh:118;None:112;Germany:73;Pakistan:63;Sri Lanka:56
-Ukraine,4004,United States:1118;United Kingdom:438;Australia:409;Canada:223;India:183;Germany:116;None:89;Netherlands:86;France:66;Spain:62
-Canada,3732,United States:1193;Australia:388;United Kingdom:387;Canada:265;India:242;None:132;Germany:61;Netherlands:41;Spain:39;Pakistan:36
-Egypt,3536,United States:1014;United Kingdom:374;Australia:317;India:262;Canada:150;None:103;Germany:83;Pakistan:70;United Arab Emirates:45;Bangladesh:45
-Australia,2756,United States:782;Australia:575;United Kingdom:256;Canada:132;India:131;None:83;Germany:46;Pakistan:38;Singapore:30;Netherlands:27
-Indonesia,2584,United States:742;Australia:304;United Kingdom:247;India:167;Canada:143;None:57;Pakistan:50;Netherlands:50;Germany:48;France:35
-Serbia and Montenegro,2529,United States:738;Australia:306;United Kingdom:280;India:123;Canada:121;Germany:74;None:69;Netherlands:50;Pakistan:38;Sweden:34
-Bulgaria,2371,United States:615;United Kingdom:291;Australia:240;India:149;Canada:123;Germany:72;None:63;Netherlands:35;Pakistan:34;France:34
-Nepal,2367,United States:735;Australia:242;United Kingdom:225;Canada:128;India:110;None:62;Germany:52;Pakistan:47;Bangladesh:46;Netherlands:31
-Poland,1614,United States:428;United Kingdom:195;Australia:189;India:100;Canada:77;Germany:54;None:50;Netherlands:30;Pakistan:24;Sweden:24
-Russian Federation,1448,United States:407;United Kingdom:141;Australia:118;Canada:90;India:76;None:53;Germany:47;Netherlands:22;Spain:20;Pakistan:19
-Argentina,1435,United States:403;Australia:170;United Kingdom:125;Canada:83;India:64;None:43;Germany:29;Spain:28;Pakistan:27;Netherlands:20
-Italy,1352,United States:360;United Kingdom:148;Australia:139;India:88;Canada:67;Italy:48;None:40;Germany:34;Netherlands:34;Spain:20
-Spain,1205,United States:306;United Kingdom:114;Australia:104;India:70;Canada:67;None:47;Spain:30;Germany:28;Pakistan:21;Brazil:17
-Brazil,1205,United States:337;United Kingdom:126;Australia:113;India:107;Canada:57;None:44;Germany:31;Pakistan:19;Netherlands:19;Singapore:16
-Portugal,1092,United States:320;Australia:129;United Kingdom:126;India:76;Canada:57;None:35;Germany:18;Spain:16;Brazil:15;Netherlands:14
-Germany,994,United States:306;United Kingdom:117;Australia:86;Germany:42;Canada:39;India:32;None:31;France:17;Spain:15;United Arab Emirates:14
-Turkey,960,United States:266;United Kingdom:122;Australia:86;India:54;Canada:41;None:24;Germany:23;Philippines:19;Pakistan:17;Sweden:17
-Malaysia,933,United States:249;Australia:101;United Kingdom:101;India:77;Canada:38;None:31;Pakistan:29;Bangladesh:24;Netherlands:15;Sri Lanka:15
-Kenya,880,United States:233;United Kingdom:96;India:87;Australia:64;Canada:50;None:32;Bangladesh:22;Pakistan:21;Germany:19;Sri Lanka:15
-United Arab Emirates,847,United States:224;Australia:106;United Kingdom:88;India:60;Canada:48;None:24;Germany:19;Bangladesh:17;United Arab Emirates:13;Netherlands:12
-Florida,846,United States:287;Australia:115;United Kingdom:80;India:49;Canada:41;None:23;Pakistan:18;Germany:17;United Arab Emirates:14;Sweden:8
-Mexico,817,United States:244;Australia:85;United Kingdom:73;Canada:38;India:36;None:27;Mexico:18;Spain:16;Pakistan:15;United Arab Emirates:13
-Nigeria,809,United States:209;United Kingdom:94;Australia:60;India:56;Canada:41;None:31;Pakistan:21;Germany:16;Bangladesh:15;Spain:10
-France,778,United States:226;Australia:75;United Kingdom:74;India:55;Canada:45;None:25;France:18;Pakistan:16;Netherlands:14;Germany:13
-Greece,770,United States:199;United Kingdom:90;Australia:69;India:50;Canada:43;None:23;Germany:18;Netherlands:17;France:12;Singapore:11
-Morocco,626,United States:211;United Kingdom:55;Canada:47;Australia:44;India:31;Germany:20;None:19;Pakistan:8;Bangladesh:8;Netherlands:8
-Bolivia,611,United States:197;Australia:96;United Kingdom:60;Canada:32;None:28;India:20;Germany:15;Pakistan:11;Singapore:10;Spain:6
-Moldova,600,United States:179;United Kingdom:80;Australia:54;Canada:31;India:26;None:18;Germany:15;Spain:11;Sweden:9;Pakistan:9
-Croatia,596,United States:162;United Kingdom:68;Australia:60;India:31;Canada:26;None:15;Germany:14;Denmark:13;Bangladesh:12;Pakistan:11
-South Africa,570,United States:140;United Kingdom:73;Australia:53;India:35;Canada:27;None:21;Pakistan:19;Germany:15;Bangladesh:11;Sweden:9
-Sweden,560,United States:163;United Kingdom:67;Australia:60;Canada:26;India:23;None:16;Germany:13;Spain:8;Denmark:8;Sweden:8
-Iran,551,United States:141;United Kingdom:72;Australia:44;India:44;Canada:22;Germany:19;None:14;Switzerland:10;Singapore:9;Netherlands:9
-Bosnia and Herzegovina,519,United States:145;United Kingdom:56;Australia:47;Canada:30;India:29;Germany:19;None:16;France:10;Netherlands:10;Sweden:8
-Macedonia,515,United States:142;United Kingdom:53;Australia:52;Canada:33;India:33;None:18;Germany:13;Pakistan:13;Netherlands:11;France:9
-Singapore,488,United States:124;Australia:56;United Kingdom:45;India:37;None:24;Canada:22;Singapore:10;Germany:10;New Zealand (Aotearoa):9;Netherlands:9
-Belarus,453,United States:135;United Kingdom:57;Australia:38;Canada:22;India:19;Russian Federation:13;Germany:11;None:10;Spain:7;Denmark:7
-Hungary,447,United States:144;United Kingdom:45;Australia:38;India:33;Canada:23;Germany:14;None:12;Netherlands:11;Pakistan:8;Italy:6
-Tunisia,429,United States:103;Australia:50;United Kingdom:48;India:34;Canada:20;Germany:10;None:10;France:9;Pakistan:8;Italy:7
-Algeria,414,United States:118;United Kingdom:47;Australia:43;India:29;Canada:16;None:9;Pakistan:9;United Arab Emirates:9;Germany:8;Netherlands:7
-Peru,406,United States:131;United Kingdom:46;Australia:31;Canada:25;India:25;None:12;Spain:7;Pakistan:7;Brazil:6;Germany:6
-Netherlands,388,United States:123;United Kingdom:50;Australia:38;India:19;Canada:14;Germany:13;Netherlands:13;None:11;Israel:7;Italy:6
-Hong Kong,375,United States:94;Australia:47;United Kingdom:33;India:24;Canada:23;France:10;Germany:8;Hong Kong:7;None:7;Bangladesh:6
+
+India,158017,United States:46119;Australia:17365;United Kingdom:16723;India:11164;Canada:7436;Germany:3228;Netherlands:2587;Pakistan:1959;Singapore:1809
+
+Pakistan,38044,United States:11537;Australia:4183;United Kingdom:4149;Canada:1951;India:1684;Pakistan:792;Germany:789;Netherlands:636;Singapore:427
+
+Bangladesh,25277,United States:7399;United Kingdom:2606;Australia:2317;India:1376;Canada:1132;Pakistan:589;Germany:586;Bangladesh:554;Netherlands:447
+
+United States,22347,United States:7625;Australia:2411;United Kingdom:2267;Canada:1210;India:1056;Germany:382;Netherlands:314;Pakistan:253;Spain:249
+
+Vietnam,10615,United States:3095;United Kingdom:1208;Australia:1153;Canada:517;India:510;Germany:255;Netherlands:187;Pakistan:149;Spain:148
+
+Romania,10009,United States:2924;United Kingdom:1212;Australia:1074;Canada:510;India:466;Germany:252;Netherlands:216;Pakistan:169;Spain:108
+
+United Kingdom,8089,United States:2327;United Kingdom:1101;Australia:892;India:460;Canada:439;Germany:178;Netherlands:107;Spain:104;Pakistan:100
+
+Philippines,7231,United States:2204;Australia:966;United Kingdom:704;Canada:361;India:254;Germany:144;Pakistan:111;Singapore:108;Netherlands:98
+
+China,6594,United States:2077;Australia:801;United Kingdom:598;Canada:317;India:223;Netherlands:148;Germany:138;United Arab Emirates:90;France:77
+
+Sri Lanka,4073,United States:1142;Australia:462;United Kingdom:391;India:301;Canada:207;Bangladesh:118;Germany:73;Pakistan:63;Sri Lanka:56
+
+Ukraine,4004,United States:1118;United Kingdom:438;Australia:409;Canada:223;India:183;Germany:116;Netherlands:86;France:66;Spain:62
+
+Canada,3732,United States:1193;Australia:388;United Kingdom:387;Canada:265;India:242;Germany:61;Netherlands:41;Spain:39;Pakistan:36
+
+Egypt,3536,United States:1014;United Kingdom:374;Australia:317;India:262;Canada:150;Germany:83;Pakistan:70;United Arab Emirates:45;Bangladesh:45
+
+Australia,2756,United States:782;Australia:575;United Kingdom:256;Canada:132;India:131;Germany:46;Pakistan:38;Singapore:30;Netherlands:27
+
+Indonesia,2584,United States:742;Australia:304;United Kingdom:247;India:167;Canada:143;Pakistan:50;Netherlands:50;Germany:48;France:35
+
+Serbia and Montenegro,2529,United States:738;Australia:306;United Kingdom:280;India:123;Canada:121;Germany:74;Netherlands:50;Pakistan:38;Sweden:34
+
+Bulgaria,2371,United States:615;United Kingdom:291;Australia:240;India:149;Canada:123;Germany:72;Netherlands:35;Pakistan:34;France:34
+
+Nepal,2367,United States:735;Australia:242;United Kingdom:225;Canada:128;India:110;Germany:52;Pakistan:47;Bangladesh:46;Netherlands:31
+
+Poland,1614,United States:428;United Kingdom:195;Australia:189;India:100;Canada:77;Germany:54;Netherlands:30;Pakistan:24;Sweden:24
+
+Russian Federation,1448,United States:407;United Kingdom:141;Australia:118;Canada:90;India:76;Germany:47;Netherlands:22;Spain:20;Pakistan:19
+
+Argentina,1435,United States:403;Australia:170;United Kingdom:125;Canada:83;India:64;Germany:29;Spain:28;Pakistan:27;Netherlands:20
+
+Italy,1352,United States:360;United Kingdom:148;Australia:139;India:88;Canada:67;Italy:48;Germany:34;Netherlands:34;Spain:20
+
+Spain,1205,United States:306;United Kingdom:114;Australia:104;India:70;Canada:67;Spain:30;Germany:28;Pakistan:21;Brazil:17
+
+Brazil,1205,United States:337;United Kingdom:126;Australia:113;India:107;Canada:57;Germany:31;Pakistan:19;Netherlands:19;Singapore:16
+
+Portugal,1092,United States:320;Australia:129;United Kingdom:126;India:76;Canada:57;Germany:18;Spain:16;Brazil:15;Netherlands:14
+
+Germany,994,United States:306;United Kingdom:117;Australia:86;Germany:42;Canada:39;India:32;France:17;Spain:15;United Arab Emirates:14
+
+Turkey,960,United States:266;United Kingdom:122;Australia:86;India:54;Canada:41;Germany:23;Philippines:19;Pakistan:17;Sweden:17
+
+Malaysia,933,United States:249;Australia:101;United Kingdom:101;India:77;Canada:38;Pakistan:29;Bangladesh:24;Netherlands:15;Sri Lanka:15
+
+Kenya,880,United States:233;United Kingdom:96;India:87;Australia:64;Canada:50;Bangladesh:22;Pakistan:21;Germany:19;Sri Lanka:15
+
+United Arab Emirates,847,United States:224;Australia:106;United Kingdom:88;India:60;Canada:48;Germany:19;Bangladesh:17;United Arab Emirates:13;Netherlands:12
+
+Florida,846,United States:287;Australia:115;United Kingdom:80;India:49;Canada:41;Pakistan:18;Germany:17;United Arab Emirates:14;Sweden:8
+
+Mexico,817,United States:244;Australia:85;United Kingdom:73;Canada:38;India:36;Mexico:18;Spain:16;Pakistan:15;United Arab Emirates:13
+
+Nigeria,809,United States:209;United Kingdom:94;Australia:60;India:56;Canada:41;Pakistan:21;Germany:16;Bangladesh:15;Spain:10
+
+France,778,United States:226;Australia:75;United Kingdom:74;India:55;Canada:45;France:18;Pakistan:16;Netherlands:14;Germany:13
+
+Greece,770,United States:199;United Kingdom:90;Australia:69;India:50;Canada:43;Germany:18;Netherlands:17;France:12;Singapore:11
+
+Morocco,626,United States:211;United Kingdom:55;Canada:47;Australia:44;India:31;Germany:20;Pakistan:8;Bangladesh:8;Netherlands:8
+
+Bolivia,611,United States:197;Australia:96;United Kingdom:60;Canada:32;India:20;Germany:15;Pakistan:11;Singapore:10;Spain:6
+
+Moldova,600,United States:179;United Kingdom:80;Australia:54;Canada:31;India:26;Germany:15;Spain:11;Sweden:9;Pakistan:9
+
+Croatia,596,United States:162;United Kingdom:68;Australia:60;India:31;Canada:26;Germany:14;Denmark:13;Bangladesh:12;Pakistan:11
+
+South Africa,570,United States:140;United Kingdom:73;Australia:53;India:35;Canada:27;Pakistan:19;Germany:15;Bangladesh:11;Sweden:9
+
+Sweden,560,United States:163;United Kingdom:67;Australia:60;Canada:26;India:23;Germany:13;Spain:8;Denmark:8;Sweden:8
+
+Iran,551,United States:141;United Kingdom:72;Australia:44;India:44;Canada:22;Germany:19;Switzerland:10;Singapore:9;Netherlands:9
+
+Bosnia and Herzegovina,519,United States:145;United Kingdom:56;Australia:47;Canada:30;India:29;Germany:19;France:10;Netherlands:10;Sweden:8
+
+Macedonia,515,United States:142;United Kingdom:53;Australia:52;Canada:33;India:33;Germany:13;Pakistan:13;Netherlands:11;France:9
+
+Singapore,488,United States:124;Australia:56;United Kingdom:45;India:37;Canada:22;Singapore:10;Germany:10;New Zealand:9;Netherlands:9
+
+Belarus,453,United States:135;United Kingdom:57;Australia:38;Canada:22;India:19;Russian Federation:13;Germany:11;Spain:7;Denmark:7
+
+Hungary,447,United States:144;United Kingdom:45;Australia:38;India:33;Canada:23;Germany:14;Netherlands:11;Pakistan:8;Italy:6
+
+Tunisia,429,United States:103;Australia:50;United Kingdom:48;India:34;Canada:20;Germany:10;France:9;Pakistan:8;Italy:7
+
+Algeria,414,United States:118;United Kingdom:47;Australia:43;India:29;Canada:16;Pakistan:9;United Arab Emirates:9;Germany:8;Netherlands:7
+
+Peru,406,United States:131;United Kingdom:46;Australia:31;Canada:25;India:25;Spain:7;Pakistan:7;Brazil:6;Germany:6
+
+Netherlands,388,United States:123;United Kingdom:50;Australia:38;India:19;Canada:14;Germany:13;Netherlands:13;Israel:7;Italy:6
+
+Hong Kong,375,United States:94;Australia:47;United Kingdom:33;India:24;Canada:23;France:10;Germany:8;Hong Kong:7;Bangladesh:6
+
 Saudi Arabia,366,United States:106;Australia:29;India:24;United Kingdom:21;Canada:15;Spain:11;Pakistan:10;Brazil:9;Netherlands:9;Singapore:7
-Israel,350,United States:98;United Kingdom:40;India:25;Australia:23;Canada:17;Germany:9;Israel:8;None:8;Netherlands:7;Pakistan:7
-New Zealand,332,United States:102;Australia:52;United Kingdom:29;India:21;Canada:13;None:13;New Zealand (Aotearoa):8;Germany:6;Bangladesh:5;Norway:5
-Estonia,328,United States:72;Australia:54;United Kingdom:46;India:17;Canada:13;Germany:8;Singapore:7;Sweden:7;None:6;Netherlands:6
-Colombia,328,United States:94;Australia:34;United Kingdom:25;India:21;Canada:12;None:11;Pakistan:8;Germany:7;Bangladesh:6;Turkey:5
-Denmark,323,United States:90;Australia:52;United Kingdom:38;Canada:14;None:11;India:11;Pakistan:6;Singapore:5;Denmark:5;Bangladesh:4
-Lithuania,319,United States:92;United Kingdom:37;Australia:29;India:21;Canada:12;None:10;Israel:7;France:6;Germany:6;Ireland:5
-Thailand,318,United States:84;United Kingdom:38;Australia:31;Canada:16;India:14;None:11;Singapore:10;Germany:9;United Arab Emirates:7;Netherlands:6
-Armenia,313,United States:85;Australia:30;United Kingdom:29;India:22;Canada:17;Pakistan:9;None:8;Hong Kong:5;Israel:5;Germany:5
-Switzerland,310,United States:94;United Kingdom:38;Australia:31;Canada:14;India:13;Netherlands:8;Germany:7;None:7;Singapore:6;Hong Kong:5
-Austria,307,United States:103;Australia:50;United Kingdom:39;Canada:15;Germany:9;Netherlands:8;Brazil:7;None:7;Spain:5;India:5
-Uruguay,294,United States:86;United Kingdom:32;Australia:31;India:18;Canada:14;Spain:8;France:7;None:7;Netherlands:6;Pakistan:6
-Japan,268,United States:72;Australia:46;United Kingdom:23;Canada:20;India:10;France:6;Italy:5;None:5;Malaysia:4;Japan:4
-Cyprus,258,United States:85;Australia:28;United Kingdom:24;India:17;Canada:7;Germany:7;Singapore:6;None:6;Switzerland:5;Brazil:4
-Venezuela,250,United States:80;Australia:25;United Kingdom:20;Canada:16;India:14;Brazil:6;None:6;Germany:5;Spain:5;Pakistan:4
-Czech Republic,248,United States:67;United Kingdom:28;Australia:24;India:17;Canada:8;Germany:7;Pakistan:6;France:5;Netherlands:5;None:4
-Kazakhstan,242,United States:69;Australia:39;United Kingdom:29;Canada:18;None:8;Singapore:5;Italy:4;Bangladesh:4;Netherlands:4;India:4
+
+Israel,350,United States:98;United Kingdom:40;India:25;Australia:23;Canada:17;Germany:9;Israel:8;Netherlands:7;Pakistan:7
+
+New Zealand,332,United States:102;Australia:52;United Kingdom:29;India:21;Canada:13;New Zealand:8;Germany:6;Bangladesh:5;Norway:5
+
+Estonia,328,United States:72;Australia:54;United Kingdom:46;India:17;Canada:13;Germany:8;Singapore:7;Sweden:7;Netherlands:6
+
+Colombia,328,United States:94;Australia:34;United Kingdom:25;India:21;Canada:12;Pakistan:8;Germany:7;Bangladesh:6;Turkey:5
+
+Denmark,323,United States:90;Australia:52;United Kingdom:38;Canada:14;India:11;Pakistan:6;Singapore:5;Denmark:5;Bangladesh:4
+
+Lithuania,319,United States:92;United Kingdom:37;Australia:29;India:21;Canada:12;Israel:7;France:6;Germany:6;Ireland:5
+
+Thailand,318,United States:84;United Kingdom:38;Australia:31;Canada:16;India:14;Singapore:10;Germany:9;United Arab Emirates:7;Netherlands:6
+
+Armenia,313,United States:85;Australia:30;United Kingdom:29;India:22;Canada:17;Pakistan:9;Hong Kong:5;Israel:5;Germany:5
+
+Switzerland,310,United States:94;United Kingdom:38;Australia:31;Canada:14;India:13;Netherlands:8;Germany:7;Singapore:6;Hong Kong:5
+
+Austria,307,United States:103;Australia:50;United Kingdom:39;Canada:15;Germany:9;Netherlands:8;Brazil:7;Spain:5;India:5
+
+Uruguay,294,United States:86;United Kingdom:32;Australia:31;India:18;Canada:14;Spain:8;France:7;Netherlands:6;Pakistan:6
+
+Japan,268,United States:72;Australia:46;United Kingdom:23;Canada:20;India:10;France:6;Italy:5;Malaysia:4;Japan:4
+
+Cyprus,258,United States:85;Australia:28;United Kingdom:24;India:17;Canada:7;Germany:7;Singapore:6;Switzerland:5;Brazil:4
+
+Venezuela,250,United States:80;Australia:25;United Kingdom:20;Canada:16;India:14;Brazil:6;Germany:5;Spain:5;Pakistan:4
+
+Czech Republic,248,United States:67;United Kingdom:28;Australia:24;India:17;Canada:8;Germany:7;Pakistan:6;France:5;Netherlands:5
+
+Kazakhstan,242,United States:69;Australia:39;United Kingdom:29;Canada:18;Singapore:5;Italy:4;Bangladesh:4;Netherlands:4;India:4
+
 Slovak Republic,220,United States:68;United Kingdom:23;India:18;Canada:13;Australia:12;Germany:8;Netherlands:6;Sweden:5;Pakistan:5;Israel:4
-Albania,212,United States:56;Australia:25;United Kingdom:25;Canada:14;None:13;India:13;Spain:5;Netherlands:4;Brazil:3;Israel:3
-Dominican Republic,211,United States:72;Australia:16;United Kingdom:15;India:13;Canada:10;None:10;Pakistan:5;France:4;China:4;Germany:4
+
+Albania,212,United States:56;Australia:25;United Kingdom:25;Canada:14;India:13;Spain:5;Netherlands:4;Brazil:3;Israel:3
+
+Dominican Republic,211,United States:72;Australia:16;United Kingdom:15;India:13;Canada:10;Pakistan:5;France:4;China:4;Germany:4
+
 Lebanon,206,United States:58;United Kingdom:28;Australia:15;India:14;Canada:6;Germany:6;France:5;Netherlands:5;Brazil:4;Belgium:4
-Slovenia,204,United States:58;Australia:21;United Kingdom:21;Canada:11;India:11;None:7;Bangladesh:4;Israel:4;Norway:4;Italy:3
-Chile,199,United States:44;Australia:26;United Kingdom:16;India:13;Chile:11;Canada:10;None:8;Pakistan:6;Spain:5;Brazil:5
-Mauritius,190,United States:56;Australia:28;United Kingdom:23;India:16;Germany:9;Canada:8;None:6;Netherlands:4;Israel:3;Singapore:3
-Ireland,185,United States:49;United Kingdom:23;Australia:15;India:15;Canada:6;Netherlands:6;None:5;Sri Lanka:4;Bangladesh:3;France:3
-Belgium,183,United States:41;United Kingdom:19;Australia:13;India:12;Canada:11;Germany:11;None:6;France:5;Netherlands:5;Venezuela:3
-Latvia,177,United States:47;Australia:22;United Kingdom:19;India:11;Germany:6;None:5;Canada:4;France:4;Netherlands:4;Norway:4
-Palestine,176,United States:51;United Kingdom:22;Australia:14;India:11;Canada:8;Germany:8;Pakistan:7;None:5;Netherlands:5;Egypt:3
-Jamaica,173,United States:46;Australia:25;India:14;United Kingdom:14;Canada:12;Netherlands:8;Germany:6;Bangladesh:5;None:5;Singapore:2
-Georgia,170,United States:45;Australia:18;United Kingdom:12;India:10;France:6;Canada:5;Germany:5;None:5;Pakistan:5;Netherlands:4
-Cameroon,136,United States:45;United Kingdom:20;Australia:11;India:10;None:5;Canada:4;Germany:4;Spain:4;Greece:3;Italy:2
-Gambia,134,United States:38;Australia:18;United Kingdom:15;None:6;Germany:5;India:4;Greece:4;Canada:3;France:3;New Zealand (Aotearoa):3
-Puerto Rico,129,United States:41;United Kingdom:19;Australia:8;India:8;Canada:7;None:6;Germany:3;Panama:2;Nigeria:2;Netherlands:2
-Qatar,121,United States:32;India:12;United Kingdom:11;Australia:10;Canada:7;None:5;Pakistan:4;Bangladesh:3;Germany:3;Sri Lanka:3
-Jordan,108,United States:26;United Kingdom:14;India:13;Australia:11;None:4;Canada:3;Bangladesh:2;France:2;Norway:2;Singapore:2
-Costa Rica,106,United States:37;Australia:13;United Kingdom:12;India:6;Spain:5;None:5;Canada:3;Germany:3;Netherlands:2;New Zealand (Aotearoa):2
-Finland,102,United States:25;Australia:12;United Kingdom:11;India:7;Netherlands:5;Canada:4;France:3;None:3;Switzerland:3;Saudi Arabia:2
+
+Slovenia,204,United States:58;Australia:21;United Kingdom:21;Canada:11;India:11;Bangladesh:4;Israel:4;Norway:4;Italy:3
+
+Chile,199,United States:44;Australia:26;United Kingdom:16;India:13;Chile:11;Canada:10;Pakistan:6;Spain:5;Brazil:5
+
+Mauritius,190,United States:56;Australia:28;United Kingdom:23;India:16;Germany:9;Canada:8;Netherlands:4;Israel:3;Singapore:3
+
+Ireland,185,United States:49;United Kingdom:23;Australia:15;India:15;Canada:6;Netherlands:6;Sri Lanka:4;Bangladesh:3;France:3
+
+Belgium,183,United States:41;United Kingdom:19;Australia:13;India:12;Canada:11;Germany:11;France:5;Netherlands:5;Venezuela:3
+
+Latvia,177,United States:47;Australia:22;United Kingdom:19;India:11;Germany:6;Canada:4;France:4;Netherlands:4;Norway:4
+
+Palestine,176,United States:51;United Kingdom:22;Australia:14;India:11;Canada:8;Germany:8;Pakistan:7;Netherlands:5;Egypt:3
+
+Jamaica,173,United States:46;Australia:25;India:14;United Kingdom:14;Canada:12;Netherlands:8;Germany:6;Bangladesh:5;Singapore:2
+
+Georgia,170,United States:45;Australia:18;United Kingdom:12;India:10;France:6;Canada:5;Germany:5;Pakistan:5;Netherlands:4
+
+Cameroon,136,United States:45;United Kingdom:20;Australia:11;India:10;Canada:4;Germany:4;Spain:4;Greece:3;Italy:2
+
+Gambia,134,United States:38;Australia:18;United Kingdom:15;Germany:5;India:4;Greece:4;Canada:3;France:3;New Zealand:3
+
+Puerto Rico,129,United States:41;United Kingdom:19;Australia:8;India:8;Canada:7;Germany:3;Panama:2;Nigeria:2;Netherlands:2
+
+Qatar,121,United States:32;India:12;United Kingdom:11;Australia:10;Canada:7;Pakistan:4;Bangladesh:3;Germany:3;Sri Lanka:3
+
+Jordan,108,United States:26;United Kingdom:14;India:13;Australia:11;Canada:3;Bangladesh:2;France:2;Norway:2;Singapore:2
+
+Costa Rica,106,United States:37;Australia:13;United Kingdom:12;India:6;Spain:5;Canada:3;Germany:3;Netherlands:2;New Zealand:2
+
+Finland,102,United States:25;Australia:12;United Kingdom:11;India:7;Netherlands:5;Canada:4;France:3;Switzerland:3;Saudi Arabia:2
+
 El Salvador,102,United States:30;United Kingdom:10;Canada:7;India:6;Australia:5;Germany:4;Spain:4;Florida:3;United Arab Emirates:3;Bangladesh:2
-Panama,91,United States:24;Australia:11;Canada:8;United Kingdom:8;India:5;Germany:3;Spain:3;None:3;Italy:2;Bangladesh:2
+
+Panama,91,United States:24;Australia:11;Canada:8;United Kingdom:8;India:5;Germany:3;Spain:3;Italy:2;Bangladesh:2
+
 Ethiopia,63,United States:17;India:7;Canada:5;Brazil:3;Pakistan:3;United Kingdom:3;Australia:2;Germany:2;Sao Tome and Principe:1;Bangladesh:1
-Norway,55,United States:13;Australia:7;United Kingdom:6;South Africa:3;Canada:2;Norway:2;Spain:2;None:2;Egypt:2;Malaysia:2
+
+Norway,55,United States:13;Australia:7;United Kingdom:6;South Africa:3;Canada:2;Norway:2;Spain:2;Egypt:2;Malaysia:2

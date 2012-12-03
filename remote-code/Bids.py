@@ -7,25 +7,12 @@ from google.appengine.ext import webapp
 import logging as log
 import jinja2
 import os
-from models import AcceptedBidderBehavior
+from models import AcceptedBidderBehavior, OutBidderBehavior
 
 
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
-
-class SplitAcceptedBidders:
-    def __init__(self, behavior):
-        self.country = behavior.country
-        self.bids_count = behavior.bids_count
-        self.accepted = []
-        accepted_split = behavior.accepted.split(";")
-        for accepted_entry in accepted_split:
-            a_country, a_count = accepted_entry.split(":", 2)
-            self.accepted.append((a_country, a_count))
-    
-    def __str__(self):
-        return "%s [%d]: %s" % (self.country, self.bids_count, self.accepted)  
 
 class Bids(webapp.RequestHandler):
     
@@ -51,15 +38,26 @@ class Bids(webapp.RequestHandler):
         #Get the behaviors from the database
         behaviors = AcceptedBidderBehavior.all()
         behaviors.filter("country IN", countries)
-        split_behaviors = []
+        expanded_behaviors = []
         for b in behaviors:
-            s = SplitAcceptedBidders(b)
-            split_behaviors.append(s)
-            log.info(s);
-        countries = [c.country for c in split_behaviors]
+            b.expand()
+            expanded_behaviors.append(b)
+            log.info(b);
+        expanded_behaviors.sort(key=lambda x: x.country)
+        countries = [c.country for c in expanded_behaviors]
+        
+        #Get the outbound bids from the database
+        bids = OutBidderBehavior.all()
+        bids.filter("country IN", countries)
+        expanded_bids = []
+        for b in bids:
+            b.expand()
+            log.info(b);
+            expanded_bids.append(b)
+        expanded_bids.sort(key=lambda x: x.country)    
                 
         # Generate the page
-        template_values = { "countries": countries, 'selectable_countries': selectable_countries, 'accepted_bids': split_behaviors }
+        template_values = { "countries": countries, 'selectable_countries': selectable_countries, 'accepted_bids': expanded_behaviors, 'out_bids': expanded_bids  }
         
         template = jinja_environment.get_template('templates/bids.html')
         self.response.out.write(template.render(template_values))

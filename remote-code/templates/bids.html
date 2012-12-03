@@ -30,6 +30,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 	function drawCharts(){
 		drawRegionsMap();
 		drawAcceptedBids();
+		drawOutBids();
 	}
 	
 	function drawAcceptedBids(){
@@ -39,17 +40,39 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
         // Drawing chart for {{bid.country}}
         data = google.visualization.arrayToDataTable([
 			['Country', 'Bids Accepted'],
-			{% for c in bid.accepted%} 
+			{% for c in bid.accepted_expanded%} 
 			['{{c[0]}}', {{c[1]}} ] {%if not loop.last %},{%endif%}
 			{% endfor %}
 		]);
 		
 		options = { 
-				title: 'Accepted bidders for {{bid.country}}', 
+				title: 'Countries of accepted freelancers for projects whose submitter is from \'{{bid.country}}\'',
+				legend: {position: 'left'}, 
+				height: 260};
+		
+		chart = new google.visualization.PieChart(document.getElementById('accepted-chart-{{loop.index}}'));
+		chart.draw(data, options);
+		{% endfor %}
+	}
+	
+	function drawOutBids(){
+        var data, options, chart;
+        
+        {% for bid in out_bids %}
+        // Drawing chart for {{bid.country}}
+        data = google.visualization.arrayToDataTable([
+			['Country', 'Outbound Bids'],
+			{% for c in bid.bids_expanded%} 
+			['{{c[0]}}', {{c[1]}} ] {%if not loop.last %},{%endif%}
+			{% endfor %}
+		]);
+		
+		options = { 
+				title: 'Countries of people submitting projects on which freelancers from \'{{bid.country}}\' bid',
 				legend: {position: 'left'}, 
 				height: 250};
 		
-		chart = new google.visualization.PieChart(document.getElementById('accepted-chart-{{loop.index}}'));
+		chart = new google.visualization.PieChart(document.getElementById('out-bids-chart-{{loop.index}}'));
 		chart.draw(data, options);
 		{% endfor %}
 		
@@ -111,7 +134,11 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 <hr />
 {% for bid in accepted_bids %}
 <!-- Chart for accepted bids for {{bid.country}} -->
-<div class="country-entry" id="accepted-chart-{{loop.index}}"></div>
+<div class="country-entry">
+	<h2 class="title">{{bid.country}}</h2>
+	<div class="chart" id="accepted-chart-{{loop.index}}" style="width: 50%;"></div>
+	<div class="chart" id="out-bids-chart-{{loop.index}}" style="width: 50%;"></div>
+</div>
 {% endfor%}
 <div class="clear"></div>
 

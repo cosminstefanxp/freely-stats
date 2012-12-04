@@ -25,7 +25,7 @@
 			defaultEdgeType : 'curve',
 			labelThreshold : 6
 		}).graphProperties({
-			minNodeSize : 0.5,
+			minNodeSize : 2,
 			maxNodeSize : 6
 		}).mouseProperties({
 			maxRatio : 32
@@ -34,6 +34,30 @@
 		// (requires "sigma.parseGexf.js" to be executed)
 		sigInst.parseGexf(filename);
 
+		 // Bind events :
+		sigInst.bind('overnodes',function(event){
+			var nodes = event.content;
+			var neighbors = {};
+			sigInst.iterEdges(function(e){
+				if(nodes.indexOf(e.source)>=0 || nodes.indexOf(e.target)>=0){
+						neighbors[e.source] = 1;
+						neighbors[e.target] = 1;
+					}
+				}).iterNodes(function(n){
+						if(!neighbors[n.id]){
+							n.hidden = 1;
+						}else{
+							n.hidden = 0;
+						}	
+					}).draw(2,2,2);
+				}).bind('outnodes',function(){
+						sigInst.iterEdges(function(e){
+							e.hidden = 0;
+						}).iterNodes(function(n){
+							n.hidden = 0;
+						}).draw(2,2,2);
+					});
+		
 		/**
 		 * Now, here is the code that shows the popup :
 		 */
@@ -75,9 +99,11 @@
 					'background' : '#fff',
 					'color' : '#333',
 					'box-shadow' : '0 0 4px #666',
-					'position' : 'absolute',
-					'left' : node.displayX,
-					'top' : node.displayY + 15
+					'position' : 'relative',
+					//'left' : node.displayX,
+					//'top' : node.displayY + 15
+					'left' : 2,
+					'top' : 2
 				});
 
 				$('#jobs-network').append(popUp);

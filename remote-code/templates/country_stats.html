@@ -135,6 +135,11 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 
 <div class="clear"></div>
 <hr />
+<div>
+    <p>For each country, we show how many bids have been made by users from this country (<b>Outbound bids</b>) and the average rating of the users from that country (<b>Average rating</b>). Then, we analyse the messages the users send to a project owner when bidding for a project. On these texts, after removing the stopwords, we perform text analysis, showing the <b>total number of words</b>, the number of <b>unique words</b> and compute the <b>lexical diversity</b>. Also, we plot a bar chart displaying the most frequent 50 words used by bidders from that country. Finally, we plot a pie chart, showing what are the countries in which people from the selected country bid most often.
+    </p>
+</div>
+<hr />
 {% for stat in stats %}
 <!-- Chart for bids for {{stat.country}} -->
 <div class="country-entry">

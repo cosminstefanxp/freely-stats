@@ -1,4 +1,4 @@
-from BitVector import *
+from BitVector import BitVector
 class Compute_Recommendations:
     def __init__(self):
         self.top_200 = [ 'PHP', 'Website Design', 'Graphic Design', 'HTML', 'Software Architecture', 'MySQL', 'Software Testing', 'SEO',
@@ -8,16 +8,16 @@ class Compute_Recommendations:
             'C# Programming', 'HTML5', 'Shopping Carts', 'Joomla', 'Linux', 'Script Install', 'Flash', 'jQuery / Prototype',
             'XML', 'SQL', 'Web Scraping', 'Video Services', 'C++ Programming', 'Animation', 'Shell Script', 'Magento',
             'iPad', 'Objective C', 'ASP', '3D Animation', 'Templates', 'Illustration', 'Icon Design', 'Visual Basic',
-            'Twitter', '3D Modelling', 'Banner Design', 'Arts &amp; Crafts', 'Database Administration', 'Game Design',
+            'Twitter', '3D Modelling', 'Banner Design', 'Arts & Crafts', 'Database Administration', 'Game Design',
             'Blog Design', 'Embedded Software', 'Illustrator', 'System Admin', 'Visual Arts', 'UNIX', '3D Rendering',
             'Drupal', 'Mac OS', 'Microsoft', 'Python', 'PSD to HTML', 'Videography', 'Cocoa', 'YouTube', 'After Effects',
             'VoIP', 'Paypal API', 'ActionScript', 'Photoshop Design', 'Audio Services', 'Game Consoles', 'Cisco',
-            'Prestashop', 'Ruby &amp; Ruby on Rails', 'Usability Testing', 'Brochure Design', 'Voice Talent', 'CMS',
-            'Photo Editing', 'Caricature &amp; Cartoons', 'Word', 'Web Security', '3ds Max', 'Advertisement Design', 'Music',
+            'Prestashop', 'Ruby & Ruby on Rails', 'Usability Testing', 'Brochure Design', 'Voice Talent', 'CMS',
+            'Photo Editing', 'Caricature & Cartoons', 'Word', 'Web Security', '3ds Max', 'Advertisement Design', 'Music',
             'Delphi', 'Print', 'Microsoft Access', 'Blackberry', 'Corporate Identity', 'Open Cart', 'Perl',
             'Visual Basic for Applications', 'Photography', 'Chrome OS', 'Google App Engine', 'Flyer Design',
             'Business Cards', 'Video Broadcasting', 'Asterisk PBX', 'Computer Security', 'XSLT', 'Microsoft Exchange',
-            'OSCommerce', 'Covers &amp; Packaging', 'Flash 3D', 'Presentations', 'T-Shirts', 'Apache', 'Oracle',
+            'OSCommerce', 'Covers & Packaging', 'Flash 3D', 'Presentations', 'T-Shirts', 'Apache', 'Oracle',
             'Building Architecture', 'Stationery Design', 'Assembly', 'Google Analytics', 'J2EE', 'node.js', 'Poster Design',
             'Silverlight', 'Unity 3D', 'Windows Server', 'Zen Cart', 'Amazon Kindle', 'Flex', 'Invitation Design', 'Maya',
             'Motion Graphics', 'Apple Safari', 'JSP', 'Concept Design', 'CakePHP', 'Google Chrome', 'OpenGL', 'Smarty PHP',
@@ -25,9 +25,9 @@ class Compute_Recommendations:
             'Linkedin', 'Metatrader', 'MMORPG', 'Moodle', 'Virtuemart', 'Volusion', 'Interior Design', 'Post-Production',
             'Google Web Toolkit', 'Pinterest', 'SAP', 'Sharepoint', 'SugarCRM', 'UML Design', 'vTiger', 'WHMCS', 'Windows API',
             'WPF', 'Android Honeycomb', 'Blog Install', 'Django', 'DNS', 'Google Earth', 'PhoneGap', 'Photoshop Coding',
-            'TaoBao API', 'VPS', 'Zend', 'Geolocation', 'Windows Mobile', 'Final Cut Pro', 'Format &amp; Layout',
+            'TaoBao API', 'VPS', 'Zend', 'Geolocation', 'Windows Mobile', 'Final Cut Pro', 'Format & Layout',
             'Industrial Design', 'Infographics', 'Cloud Computing', 'Cold Fusion', 'Dynamics', 'eLearning', 'FileMaker', 'Kinect',
-            'NoSQL Couch &amp; Mongo', 'x86/x64 Assembler', '3D Printing', 'Dreamweaver', 'Landing Pages', 'Typography',
+            'NoSQL Couch & Mongo', 'x86/x64 Assembler', '3D Printing', 'Dreamweaver', 'Landing Pages', 'Typography',
             'Agile Development', 'BigCommerce', 'Boonex Dolphin']
         
     def get_jobs(self, vector): 
@@ -57,8 +57,6 @@ class Compute_Recommendations:
         return 1.0 / (1.0 + v1.hamming_distance(v2) * 1.0)
     
     def topMatchDist(self, v1, v2):
-        differences = v1 & ~v2
-        count_differences = differences.hamming_distance(BitVector(size=200))
         return 1.0 / (1.0 + (v1.hamming_distance(v2)) * 1.0)
     
     def topMatches(self, vectors, person_vector, counts, n=5):
@@ -103,3 +101,14 @@ class Compute_Recommendations:
         rankings.sort() 
         rankings.reverse() 
         return rankings[:10]
+
+    def compute_pattern(self, job_list):
+        bitVector = BitVector(size=200)
+        ids = []
+        for job in job_list:
+            if(job in self.top_200):
+                _id = self.top_200.index(job)
+                ids.append(_id)
+        for _id in ids:
+            bitVector[_id] = 1
+        return bitVector

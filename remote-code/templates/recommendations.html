@@ -6,22 +6,53 @@
     {{ super() }}
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-	$(document).ready(function() {
-		// Add the click handlers for selecting and deselecting the jobs for the filter
-		$("#selection-cloud .select-entry").click(on_select);
-		$("#selected-list .select-entry").click(on_deselect);
+$(document).ready(function() {
+	// Add the click handlers for selecting and deselecting the jobs for the filter
+	$("#selection-cloud .select-entry").click(on_select);
+	$("#selected-list .select-entry").click(on_deselect);
 	});
+
+	{% if rec_enabled==True%}
+	// Load the Visualization API and the piechart package.
+	google.load('visualization', '1.0', { 'packages' : [ 'corechart' ] });
+
+	// Set a callback to run when the Google Visualization API is loaded.
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+			['Recommendation', 'Rating'],
+			{% for rec in recommendations %}
+				['{{rec[1]}}',{{rec[0]}}] {% if not loop.last %},{%endif%}
+			{% endfor %}
+		]);
+		
+		var options = {
+			title: 'Recommendations',
+			height: 300,
+			chartArea: {left: 150},
+			legend: {position: 'none'}
+		};
+		
+		var chart = new google.visualization.BarChart(document.getElementById('chart-div'));
+		chart.draw(data, options);
+	}
+	{% endif %}
 </script>
 
 <style>
 	.results-box {
-		width: 45%;
-		margin: 15px;
-		border: 1px solid #888;
+		width: 31%;
+		margin: 15px 10px 15px 20px;
+		border: 1px solid #bbb;
 		border-radius: 3px;
 		float: left;
 		padding: 15px;
-		height: 100%;
+		height: 100%;	
+		background-color: white;
+	}
+	
+	#recommendations {
+		width: 60%;
 	}
 	
 	#top-matches table tr {
@@ -76,20 +107,18 @@
 		<tr><th style="text-align: left">Jobs</th><th style="text-align: left">Projects Count</th></tr>
 		{% for match in top_matches %}
 			<tr>
-				<td>{% for job in match[2] %} <span class='match'>{{job}}</span>{%endfor%}</td>
-				<td>{{ match[1] }}</td>
+				<td>{% for job in match[2] %} <span class='match'>{{job|e}}</span>{%endfor%}</td>
+				<td>{{ match[1]}}</td>
 			</tr>
 		{% endfor %}
 	</table>
 </div>
 {% endif %}
 
-{% if recommendations != None %}
+{% if rec_enabled == True %}
 <div id="recommendations" class="results-box">
 	<h2>Learning recommendations</h2>
-	{% for rec in recommendations %}
-	<span class='match'>{{rec[1]}}</span> - {{rec[0]}}<br/>
-	{% endfor %}
+	<div id="chart-div"></div>
 </div>
 {% endif %}
 <div class="clear"></div>

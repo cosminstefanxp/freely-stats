@@ -5,10 +5,18 @@
 <script type="text/javascript" src="js/sigma.parseGexf.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		init();
+		init('data/modularity.gexf');
+		$('#type-selector').change(function () {
+	          $("#type-selector option:selected").each(function () {
+	                $('#jobs-network').empty();
+	                init($(this).val());
+
+	              });
+	        });
+
 	});	
 	
-	function init() {
+	function init(filename) {
 		/**
 		 * First, let's instantiate sigma.js :
 		 */
@@ -18,13 +26,13 @@
 			labelThreshold : 6
 		}).graphProperties({
 			minNodeSize : 0.5,
-			maxNodeSize : 4
+			maxNodeSize : 6
 		}).mouseProperties({
 			maxRatio : 32
 		});
 
 		// (requires "sigma.parseGexf.js" to be executed)
-		sigInst.parseGexf('data/jobs_network.gexf');
+		sigInst.parseGexf(filename);
 
 		/**
 		 * Now, here is the code that shows the popup :
@@ -80,8 +88,9 @@
 				popUp = false;
 			}
 
-			sigInst.bind('overnodes', showNodeInfo).bind('outnodes',
-					hideNodeInfo).draw();
+			graph=sigInst.bind('overnodes', showNodeInfo).bind('outnodes',
+					hideNodeInfo);
+			graph.draw();
 		})();
 	}
 </script>
@@ -90,7 +99,14 @@
 <h2>Skills network</h2>
 <p>This page shows the network structure of Freelancer.com skills
 	and the communities that connect them.</p>
-  <div class="sigma-parent">
-    <div class="sigma-expand" id="jobs-network"></div>
-  </div>
+<p>Select the type of network visualization that you want used:</p>
+<select id="type-selector">
+	<option value="data/modularity.gexf">Modularity</option>
+	<option value="data/degree.gexf">Degree</option>
+	<option value="data/closeness.gexf">Closeness</option>
+</select>
+<br/>
+<div class="sigma-parent">
+  <div class="sigma-expand" id="jobs-network"></div>
+</div>
 {% endblock %}

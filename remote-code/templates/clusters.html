@@ -1,0 +1,29 @@
+{% extends "templates/base.html" %} {% set active_page = "clusters" %}
+{% block title %}Clusters{% endblock %}
+{% block head %} {{super()}}
+<style>
+.img-container{
+	margin: 0px auto;
+	background: white;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	width: 80%;
+	min-width: 600px;
+	max-width: 1300px;
+	padding: 15px;
+}
+.img-container img{
+	width: 100%;
+}
+</style>
+{% endblock %}
+{% block content %}
+<h2>Skills Clusters</h2>
+<p>This page shows the clusters that can be formed with the Freelancer.com skills.</p>
+
+<h2>Hierarchical clustering</h2>
+<div class="img-container">
+	<img src="/img/job_dendrogram.png"/>
+</div>
+
+{% endblock %}

@@ -4,7 +4,7 @@ Created on Nov 24, 2012
 @author: cosmin
 '''
 from google.appengine.ext import db
-from BitVector import *
+from BitVector import BitVector
 
 TopJobs = [('PHP', 1855), ('Website Design', 1248), ('Graphic Design', 1132),
     ('HTML', 1081), ('Software Architecture', 875), ('MySQL', 750), ('Software Testing', 527),

@@ -22,6 +22,8 @@ for line in file.readlines():
     else:
          continue
     for job in jobs:
+        job = job.replace("&amp;", "&")
+        job = job.strip()
         if(job in top_jobs):
             for linked_job in jobs:
                 if(job != linked_job):

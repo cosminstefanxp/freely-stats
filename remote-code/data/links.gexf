@@ -45,7 +45,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="76.94223" y="438.32477" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="1.0" label="Embedded Software">
         <attvalues>
@@ -58,9 +58,9 @@
           <attvalue for="Triangles" value="138"></attvalue>
           <attvalue for="eigencentrality" value="0.37358846882981894"></attvalue>
         </attvalues>
-        <viz:size value="14.329114"></viz:size>
+        <viz:size value="12.948378"></viz:size>
         <viz:position x="11.015019" y="452.88434" z="0.0"></viz:position>
-        <viz:color r="232" g="126" b="99"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="2.0" label=" Anything Goes">
         <attvalues>
@@ -73,9 +73,9 @@
           <attvalue for="Triangles" value="9"></attvalue>
           <attvalue for="eigencentrality" value="0.09939516627630324"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.840243"></viz:size>
         <viz:position x="-313.70325" y="10.646351" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="3.0" label=" Python">
         <attvalues>
@@ -90,7 +90,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-301.54263" y="434.24252" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="4.0" label="Delphi">
         <attvalues>
@@ -103,9 +103,9 @@
           <attvalue for="Triangles" value="137"></attvalue>
           <attvalue for="eigencentrality" value="0.34182390199467877"></attvalue>
         </attvalues>
-        <viz:size value="14.126582"></viz:size>
+        <viz:size value="12.363917"></viz:size>
         <viz:position x="-164.40372" y="382.17172" z="0.0"></viz:position>
-        <viz:color r="231" g="117" b="93"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="5.0" label="Flash">
         <attvalues>
@@ -118,9 +118,9 @@
           <attvalue for="Triangles" value="101"></attvalue>
           <attvalue for="eigencentrality" value="0.3057848269032416"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="13.162439"></viz:size>
         <viz:position x="121.28041" y="-241.97385" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="6.0" label="Research">
         <attvalues>
@@ -135,7 +135,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-470.21033" y="25.751144" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="7.0" label="Database Administration">
         <attvalues>
@@ -148,9 +148,9 @@
           <attvalue for="Triangles" value="161"></attvalue>
           <attvalue for="eigencentrality" value="0.3967592707716537"></attvalue>
         </attvalues>
-        <viz:size value="14.227848"></viz:size>
+        <viz:size value="12.441164"></viz:size>
         <viz:position x="-118.48865" y="314.351" z="0.0"></viz:position>
-        <viz:color r="231" g="122" b="96"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="8.0" label="3ds Max">
         <attvalues>
@@ -163,9 +163,9 @@
           <attvalue for="Triangles" value="34"></attvalue>
           <attvalue for="eigencentrality" value="0.06135826602782424"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.950935"></viz:size>
         <viz:position x="179.05557" y="-842.83466" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="9.0" label="Video Broadcasting">
         <attvalues>
@@ -178,9 +178,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.0264402068849452"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-96.15974" y="-541.6872" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="10.0" label="User Interface / IA">
         <attvalues>
@@ -193,9 +193,9 @@
           <attvalue for="Triangles" value="90"></attvalue>
           <attvalue for="eigencentrality" value="0.344856409760404"></attvalue>
         </attvalues>
-        <viz:size value="13.620254"></viz:size>
+        <viz:size value="12.05032"></viz:size>
         <viz:position x="88.71161" y="16.939594" z="0.0"></viz:position>
-        <viz:color r="227" g="95" b="78"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="11.0" label="MySQL">
         <attvalues>
@@ -208,9 +208,9 @@
           <attvalue for="Triangles" value="691"></attvalue>
           <attvalue for="eigencentrality" value="0.9062986758140835"></attvalue>
         </attvalues>
-        <viz:size value="18.58228"></viz:size>
+        <viz:size value="14.257486"></viz:size>
         <viz:position x="189.22862" y="169.56529" z="0.0"></viz:position>
-        <viz:color r="159" g="195" b="186"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="12.0" label="Web Search">
         <attvalues>
@@ -223,9 +223,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.008808985715850391"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.008351"></viz:size>
         <viz:position x="-449.52563" y="86.92291" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="13.0" label="Ghostwriting">
         <attvalues>
@@ -238,9 +238,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.009665315561190203"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.035001"></viz:size>
         <viz:position x="-510.66635" y="-91.770706" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="14.0" label=" Photo Editing">
         <attvalues>
@@ -253,9 +253,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.020632997063897898"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="300.9142" y="-575.50574" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="15.0" label=" SEO">
         <attvalues>
@@ -270,7 +270,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-574.9681" y="-204.53746" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="16.0" label="Website Design">
         <attvalues>
@@ -283,9 +283,9 @@
           <attvalue for="Triangles" value="550"></attvalue>
           <attvalue for="eigencentrality" value="0.7824221561811356"></attvalue>
         </attvalues>
-        <viz:size value="18.987343"></viz:size>
+        <viz:size value="20.0"></viz:size>
         <viz:position x="-11.947788" y="-173.2021" z="0.0"></viz:position>
-        <viz:color r="127" g="175" b="185"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="17.0" label="PCB Layout">
         <attvalues>
@@ -300,7 +300,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="15.977315" y="537.78314" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="18.0" label=" Videography">
         <attvalues>
@@ -315,7 +315,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-79.46465" y="-601.9118" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="19.0" label=" Embedded Software">
         <attvalues>
@@ -330,7 +330,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="40.230427" y="658.08264" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="20.0" label="Photography">
         <attvalues>
@@ -343,9 +343,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.024086104397580764"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.010318"></viz:size>
         <viz:position x="210.72023" y="-578.0098" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="21.0" label="Javascript">
         <attvalues>
@@ -358,9 +358,9 @@
           <attvalue for="Triangles" value="350"></attvalue>
           <attvalue for="eigencentrality" value="0.5916843414353637"></attvalue>
         </attvalues>
-        <viz:size value="15.949368"></viz:size>
+        <viz:size value="12.47211"></viz:size>
         <viz:position x="91.36356" y="108.89082" z="0.0"></viz:position>
-        <viz:color r="244" g="197" b="149"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="22.0" label="YouTube">
         <attvalues>
@@ -373,9 +373,9 @@
           <attvalue for="Triangles" value="43"></attvalue>
           <attvalue for="eigencentrality" value="0.0770510998447798"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="13.3442955"></viz:size>
         <viz:position x="-417.05255" y="-381.33475" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="23.0" label=" Advertising">
         <attvalues>
@@ -388,9 +388,9 @@
           <attvalue for="Triangles" value="14"></attvalue>
           <attvalue for="eigencentrality" value="0.018290292578974673"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.000388"></viz:size>
         <viz:position x="-509.79837" y="-289.36002" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="24.0" label="Testing / QA">
         <attvalues>
@@ -403,9 +403,9 @@
           <attvalue for="Triangles" value="11"></attvalue>
           <attvalue for="eigencentrality" value="0.08986362202096523"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.001299"></viz:size>
         <viz:position x="120.44917" y="313.8436" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="25.0" label=" MySQL">
         <attvalues>
@@ -418,9 +418,9 @@
           <attvalue for="Triangles" value="46"></attvalue>
           <attvalue for="eigencentrality" value="0.24215235867279147"></attvalue>
         </attvalues>
-        <viz:size value="13.012658"></viz:size>
+        <viz:size value="12.003231"></viz:size>
         <viz:position x="24.368338" y="107.81294" z="0.0"></viz:position>
-        <viz:color r="222" g="69" b="59"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="26.0" label="C++ Programming">
         <attvalues>
@@ -433,9 +433,9 @@
           <attvalue for="Triangles" value="76"></attvalue>
           <attvalue for="eigencentrality" value="0.25279015624093704"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.985825"></viz:size>
         <viz:position x="-226.45064" y="274.87375" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="27.0" label=" Audio Services">
         <attvalues>
@@ -448,9 +448,9 @@
           <attvalue for="Triangles" value="10"></attvalue>
           <attvalue for="eigencentrality" value="0.02989331421862806"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-111.31447" y="-565.7774" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="28.0" label="Business Plans">
         <attvalues>
@@ -463,9 +463,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.011964064151620121"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.01259"></viz:size>
         <viz:position x="-351.03128" y="-13.314111" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="29.0" label=" Video Services">
         <attvalues>
@@ -478,9 +478,9 @@
           <attvalue for="Triangles" value="5"></attvalue>
           <attvalue for="eigencentrality" value="0.023089738644150273"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.006358"></viz:size>
         <viz:position x="-152.56702" y="-605.9043" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="30.0" label="Translation">
         <attvalues>
@@ -493,9 +493,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.015836847335160106"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.018284"></viz:size>
         <viz:position x="-175.17262" y="-291.04587" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="31.0" label="HTML5">
         <attvalues>
@@ -508,9 +508,9 @@
           <attvalue for="Triangles" value="141"></attvalue>
           <attvalue for="eigencentrality" value="0.3164591204605341"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="12.212099"></viz:size>
         <viz:position x="341.4978" y="181.73882" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="32.0" label=" Microsoft">
         <attvalues>
@@ -525,7 +525,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-205.15594" y="513.4916" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="33.0" label=" Database Administration">
         <attvalues>
@@ -538,9 +538,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.040566776913670936"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-266.4114" y="275.14255" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="34.0" label="Icon Design">
         <attvalues>
@@ -553,9 +553,9 @@
           <attvalue for="Triangles" value="204"></attvalue>
           <attvalue for="eigencentrality" value="0.42255339798295866"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.514023"></viz:size>
         <viz:position x="122.38418" y="-316.6457" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="35.0" label="Wordpress">
         <attvalues>
@@ -568,9 +568,9 @@
           <attvalue for="Triangles" value="286"></attvalue>
           <attvalue for="eigencentrality" value="0.5304418410192537"></attvalue>
         </attvalues>
-        <viz:size value="15.746836"></viz:size>
+        <viz:size value="12.896315"></viz:size>
         <viz:position x="203.32607" y="-104.37682" z="0.0"></viz:position>
-        <viz:color r="243" g="188" b="143"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="36.0" label="Videography">
         <attvalues>
@@ -583,9 +583,9 @@
           <attvalue for="Triangles" value="165"></attvalue>
           <attvalue for="eigencentrality" value="0.24933244953108316"></attvalue>
         </attvalues>
-        <viz:size value="15.240506"></viz:size>
+        <viz:size value="13.972253"></viz:size>
         <viz:position x="-58.210766" y="-579.86206" z="0.0"></viz:position>
-        <viz:color r="239" g="166" b="128"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="37.0" label="Illustrator">
         <attvalues>
@@ -598,9 +598,9 @@
           <attvalue for="Triangles" value="58"></attvalue>
           <attvalue for="eigencentrality" value="0.1158548560203032"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.374243"></viz:size>
         <viz:position x="275.7364" y="-615.13403" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="38.0" label="Business Analysis">
         <attvalues>
@@ -615,7 +615,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-248.73624" y="-86.07137" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="39.0" label="Drupal">
         <attvalues>
@@ -628,9 +628,9 @@
           <attvalue for="Triangles" value="116"></attvalue>
           <attvalue for="eigencentrality" value="0.3642615610068178"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.3125925"></viz:size>
         <viz:position x="83.210915" y="-45.095562" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="40.0" label="Microsoft Exchange">
         <attvalues>
@@ -643,9 +643,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.014431016221077744"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-396.32983" y="190.20113" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="41.0" label="Script Install">
         <attvalues>
@@ -658,9 +658,9 @@
           <attvalue for="Triangles" value="390"></attvalue>
           <attvalue for="eigencentrality" value="0.6361530844544536"></attvalue>
         </attvalues>
-        <viz:size value="15.949368"></viz:size>
+        <viz:size value="12.655563"></viz:size>
         <viz:position x="-18.298347" y="378.80322" z="0.0"></viz:position>
-        <viz:color r="244" g="197" b="149"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="42.0" label="Ruby &amp;amp">
         <attvalues>
@@ -675,7 +675,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-282.51517" y="473.9903" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="43.0" label=" Ruby on Rails">
         <attvalues>
@@ -690,7 +690,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-302.3362" y="456.9482" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="44.0" label=" PSD to HTML">
         <attvalues>
@@ -705,7 +705,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="417.61942" y="-78.57609" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="45.0" label="Joomla">
         <attvalues>
@@ -718,9 +718,9 @@
           <attvalue for="Triangles" value="93"></attvalue>
           <attvalue for="eigencentrality" value="0.30613146081766707"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.607632"></viz:size>
         <viz:position x="248.75328" y="-19.043716" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="46.0" label=" Cocoa">
         <attvalues>
@@ -733,9 +733,9 @@
           <attvalue for="Triangles" value="14"></attvalue>
           <attvalue for="eigencentrality" value="0.046403409140589755"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.000299"></viz:size>
         <viz:position x="253.18738" y="493.1567" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="47.0" label="iPhone">
         <attvalues>
@@ -748,9 +748,9 @@
           <attvalue for="Triangles" value="87"></attvalue>
           <attvalue for="eigencentrality" value="0.2174274175095565"></attvalue>
         </attvalues>
-        <viz:size value="14.025316"></viz:size>
+        <viz:size value="12.490469"></viz:size>
         <viz:position x="277.3561" y="403.42917" z="0.0"></viz:position>
-        <viz:color r="230" g="113" b="90"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="48.0" label="Mobile Phone">
         <attvalues>
@@ -763,9 +763,9 @@
           <attvalue for="Triangles" value="159"></attvalue>
           <attvalue for="eigencentrality" value="0.36180792120509886"></attvalue>
         </attvalues>
-        <viz:size value="14.8354435"></viz:size>
+        <viz:size value="12.644664"></viz:size>
         <viz:position x="225.8704" y="436.67758" z="0.0"></viz:position>
-        <viz:color r="236" g="148" b="115"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="49.0" label="Data Mining">
         <attvalues>
@@ -780,7 +780,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-448.77072" y="17.02269" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="50.0" label="Technical Writing">
         <attvalues>
@@ -795,7 +795,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-149.34126" y="466.34714" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="51.0" label="AutoCAD">
         <attvalues>
@@ -808,9 +808,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.010442316900982955"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="132.21713" y="-877.0197" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="52.0" label="Video Upload">
         <attvalues>
@@ -823,9 +823,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.011536613412453989"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-107.04417" y="-630.5282" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="53.0" label=" Website Design">
         <attvalues>
@@ -840,7 +840,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-216.61615" y="-352.8686" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="54.0" label="Cisco">
         <attvalues>
@@ -853,9 +853,9 @@
           <attvalue for="Triangles" value="158"></attvalue>
           <attvalue for="eigencentrality" value="0.3820104118728313"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="12.816949"></viz:size>
         <viz:position x="-132.98305" y="441.61444" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="55.0" label="Cocoa">
         <attvalues>
@@ -868,9 +868,9 @@
           <attvalue for="Triangles" value="24"></attvalue>
           <attvalue for="eigencentrality" value="0.06769686611738711"></attvalue>
         </attvalues>
-        <viz:size value="12.810126"></viz:size>
+        <viz:size value="12.005597"></viz:size>
         <viz:position x="201.06601" y="502.42383" z="0.0"></viz:position>
-        <viz:color r="221" g="60" b="53"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="56.0" label="Poster Design">
         <attvalues>
@@ -885,7 +885,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="118.71008" y="-565.40857" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="57.0" label=" Delphi">
         <attvalues>
@@ -900,7 +900,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-294.93994" y="529.09863" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="58.0" label=" Web Scraping">
         <attvalues>
@@ -915,7 +915,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-465.18457" y="64.538445" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="59.0" label=" Research">
         <attvalues>
@@ -930,7 +930,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-479.26038" y="46.546272" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="60.0" label=" Asterisk PBX">
         <attvalues>
@@ -945,7 +945,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="115.6413" y="622.71295" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="61.0" label="Magento">
         <attvalues>
@@ -958,9 +958,9 @@
           <attvalue for="Triangles" value="69"></attvalue>
           <attvalue for="eigencentrality" value="0.2335025987239878"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.315365"></viz:size>
         <viz:position x="268.8983" y="-59.568867" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="62.0" label=" Computer Security">
         <attvalues>
@@ -975,7 +975,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="194.07085" y="306.1712" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="63.0" label=" Link Building">
         <attvalues>
@@ -988,9 +988,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.007056652731434606"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-532.5459" y="-248.86981" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="64.0" label="SQL">
         <attvalues>
@@ -1003,9 +1003,9 @@
           <attvalue for="Triangles" value="270"></attvalue>
           <attvalue for="eigencentrality" value="0.5210996640921988"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.218403"></viz:size>
         <viz:position x="-171.21524" y="306.9243" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="65.0" label="Google Plus">
         <attvalues>
@@ -1018,9 +1018,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.008607850417051036"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-491.72455" y="-360.32648" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="66.0" label="Visual Basic">
         <attvalues>
@@ -1033,9 +1033,9 @@
           <attvalue for="Triangles" value="215"></attvalue>
           <attvalue for="eigencentrality" value="0.43684911854331127"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.980316"></viz:size>
         <viz:position x="-294.44537" y="321.53024" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="67.0" label="PHP">
         <attvalues>
@@ -1048,7 +1048,7 @@
           <attvalue for="Triangles" value="806"></attvalue>
           <attvalue for="eigencentrality" value="1.0"></attvalue>
         </attvalues>
-        <viz:size value="20.0"></viz:size>
+        <viz:size value="19.063015"></viz:size>
         <viz:position x="-39.9463" y="37.677147" z="0.0"></viz:position>
         <viz:color r="44" g="123" b="182"></viz:color>
       </node>
@@ -1063,9 +1063,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.008808985715850391"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.008351"></viz:size>
         <viz:position x="-472.01025" y="95.30725" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="69.0" label=" Social Networking">
         <attvalues>
@@ -1078,9 +1078,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.008712274752424521"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-534.5148" y="-328.22092" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="70.0" label="iPad">
         <attvalues>
@@ -1093,9 +1093,9 @@
           <attvalue for="Triangles" value="53"></attvalue>
           <attvalue for="eigencentrality" value="0.11972875921466068"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.087344"></viz:size>
         <viz:position x="352.57996" y="401.88788" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="71.0" label=" ASP">
         <attvalues>
@@ -1108,9 +1108,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.024364948738994675"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.00033"></viz:size>
         <viz:position x="-269.91187" y="212.54715" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="72.0" label="PSD to HTML">
         <attvalues>
@@ -1123,9 +1123,9 @@
           <attvalue for="Triangles" value="73"></attvalue>
           <attvalue for="eigencentrality" value="0.23531337372312"></attvalue>
         </attvalues>
-        <viz:size value="13.417722"></viz:size>
+        <viz:size value="12.315771"></viz:size>
         <viz:position x="389.74847" y="-73.70411" z="0.0"></viz:position>
-        <viz:color r="225" g="86" b="71"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="73.0" label=" C# Programming">
         <attvalues>
@@ -1138,9 +1138,9 @@
           <attvalue for="Triangles" value="2"></attvalue>
           <attvalue for="eigencentrality" value="0.03609401272686066"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.000854"></viz:size>
         <viz:position x="-224.57794" y="441.6018" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="74.0" label=" Javascript">
         <attvalues>
@@ -1153,9 +1153,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.02989366487138534"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="404.90332" y="153.58667" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="75.0" label="Flash 3D">
         <attvalues>
@@ -1168,9 +1168,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.02184668063735643"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="28.008371" y="-91.99265" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="76.0" label="Excel">
         <attvalues>
@@ -1183,9 +1183,9 @@
           <attvalue for="Triangles" value="4"></attvalue>
           <attvalue for="eigencentrality" value="0.03396454208979509"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0148115"></viz:size>
         <viz:position x="-412.36163" y="154.69115" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="77.0" label="Windows Mobile">
         <attvalues>
@@ -1215,7 +1215,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-304.50772" y="479.35806" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="79.0" label="Web Security">
         <attvalues>
@@ -1228,9 +1228,9 @@
           <attvalue for="Triangles" value="110"></attvalue>
           <attvalue for="eigencentrality" value="0.3683686069844382"></attvalue>
         </attvalues>
-        <viz:size value="14.227848"></viz:size>
+        <viz:size value="12.997011"></viz:size>
         <viz:position x="164.59671" y="303.5721" z="0.0"></viz:position>
-        <viz:color r="231" g="122" b="96"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="80.0" label=" Testing / QA">
         <attvalues>
@@ -1245,7 +1245,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="111.72461" y="374.39468" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="81.0" label=" YouTube">
         <attvalues>
@@ -1260,7 +1260,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-487.96298" y="-454.2874" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="82.0" label="Data Processing">
         <attvalues>
@@ -1273,9 +1273,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.02174368717475773"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.012264"></viz:size>
         <viz:position x="-428.27707" y="104.218475" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="83.0" label="Print">
         <attvalues>
@@ -1288,9 +1288,9 @@
           <attvalue for="Triangles" value="90"></attvalue>
           <attvalue for="eigencentrality" value="0.17123646230969497"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="13.541642"></viz:size>
         <viz:position x="128.68341" y="-539.50604" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="84.0" label="Android">
         <attvalues>
@@ -1303,9 +1303,9 @@
           <attvalue for="Triangles" value="38"></attvalue>
           <attvalue for="eigencentrality" value="0.11552904745687508"></attvalue>
         </attvalues>
-        <viz:size value="12.911392"></viz:size>
+        <viz:size value="12.0062065"></viz:size>
         <viz:position x="333.237" y="356.56595" z="0.0"></viz:position>
-        <viz:color r="221" g="64" b="56"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="85.0" label="CMS">
         <attvalues>
@@ -1318,9 +1318,9 @@
           <attvalue for="Triangles" value="69"></attvalue>
           <attvalue for="eigencentrality" value="0.22638241772223097"></attvalue>
         </attvalues>
-        <viz:size value="13.417722"></viz:size>
+        <viz:size value="12.313244"></viz:size>
         <viz:position x="317.05734" y="-68.80473" z="0.0"></viz:position>
-        <viz:color r="225" g="86" b="71"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="86.0" label=" eCommerce">
         <attvalues>
@@ -1333,9 +1333,9 @@
           <attvalue for="Triangles" value="19"></attvalue>
           <attvalue for="eigencentrality" value="0.0918320125563888"></attvalue>
         </attvalues>
-        <viz:size value="12.70886"></viz:size>
+        <viz:size value="12.0112"></viz:size>
         <viz:position x="140.92912" y="-22.320665" z="0.0"></viz:position>
-        <viz:color r="220" g="55" b="49"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="87.0" label=" VoIP">
         <attvalues>
@@ -1350,7 +1350,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="138.87053" y="619.471" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="88.0" label=" Articles">
         <attvalues>
@@ -1365,7 +1365,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-575.0307" y="-246.63301" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="89.0" label=" 3D Animation">
         <attvalues>
@@ -1378,9 +1378,9 @@
           <attvalue for="Triangles" value="40"></attvalue>
           <attvalue for="eigencentrality" value="0.07740626289708834"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.072638"></viz:size>
         <viz:position x="71.25889" y="-750.4426" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="90.0" label=" System Admin">
         <attvalues>
@@ -1395,7 +1395,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-136.04108" y="556.66077" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="91.0" label="Objective C">
         <attvalues>
@@ -1408,9 +1408,9 @@
           <attvalue for="Triangles" value="65"></attvalue>
           <attvalue for="eigencentrality" value="0.17628201250818643"></attvalue>
         </attvalues>
-        <viz:size value="13.620254"></viz:size>
+        <viz:size value="12.176561"></viz:size>
         <viz:position x="269.28754" y="463.57553" z="0.0"></viz:position>
-        <viz:color r="227" g="95" b="78"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="92.0" label=" 3D Modelling">
         <attvalues>
@@ -1423,9 +1423,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.010442316900982955"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="129.39922" y="-948.6081" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="93.0" label="Interior Design">
         <attvalues>
@@ -1438,9 +1438,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.006018991400931667"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="152.64825" y="-937.43646" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="94.0" label="Web Scraping">
         <attvalues>
@@ -1453,9 +1453,9 @@
           <attvalue for="Triangles" value="11"></attvalue>
           <attvalue for="eigencentrality" value="0.13708039677777564"></attvalue>
         </attvalues>
-        <viz:size value="13.92405"></viz:size>
+        <viz:size value="14.521513"></viz:size>
         <viz:position x="-445.585" y="44.59183" z="0.0"></viz:position>
-        <viz:color r="229" g="108" b="87"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="95.0" label="Symbian">
         <attvalues>
@@ -1483,9 +1483,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.010203698449580412"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="319.8442" y="-647.9368" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="97.0" label="HTML">
         <attvalues>
@@ -1498,9 +1498,9 @@
           <attvalue for="Triangles" value="344"></attvalue>
           <attvalue for="eigencentrality" value="0.5842070329102383"></attvalue>
         </attvalues>
-        <viz:size value="16.455696"></viz:size>
+        <viz:size value="12.930624"></viz:size>
         <viz:position x="153.65666" y="-62.65762" z="0.0"></viz:position>
-        <viz:color r="248" g="219" b="165"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="98.0" label="Facebook">
         <attvalues>
@@ -1513,9 +1513,9 @@
           <attvalue for="Triangles" value="33"></attvalue>
           <attvalue for="eigencentrality" value="0.0549837685098171"></attvalue>
         </attvalues>
-        <viz:size value="13.012658"></viz:size>
+        <viz:size value="12.200948"></viz:size>
         <viz:position x="-464.5726" y="-287.63324" z="0.0"></viz:position>
-        <viz:color r="222" g="69" b="59"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="99.0" label=" CSS">
         <attvalues>
@@ -1528,9 +1528,9 @@
           <attvalue for="Triangles" value="83"></attvalue>
           <attvalue for="eigencentrality" value="0.24837308829408333"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.017021"></viz:size>
         <viz:position x="307.81476" y="2.2048295" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="100.0" label="Microsoft Access">
         <attvalues>
@@ -1543,9 +1543,9 @@
           <attvalue for="Triangles" value="102"></attvalue>
           <attvalue for="eigencentrality" value="0.32380534997827287"></attvalue>
         </attvalues>
-        <viz:size value="14.329114"></viz:size>
+        <viz:size value="13.204736"></viz:size>
         <viz:position x="-322.75647" y="238.57465" z="0.0"></viz:position>
-        <viz:color r="232" g="126" b="99"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="101.0" label=" C++ Programming">
         <attvalues>
@@ -1560,7 +1560,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-373.32727" y="315.09555" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="102.0" label="Shopping Carts">
         <attvalues>
@@ -1573,9 +1573,9 @@
           <attvalue for="Triangles" value="50"></attvalue>
           <attvalue for="eigencentrality" value="0.18012165329588414"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.022634"></viz:size>
         <viz:position x="181.88359" y="-153.43506" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="103.0" label=" Photoshop">
         <attvalues>
@@ -1590,7 +1590,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="251.75471" y="-566.0465" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="104.0" label="Corporate Identity">
         <attvalues>
@@ -1603,9 +1603,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.011578066588180978"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="216.5462" y="-613.5774" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="105.0" label="Word">
         <attvalues>
@@ -1618,9 +1618,9 @@
           <attvalue for="Triangles" value="12"></attvalue>
           <attvalue for="eigencentrality" value="0.08899474464887379"></attvalue>
         </attvalues>
-        <viz:size value="13.721519"></viz:size>
+        <viz:size value="13.747746"></viz:size>
         <viz:position x="-445.49963" y="136.37445" z="0.0"></viz:position>
-        <viz:color r="228" g="100" b="81"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="106.0" label=" Paypal API">
         <attvalues>
@@ -1635,7 +1635,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-183.49794" y="-176.22089" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="107.0" label="Business Cards">
         <attvalues>
@@ -1650,7 +1650,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="307.79257" y="-687.8409" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="108.0" label=" Logo Design">
         <attvalues>
@@ -1665,7 +1665,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="305.13165" y="-504.72983" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="109.0" label=" Chrome OS">
         <attvalues>
@@ -1678,9 +1678,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.06290538371385328"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="37.619392" y="550.4335" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="110.0" label=" Wordpress">
         <attvalues>
@@ -1695,7 +1695,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="220.67534" y="-130.6258" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="111.0" label="Invitation Design">
         <attvalues>
@@ -1710,7 +1710,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="55.234337" y="-579.0009" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="112.0" label="Presentations">
         <attvalues>
@@ -1723,9 +1723,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.019737028783513525"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-92.5544" y="-478.33997" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="113.0" label="Web Hosting">
         <attvalues>
@@ -1738,9 +1738,9 @@
           <attvalue for="Triangles" value="493"></attvalue>
           <attvalue for="eigencentrality" value="0.7372572447504377"></attvalue>
         </attvalues>
-        <viz:size value="16.658228"></viz:size>
+        <viz:size value="12.551968"></viz:size>
         <viz:position x="-77.02627" y="250.25684" z="0.0"></viz:position>
-        <viz:color r="250" g="228" b="171"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="114.0" label="Game Consoles">
         <attvalues>
@@ -1753,9 +1753,9 @@
           <attvalue for="Triangles" value="136"></attvalue>
           <attvalue for="eigencentrality" value="0.3777901130486546"></attvalue>
         </attvalues>
-        <viz:size value="14.126582"></viz:size>
+        <viz:size value="12.246536"></viz:size>
         <viz:position x="145.75156" y="357.2381" z="0.0"></viz:position>
-        <viz:color r="231" g="117" b="93"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="115.0" label="UNIX">
         <attvalues>
@@ -1768,9 +1768,9 @@
           <attvalue for="Triangles" value="245"></attvalue>
           <attvalue for="eigencentrality" value="0.45950526714142964"></attvalue>
         </attvalues>
-        <viz:size value="14.734177"></viz:size>
+        <viz:size value="12.190496"></viz:size>
         <viz:position x="31.531733" y="502.9421" z="0.0"></viz:position>
-        <viz:color r="235" g="144" b="112"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="116.0" label="Game Design">
         <attvalues>
@@ -1783,9 +1783,9 @@
           <attvalue for="Triangles" value="165"></attvalue>
           <attvalue for="eigencentrality" value="0.42472117038103674"></attvalue>
         </attvalues>
-        <viz:size value="15.037974"></viz:size>
+        <viz:size value="13.400916"></viz:size>
         <viz:position x="225.22278" y="258.07642" z="0.0"></viz:position>
-        <viz:color r="238" g="157" b="121"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="117.0" label="Windows Server">
         <attvalues>
@@ -1800,7 +1800,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-185.36075" y="714.7541" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="118.0" label=" C Programming">
         <attvalues>
@@ -1813,9 +1813,9 @@
           <attvalue for="Triangles" value="41"></attvalue>
           <attvalue for="eigencentrality" value="0.1551060204963514"></attvalue>
         </attvalues>
-        <viz:size value="13.21519"></viz:size>
+        <viz:size value="12.050853"></viz:size>
         <viz:position x="-86.27806" y="480.74384" z="0.0"></viz:position>
-        <viz:color r="224" g="77" b="65"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="119.0" label=" Amazon Web Services">
         <attvalues>
@@ -1828,9 +1828,9 @@
           <attvalue for="Triangles" value="231"></attvalue>
           <attvalue for="eigencentrality" value="0.4766246973642887"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.252681"></viz:size>
         <viz:position x="99.8194" y="246.0569" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="120.0" label=" Magento">
         <attvalues>
@@ -1845,7 +1845,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="370.2456" y="-117.431305" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="121.0" label="Social Networking">
         <attvalues>
@@ -1858,9 +1858,9 @@
           <attvalue for="Triangles" value="42"></attvalue>
           <attvalue for="eigencentrality" value="0.05402597545411"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.292202"></viz:size>
         <viz:position x="-540.14276" y="-294.46683" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="122.0" label="System Admin">
         <attvalues>
@@ -1873,9 +1873,9 @@
           <attvalue for="Triangles" value="182"></attvalue>
           <attvalue for="eigencentrality" value="0.4179807826811832"></attvalue>
         </attvalues>
-        <viz:size value="14.734177"></viz:size>
+        <viz:size value="13.126067"></viz:size>
         <viz:position x="-114.305115" y="534.6809" z="0.0"></viz:position>
-        <viz:color r="235" g="144" b="112"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="123.0" label="CSS">
         <attvalues>
@@ -1888,9 +1888,9 @@
           <attvalue for="Triangles" value="205"></attvalue>
           <attvalue for="eigencentrality" value="0.4625726396318744"></attvalue>
         </attvalues>
-        <viz:size value="14.632912"></viz:size>
+        <viz:size value="12.101638"></viz:size>
         <viz:position x="193.7428" y="63.89774" z="0.0"></viz:position>
-        <viz:color r="234" g="139" b="109"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="124.0" label="Advertisement Design">
         <attvalues>
@@ -1903,9 +1903,9 @@
           <attvalue for="Triangles" value="143"></attvalue>
           <attvalue for="eigencentrality" value="0.20692584277241421"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="12.555251"></viz:size>
         <viz:position x="174.68794" y="-613.03314" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="125.0" label=" Voice Talent">
         <attvalues>
@@ -1920,7 +1920,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-212.00845" y="-561.84064" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="126.0" label=" Photoshop Design">
         <attvalues>
@@ -1935,7 +1935,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="345.21344" y="-619.8555" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="127.0" label=" Java">
         <attvalues>
@@ -1950,7 +1950,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="98.30019" y="426.2195" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="128.0" label="Post-Production">
         <attvalues>
@@ -1963,9 +1963,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.021891488944606706"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-117.87841" y="-494.4584" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="129.0" label="Chrome OS">
         <attvalues>
@@ -1978,9 +1978,9 @@
           <attvalue for="Triangles" value="10"></attvalue>
           <attvalue for="eigencentrality" value="0.0754388697609615"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="25.673693" y="582.17487" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="130.0" label=" Script Install">
         <attvalues>
@@ -1993,9 +1993,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.036625200325373426"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-41.983036" y="472.26144" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="131.0" label="Software Testing">
         <attvalues>
@@ -2008,9 +2008,9 @@
           <attvalue for="Triangles" value="504"></attvalue>
           <attvalue for="eigencentrality" value="0.7438431416440333"></attvalue>
         </attvalues>
-        <viz:size value="16.962025"></viz:size>
+        <viz:size value="13.00953"></viz:size>
         <viz:position x="-87.5356" y="180.2896" z="0.0"></viz:position>
-        <viz:color r="252" g="241" b="181"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="132.0" label=" Data Mining">
         <attvalues>
@@ -2025,7 +2025,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-562.15106" y="36.880592" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="133.0" label="Virtuemart">
         <attvalues>
@@ -2040,7 +2040,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="408.90692" y="-19.194815" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="134.0" label=" AJAX">
         <attvalues>
@@ -2053,9 +2053,9 @@
           <attvalue for="Triangles" value="43"></attvalue>
           <attvalue for="eigencentrality" value="0.17024843523733607"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.020772"></viz:size>
         <viz:position x="257.7181" y="30.366787" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="135.0" label=" Game Design">
         <attvalues>
@@ -2070,7 +2070,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="443.69037" y="323.5669" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="136.0" label=" 3ds Max">
         <attvalues>
@@ -2085,7 +2085,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="219.08101" y="-934.60895" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="137.0" label=" Mobile Phone">
         <attvalues>
@@ -2098,9 +2098,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.022857080650085296"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="161.23833" y="607.317" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="138.0" label=" Linux">
         <attvalues>
@@ -2113,9 +2113,9 @@
           <attvalue for="Triangles" value="13"></attvalue>
           <attvalue for="eigencentrality" value="0.08783157725424073"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.002178"></viz:size>
         <viz:position x="87.19564" y="545.01105" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="139.0" label="Caricature &amp;amp">
         <attvalues>
@@ -2128,9 +2128,9 @@
           <attvalue for="Triangles" value="26"></attvalue>
           <attvalue for="eigencentrality" value="0.05733863800535272"></attvalue>
         </attvalues>
-        <viz:size value="12.70886"></viz:size>
+        <viz:size value="12.001047"></viz:size>
         <viz:position x="83.48231" y="-719.7164" z="0.0"></viz:position>
-        <viz:color r="220" g="55" b="49"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="140.0" label="Amazon Web Services">
         <attvalues>
@@ -2143,9 +2143,9 @@
           <attvalue for="Triangles" value="117"></attvalue>
           <attvalue for="eigencentrality" value="0.3556350318956072"></attvalue>
         </attvalues>
-        <viz:size value="13.721519"></viz:size>
+        <viz:size value="12.020805"></viz:size>
         <viz:position x="55.951103" y="321.24176" z="0.0"></viz:position>
-        <viz:color r="228" g="100" b="81"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="141.0" label="Advertising">
         <attvalues>
@@ -2160,7 +2160,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="254.58961" y="-774.5234" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="142.0" label="Java">
         <attvalues>
@@ -2173,9 +2173,9 @@
           <attvalue for="Triangles" value="274"></attvalue>
           <attvalue for="eigencentrality" value="0.5369620226151869"></attvalue>
         </attvalues>
-        <viz:size value="15.746836"></viz:size>
+        <viz:size value="13.39614"></viz:size>
         <viz:position x="72.481735" y="406.49997" z="0.0"></viz:position>
-        <viz:color r="243" g="188" b="143"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="143.0" label=" Academic Writing">
         <attvalues>
@@ -2188,9 +2188,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.013428207825423654"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.025196"></viz:size>
         <viz:position x="-200.12549" y="-115.9061" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="144.0" label=" Blog Design">
         <attvalues>
@@ -2203,9 +2203,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.04178753199656838"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="50.747074" y="-369.52234" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="145.0" label="Computer Security">
         <attvalues>
@@ -2220,7 +2220,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="182.97139" y="327.57886" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="146.0" label="Voice Talent">
         <attvalues>
@@ -2233,9 +2233,9 @@
           <attvalue for="Triangles" value="24"></attvalue>
           <attvalue for="eigencentrality" value="0.04135798252506876"></attvalue>
         </attvalues>
-        <viz:size value="13.21519"></viz:size>
+        <viz:size value="12.422913"></viz:size>
         <viz:position x="-150.38835" y="-512.22473" z="0.0"></viz:position>
-        <viz:color r="224" g="77" b="65"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="147.0" label=" Illustration">
         <attvalues>
@@ -2250,7 +2250,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="203.36531" y="-709.83386" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="148.0" label="Prestashop">
         <attvalues>
@@ -2263,9 +2263,9 @@
           <attvalue for="Triangles" value="44"></attvalue>
           <attvalue for="eigencentrality" value="0.20029534851054018"></attvalue>
         </attvalues>
-        <viz:size value="13.417722"></viz:size>
+        <viz:size value="12.322018"></viz:size>
         <viz:position x="207.81616" y="-8.859441" z="0.0"></viz:position>
-        <viz:color r="225" g="86" b="71"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="149.0" label="Arts &amp;amp">
         <attvalues>
@@ -2278,9 +2278,9 @@
           <attvalue for="Triangles" value="73"></attvalue>
           <attvalue for="eigencentrality" value="0.12936360284838094"></attvalue>
         </attvalues>
-        <viz:size value="13.417722"></viz:size>
+        <viz:size value="12.031277"></viz:size>
         <viz:position x="128.19902" y="-628.8907" z="0.0"></viz:position>
-        <viz:color r="225" g="86" b="71"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="150.0" label="Music">
         <attvalues>
@@ -2293,9 +2293,9 @@
           <attvalue for="Triangles" value="29"></attvalue>
           <attvalue for="eigencentrality" value="0.08087113529408833"></attvalue>
         </attvalues>
-        <viz:size value="13.417722"></viz:size>
+        <viz:size value="12.539543"></viz:size>
         <viz:position x="-39.14122" y="-536.6538" z="0.0"></viz:position>
-        <viz:color r="225" g="86" b="71"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="151.0" label="Video Services">
         <attvalues>
@@ -2308,9 +2308,9 @@
           <attvalue for="Triangles" value="165"></attvalue>
           <attvalue for="eigencentrality" value="0.20348730963500514"></attvalue>
         </attvalues>
-        <viz:size value="15.037974"></viz:size>
+        <viz:size value="13.026561"></viz:size>
         <viz:position x="-41.148083" y="-639.17395" z="0.0"></viz:position>
-        <viz:color r="238" g="157" b="121"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="152.0" label="Usability Testing">
         <attvalues>
@@ -2323,9 +2323,9 @@
           <attvalue for="Triangles" value="148"></attvalue>
           <attvalue for="eigencentrality" value="0.379114459397514"></attvalue>
         </attvalues>
-        <viz:size value="14.126582"></viz:size>
+        <viz:size value="12.326715"></viz:size>
         <viz:position x="98.36932" y="348.36603" z="0.0"></viz:position>
-        <viz:color r="231" g="117" b="93"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="153.0" label="Unity 3D">
         <attvalues>
@@ -2340,7 +2340,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="255.56796" y="265.20282" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="154.0" label=" Apache">
         <attvalues>
@@ -2353,9 +2353,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.029523069904325336"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-65.59113" y="571.99207" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="155.0" label=" Banner Design">
         <attvalues>
@@ -2368,9 +2368,9 @@
           <attvalue for="Triangles" value="20"></attvalue>
           <attvalue for="eigencentrality" value="0.0563452689476525"></attvalue>
         </attvalues>
-        <viz:size value="12.6075945"></viz:size>
+        <viz:size value="12.000448"></viz:size>
         <viz:position x="285.6717" y="-548.0079" z="0.0"></viz:position>
-        <viz:color r="219" g="51" b="46"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="156.0" label="After Effects">
         <attvalues>
@@ -2383,9 +2383,9 @@
           <attvalue for="Triangles" value="141"></attvalue>
           <attvalue for="eigencentrality" value="0.1925570136119648"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="12.394765"></viz:size>
         <viz:position x="128.5798" y="-681.0867" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="157.0" label="Marketing">
         <attvalues>
@@ -2398,9 +2398,9 @@
           <attvalue for="Triangles" value="14"></attvalue>
           <attvalue for="eigencentrality" value="0.028182041421954875"></attvalue>
         </attvalues>
-        <viz:size value="12.70886"></viz:size>
+        <viz:size value="12.088309"></viz:size>
         <viz:position x="-392.25024" y="-315.61963" z="0.0"></viz:position>
-        <viz:color r="220" g="55" b="49"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="158.0" label="ASP">
         <attvalues>
@@ -2413,9 +2413,9 @@
           <attvalue for="Triangles" value="165"></attvalue>
           <attvalue for="eigencentrality" value="0.41757886582627457"></attvalue>
         </attvalues>
-        <viz:size value="14.227848"></viz:size>
+        <viz:size value="12.281592"></viz:size>
         <viz:position x="-190.79001" y="192.58095" z="0.0"></viz:position>
-        <viz:color r="231" g="122" b="96"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="159.0" label="Building Architecture">
         <attvalues>
@@ -2428,9 +2428,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.010442316900982955"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="107.693954" y="-871.76215" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="160.0" label=" Algorithm">
         <attvalues>
@@ -2445,7 +2445,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-372.48502" y="286.75253" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="161.0" label=" PHP">
         <attvalues>
@@ -2458,9 +2458,9 @@
           <attvalue for="Triangles" value="30"></attvalue>
           <attvalue for="eigencentrality" value="0.19303009888871087"></attvalue>
         </attvalues>
-        <viz:size value="12.810126"></viz:size>
+        <viz:size value="12.003274"></viz:size>
         <viz:position x="98.621254" y="174.5731" z="0.0"></viz:position>
-        <viz:color r="221" g="60" b="53"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="162.0" label="Microcontroller">
         <attvalues>
@@ -2475,7 +2475,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="7.0125847" y="664.03015" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="163.0" label="Home Design">
         <attvalues>
@@ -2488,9 +2488,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.006018991400931667"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="164.49486" y="-915.5941" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="164.0" label="Microsoft">
         <attvalues>
@@ -2503,9 +2503,9 @@
           <attvalue for="Triangles" value="184"></attvalue>
           <attvalue for="eigencentrality" value="0.4098620396758613"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.449011"></viz:size>
         <viz:position x="-185.52914" y="488.5141" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="165.0" label="Concept Design">
         <attvalues>
@@ -2520,7 +2520,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="112.44043" y="-929.6084" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="166.0" label="Visual Arts">
         <attvalues>
@@ -2533,9 +2533,9 @@
           <attvalue for="Triangles" value="25"></attvalue>
           <attvalue for="eigencentrality" value="0.195915119812697"></attvalue>
         </attvalues>
-        <viz:size value="13.721519"></viz:size>
+        <viz:size value="13.448425"></viz:size>
         <viz:position x="-232.63246" y="-62.820885" z="0.0"></viz:position>
-        <viz:color r="228" g="100" b="81"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="167.0" label=" Cartoons">
         <attvalues>
@@ -2548,9 +2548,9 @@
           <attvalue for="Triangles" value="37"></attvalue>
           <attvalue for="eigencentrality" value="0.07400271652381672"></attvalue>
         </attvalues>
-        <viz:size value="12.911392"></viz:size>
+        <viz:size value="12.005441"></viz:size>
         <viz:position x="165.03804" y="-733.1163" z="0.0"></viz:position>
-        <viz:color r="221" g="64" b="56"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="168.0" label="JSP">
         <attvalues>
@@ -2563,9 +2563,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.0328778625369891"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-260.56226" y="485.54758" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="169.0" label=" Crafts">
         <attvalues>
@@ -2578,9 +2578,9 @@
           <attvalue for="Triangles" value="78"></attvalue>
           <attvalue for="eigencentrality" value="0.1362488592276086"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.046154"></viz:size>
         <viz:position x="91.442665" y="-596.9299" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="170.0" label=" Music">
         <attvalues>
@@ -2595,7 +2595,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-116.71269" y="-603.72943" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="171.0" label="SEO">
         <attvalues>
@@ -2608,9 +2608,9 @@
           <attvalue for="Triangles" value="44"></attvalue>
           <attvalue for="eigencentrality" value="0.10475537934069991"></attvalue>
         </attvalues>
-        <viz:size value="14.329114"></viz:size>
+        <viz:size value="14.790152"></viz:size>
         <viz:position x="-554.4574" y="-225.32104" z="0.0"></viz:position>
-        <viz:color r="232" g="126" b="99"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="172.0" label=" jQuery / Prototype">
         <attvalues>
@@ -2625,7 +2625,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="406.03894" y="127.33391" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="173.0" label="Editing">
         <attvalues>
@@ -2640,7 +2640,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-573.05035" y="146.83101" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="174.0" label="Logo Design">
         <attvalues>
@@ -2653,9 +2653,9 @@
           <attvalue for="Triangles" value="101"></attvalue>
           <attvalue for="eigencentrality" value="0.20575852818701082"></attvalue>
         </attvalues>
-        <viz:size value="13.92405"></viz:size>
+        <viz:size value="12.463868"></viz:size>
         <viz:position x="276.4509" y="-503.44577" z="0.0"></viz:position>
-        <viz:color r="229" g="108" b="87"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="175.0" label="Windows Desktop">
         <attvalues>
@@ -2668,9 +2668,9 @@
           <attvalue for="Triangles" value="377"></attvalue>
           <attvalue for="eigencentrality" value="0.5849444436878661"></attvalue>
         </attvalues>
-        <viz:size value="16.050632"></viz:size>
+        <viz:size value="13.013501"></viz:size>
         <viz:position x="-50.83674" y="512.18976" z="0.0"></viz:position>
-        <viz:color r="245" g="201" b="153"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="176.0" label=" Arts &amp;amp">
         <attvalues>
@@ -2683,9 +2683,9 @@
           <attvalue for="Triangles" value="9"></attvalue>
           <attvalue for="eigencentrality" value="0.05607670749467507"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.000267"></viz:size>
         <viz:position x="102.90322" y="-482.9587" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="177.0" label=" Twitter">
         <attvalues>
@@ -2700,7 +2700,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-516.6529" y="-348.99423" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="178.0" label="XSLT">
         <attvalues>
@@ -2715,7 +2715,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-171.03127" y="139.99228" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="179.0" label="Leads">
         <attvalues>
@@ -2730,7 +2730,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-511.1871" y="-231.86693" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="180.0" label="Website Management">
         <attvalues>
@@ -2743,9 +2743,9 @@
           <attvalue for="Triangles" value="534"></attvalue>
           <attvalue for="eigencentrality" value="0.7744308151976118"></attvalue>
         </attvalues>
-        <viz:size value="16.962025"></viz:size>
+        <viz:size value="12.682735"></viz:size>
         <viz:position x="51.714344" y="214.48816" z="0.0"></viz:position>
-        <viz:color r="252" g="241" b="181"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="181.0" label="CAD/CAM">
         <attvalues>
@@ -2758,9 +2758,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.007517725751122492"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="104.40654" y="-895.5068" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="182.0" label="Graphic Design">
         <attvalues>
@@ -2773,9 +2773,9 @@
           <attvalue for="Triangles" value="268"></attvalue>
           <attvalue for="eigencentrality" value="0.4377656486671681"></attvalue>
         </attvalues>
-        <viz:size value="16.1519"></viz:size>
+        <viz:size value="14.301662"></viz:size>
         <viz:position x="210.93031" y="-365.27078" z="0.0"></viz:position>
-        <viz:color r="246" g="205" b="156"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="183.0" label="Metatrader">
         <attvalues>
@@ -2790,7 +2790,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-369.01266" y="343.3576" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="184.0" label="Link Building">
         <attvalues>
@@ -2803,9 +2803,9 @@
           <attvalue for="Triangles" value="31"></attvalue>
           <attvalue for="eigencentrality" value="0.05233805036374433"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.562833"></viz:size>
         <viz:position x="-495.90082" y="-253.04991" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="185.0" label="SEM / Adwords">
         <attvalues>
@@ -2818,9 +2818,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.007124171634898503"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-625.3791" y="-295.13412" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="186.0" label="PDF">
         <attvalues>
@@ -2835,7 +2835,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-554.1481" y="122.91219" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="187.0" label="Photoshop Design">
         <attvalues>
@@ -2848,9 +2848,9 @@
           <attvalue for="Triangles" value="67"></attvalue>
           <attvalue for="eigencentrality" value="0.13431072347295453"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.644566"></viz:size>
         <viz:position x="320.20844" y="-604.74536" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="188.0" label=" Microsoft Access">
         <attvalues>
@@ -2865,7 +2865,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-473.6418" y="287.9614" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="189.0" label="Powerpoint">
         <attvalues>
@@ -2878,9 +2878,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.014431016221077744"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-491.7937" y="201.42719" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="190.0" label="Motion Graphics">
         <attvalues>
@@ -2893,9 +2893,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.014678658806511676"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="66.43501" y="-688.119" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="191.0" label="Anything Goes">
         <attvalues>
@@ -2908,9 +2908,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.018048285275074617"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.003018"></viz:size>
         <viz:position x="-200.40347" y="-72.03568" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="192.0" label="jQuery / Prototype">
         <attvalues>
@@ -2923,9 +2923,9 @@
           <attvalue for="Triangles" value="140"></attvalue>
           <attvalue for="eigencentrality" value="0.30970533276618967"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.578236"></viz:size>
         <viz:position x="376.0218" y="134.70695" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="193.0" label="Blog Design">
         <attvalues>
@@ -2938,9 +2938,9 @@
           <attvalue for="Triangles" value="163"></attvalue>
           <attvalue for="eigencentrality" value="0.39120241690241225"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.403855"></viz:size>
         <viz:position x="56.94203" y="-330.3041" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="194.0" label="Visual Basic for Applications">
         <attvalues>
@@ -2953,9 +2953,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.025155556373944694"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-439.801" y="325.2943" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="195.0" label="Audio Services">
         <attvalues>
@@ -2968,9 +2968,9 @@
           <attvalue for="Triangles" value="60"></attvalue>
           <attvalue for="eigencentrality" value="0.1896978584407756"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.824211"></viz:size>
         <viz:position x="-99.98062" y="-433.37714" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="196.0" label="Twitter">
         <attvalues>
@@ -2983,9 +2983,9 @@
           <attvalue for="Triangles" value="33"></attvalue>
           <attvalue for="eigencentrality" value="0.05208967725080385"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.57647"></viz:size>
         <viz:position x="-501.53824" y="-326.47174" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="197.0" label=" Article Rewriting">
         <attvalues>
@@ -3000,7 +3000,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-695.87054" y="-243.61983" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="198.0" label="Sales">
         <attvalues>
@@ -3013,9 +3013,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.018662227597512685"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.080395"></viz:size>
         <viz:position x="-333.42734" y="-168.31688" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="199.0" label=" Prestashop">
         <attvalues>
@@ -3030,7 +3030,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="338.15015" y="-27.290148" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="200.0" label=" Graphic Design">
         <attvalues>
@@ -3043,9 +3043,9 @@
           <attvalue for="Triangles" value="103"></attvalue>
           <attvalue for="eigencentrality" value="0.26849646548746414"></attvalue>
         </attvalues>
-        <viz:size value="14.025316"></viz:size>
+        <viz:size value="12.257426"></viz:size>
         <viz:position x="293.6996" y="-272.25693" z="0.0"></viz:position>
-        <viz:color r="230" g="113" b="90"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="201.0" label="Engineering">
         <attvalues>
@@ -3058,9 +3058,9 @@
           <attvalue for="Triangles" value="60"></attvalue>
           <attvalue for="eigencentrality" value="0.23037480310816405"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.126593"></viz:size>
         <viz:position x="-66.32178" y="325.03546" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="202.0" label="Pre-production">
         <attvalues>
@@ -3073,9 +3073,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.02189148894460671"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-151.94582" y="-558.2048" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="203.0" label="VoIP">
         <attvalues>
@@ -3088,9 +3088,9 @@
           <attvalue for="Triangles" value="101"></attvalue>
           <attvalue for="eigencentrality" value="0.3237211037990775"></attvalue>
         </attvalues>
-        <viz:size value="14.025316"></viz:size>
+        <viz:size value="13.074032"></viz:size>
         <viz:position x="122.62854" y="592.7946" z="0.0"></viz:position>
-        <viz:color r="230" g="113" b="90"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="204.0" label=" HTML5">
         <attvalues>
@@ -3103,9 +3103,9 @@
           <attvalue for="Triangles" value="10"></attvalue>
           <attvalue for="eigencentrality" value="0.04566439429262932"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="387.28955" y="288.5783" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="205.0" label="ActionScript">
         <attvalues>
@@ -3118,9 +3118,9 @@
           <attvalue for="Triangles" value="92"></attvalue>
           <attvalue for="eigencentrality" value="0.33973926957416795"></attvalue>
         </attvalues>
-        <viz:size value="13.92405"></viz:size>
+        <viz:size value="12.598121"></viz:size>
         <viz:position x="21.551277" y="-52.93842" z="0.0"></viz:position>
-        <viz:color r="229" g="108" b="87"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="206.0" label=" Engineering">
         <attvalues>
@@ -3133,9 +3133,9 @@
           <attvalue for="Triangles" value="5"></attvalue>
           <attvalue for="eigencentrality" value="0.07295038417348094"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.001493"></viz:size>
         <viz:position x="-123.85113" y="67.72682" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="207.0" label=" CMS">
         <attvalues>
@@ -3150,7 +3150,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="429.1961" y="-110.11145" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="208.0" label="Photo Editing">
         <attvalues>
@@ -3163,9 +3163,9 @@
           <attvalue for="Triangles" value="26"></attvalue>
           <attvalue for="eigencentrality" value="0.08369766526031891"></attvalue>
         </attvalues>
-        <viz:size value="12.911392"></viz:size>
+        <viz:size value="12.171982"></viz:size>
         <viz:position x="326.13846" y="-555.1313" z="0.0"></viz:position>
-        <viz:color r="221" g="64" b="56"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="209.0" label="XML">
         <attvalues>
@@ -3178,9 +3178,9 @@
           <attvalue for="Triangles" value="202"></attvalue>
           <attvalue for="eigencentrality" value="0.47014373288054045"></attvalue>
         </attvalues>
-        <viz:size value="14.734177"></viz:size>
+        <viz:size value="12.461922"></viz:size>
         <viz:position x="-17.059317" y="228.80069" z="0.0"></viz:position>
-        <viz:color r="235" g="144" b="112"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="210.0" label="3D Animation">
         <attvalues>
@@ -3193,9 +3193,9 @@
           <attvalue for="Triangles" value="90"></attvalue>
           <attvalue for="eigencentrality" value="0.13510753439039494"></attvalue>
         </attvalues>
-        <viz:size value="13.721519"></viz:size>
+        <viz:size value="12.354326"></viz:size>
         <viz:position x="119.58561" y="-743.4138" z="0.0"></viz:position>
-        <viz:color r="228" g="100" b="81"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="211.0" label=" Facebook">
         <attvalues>
@@ -3208,9 +3208,9 @@
           <attvalue for="Triangles" value="14"></attvalue>
           <attvalue for="eigencentrality" value="0.01829029257897467"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.000388"></viz:size>
         <viz:position x="-550.1328" y="-352.59973" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="212.0" label="Copywriting">
         <attvalues>
@@ -3223,9 +3223,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.014771511594063369"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.225632"></viz:size>
         <viz:position x="-366.07764" y="-201.00555" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="213.0" label=" Visual Arts">
         <attvalues>
@@ -3240,7 +3240,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-260.2566" y="-64.34737" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="214.0" label="Illustration">
         <attvalues>
@@ -3253,9 +3253,9 @@
           <attvalue for="Triangles" value="157"></attvalue>
           <attvalue for="eigencentrality" value="0.19699511468244568"></attvalue>
         </attvalues>
-        <viz:size value="14.734177"></viz:size>
+        <viz:size value="12.728979"></viz:size>
         <viz:position x="189.20744" y="-682.94977" z="0.0"></viz:position>
-        <viz:color r="235" g="144" b="112"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="215.0" label=".NET">
         <attvalues>
@@ -3268,9 +3268,9 @@
           <attvalue for="Triangles" value="145"></attvalue>
           <attvalue for="eigencentrality" value="0.3875550871599065"></attvalue>
         </attvalues>
-        <viz:size value="13.92405"></viz:size>
+        <viz:size value="12.031572"></viz:size>
         <viz:position x="-164.36531" y="240.44432" z="0.0"></viz:position>
-        <viz:color r="229" g="108" b="87"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="216.0" label="Brochure Design">
         <attvalues>
@@ -3283,9 +3283,9 @@
           <attvalue for="Triangles" value="62"></attvalue>
           <attvalue for="eigencentrality" value="0.12038426259098829"></attvalue>
         </attvalues>
-        <viz:size value="14.025316"></viz:size>
+        <viz:size value="13.325556"></viz:size>
         <viz:position x="285.49054" y="-668.09796" z="0.0"></viz:position>
-        <viz:color r="230" g="113" b="90"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="217.0" label="Blog">
         <attvalues>
@@ -3300,7 +3300,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-667.72723" y="-231.02219" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="218.0" label=" After Effects">
         <attvalues>
@@ -3313,9 +3313,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.032079149151136147"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-13.535805" y="-746.5735" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="219.0" label="Animation">
         <attvalues>
@@ -3328,9 +3328,9 @@
           <attvalue for="Triangles" value="137"></attvalue>
           <attvalue for="eigencentrality" value="0.18839409101643975"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.64908"></viz:size>
         <viz:position x="84.127914" y="-656.88403" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="220.0" label=" Copy Typing">
         <attvalues>
@@ -3345,7 +3345,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-538.84094" y="149.61311" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="221.0" label=" ActionScript">
         <attvalues>
@@ -3358,9 +3358,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.03599871080112652"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="107.7465" y="-106.72206" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="222.0" label=" Internet Marketing">
         <attvalues>
@@ -3373,9 +3373,9 @@
           <attvalue for="Triangles" value="9"></attvalue>
           <attvalue for="eigencentrality" value="0.01576892748385912"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.000388"></viz:size>
         <viz:position x="-575.58026" y="-326.08862" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="223.0" label="Electronics">
         <attvalues>
@@ -3388,9 +3388,9 @@
           <attvalue for="Triangles" value="7"></attvalue>
           <attvalue for="eigencentrality" value="0.07567542732183094"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.004944"></viz:size>
         <viz:position x="-161.47867" y="526.14795" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="224.0" label=" Visual Basic">
         <attvalues>
@@ -3405,7 +3405,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-471.31903" y="402.80655" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="225.0" label=" Data Entry">
         <attvalues>
@@ -3418,9 +3418,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.02527847531319038"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.087983"></viz:size>
         <viz:position x="-424.084" y="-10.819675" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="226.0" label="Templates">
         <attvalues>
@@ -3433,9 +3433,9 @@
           <attvalue for="Triangles" value="197"></attvalue>
           <attvalue for="eigencentrality" value="0.423602881223069"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.646023"></viz:size>
         <viz:position x="81.04581" y="-389.36148" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="227.0" label="Flex">
         <attvalues>
@@ -3448,9 +3448,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.02184668063735643"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="74.39463" y="-186.52664" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="228.0" label=" Illustrator">
         <attvalues>
@@ -3463,9 +3463,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.007950389249937684"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="376.60297" y="-610.10236" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="229.0" label="Maya">
         <attvalues>
@@ -3478,9 +3478,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.015818764891354323"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="157.7157" y="-881.53143" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="230.0" label="Internet Marketing">
         <attvalues>
@@ -3493,9 +3493,9 @@
           <attvalue for="Triangles" value="14"></attvalue>
           <attvalue for="eigencentrality" value="0.024728934088272026"></attvalue>
         </attvalues>
-        <viz:size value="12.6075945"></viz:size>
+        <viz:size value="12.028241"></viz:size>
         <viz:position x="-425.19113" y="-269.44324" z="0.0"></viz:position>
-        <viz:color r="219" g="51" b="46"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="231.0" label="3D Modelling">
         <attvalues>
@@ -3508,9 +3508,9 @@
           <attvalue for="Triangles" value="83"></attvalue>
           <attvalue for="eigencentrality" value="0.10201945193453524"></attvalue>
         </attvalues>
-        <viz:size value="13.92405"></viz:size>
+        <viz:size value="12.669191"></viz:size>
         <viz:position x="114.30013" y="-834.3078" z="0.0"></viz:position>
-        <viz:color r="229" g="108" b="87"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="232.0" label=" Copywriting">
         <attvalues>
@@ -3525,7 +3525,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-676.51416" y="-269.467" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="233.0" label="Python">
         <attvalues>
@@ -3538,9 +3538,9 @@
           <attvalue for="Triangles" value="194"></attvalue>
           <attvalue for="eigencentrality" value="0.4634289982816309"></attvalue>
         </attvalues>
-        <viz:size value="15.037974"></viz:size>
+        <viz:size value="13.762662"></viz:size>
         <viz:position x="-272.34637" y="446.15955" z="0.0"></viz:position>
-        <viz:color r="238" g="157" b="121"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="234.0" label="Software Architecture">
         <attvalues>
@@ -3553,9 +3553,9 @@
           <attvalue for="Triangles" value="682"></attvalue>
           <attvalue for="eigencentrality" value="0.9067190883738827"></attvalue>
         </attvalues>
-        <viz:size value="18.683544"></viz:size>
+        <viz:size value="15.575445"></viz:size>
         <viz:position x="-9.250284" y="153.51099" z="0.0"></viz:position>
-        <viz:color r="151" g="190" b="186"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="235.0" label="Shell Script">
         <attvalues>
@@ -3568,9 +3568,9 @@
           <attvalue for="Triangles" value="275"></attvalue>
           <attvalue for="eigencentrality" value="0.4948019708217417"></attvalue>
         </attvalues>
-        <viz:size value="14.936708"></viz:size>
+        <viz:size value="12.16585"></viz:size>
         <viz:position x="-52.003384" y="440.4658" z="0.0"></viz:position>
-        <viz:color r="237" g="152" b="118"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="236.0" label=" Django">
         <attvalues>
@@ -3585,7 +3585,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-427.97638" y="562.2736" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="237.0" label="Wireless">
         <attvalues>
@@ -3600,7 +3600,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-240.23885" y="611.1289" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="238.0" label=" iPhone">
         <attvalues>
@@ -3613,9 +3613,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.026106593878996765"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="336.874" y="527.1247" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="239.0" label="C Programming">
         <attvalues>
@@ -3628,9 +3628,9 @@
           <attvalue for="Triangles" value="154"></attvalue>
           <attvalue for="eigencentrality" value="0.3776366199850271"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.321544"></viz:size>
         <viz:position x="-94.04845" y="402.36017" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="240.0" label=" Web Security">
         <attvalues>
@@ -3645,7 +3645,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="326.57605" y="320.0327" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="241.0" label="Virtual Assistant">
         <attvalues>
@@ -3658,9 +3658,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.011964064151620124"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.01259"></viz:size>
         <viz:position x="-284.71188" y="-53.791344" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="242.0" label="eCommerce">
         <attvalues>
@@ -3673,9 +3673,9 @@
           <attvalue for="Triangles" value="51"></attvalue>
           <attvalue for="eigencentrality" value="0.1819789711288227"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.013039"></viz:size>
         <viz:position x="250.48454" y="-112.334076" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="243.0" label="T-Shirts">
         <attvalues>
@@ -3688,9 +3688,9 @@
           <attvalue for="Triangles" value="5"></attvalue>
           <attvalue for="eigencentrality" value="0.032328528814020666"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.000479"></viz:size>
         <viz:position x="289.51352" y="-739.20905" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="244.0" label=" Blackberry">
         <attvalues>
@@ -3720,7 +3720,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-585.9336" y="-225.65245" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="246.0" label=" Caricature &amp;amp">
         <attvalues>
@@ -3733,9 +3733,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.012277188265766216"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="326.7809" y="-726.6045" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="247.0" label=" Joomla">
         <attvalues>
@@ -3750,7 +3750,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="380.18845" y="-24.734653" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="248.0" label=" Cisco">
         <attvalues>
@@ -3763,9 +3763,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.026258028014545277"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-126.529594" y="579.02075" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="249.0" label="Linux">
         <attvalues>
@@ -3778,9 +3778,9 @@
           <attvalue for="Triangles" value="264"></attvalue>
           <attvalue for="eigencentrality" value="0.4861016408243399"></attvalue>
         </attvalues>
-        <viz:size value="15.037974"></viz:size>
+        <viz:size value="12.352541"></viz:size>
         <viz:position x="-6.794198" y="561.0589" z="0.0"></viz:position>
-        <viz:color r="238" g="157" b="121"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="250.0" label="Asterisk PBX">
         <attvalues>
@@ -3795,7 +3795,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="170.96478" y="731.6168" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="251.0" label="Stationery Design">
         <attvalues>
@@ -3808,9 +3808,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.011578066588180978"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="279.23642" y="-698.9875" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="252.0" label=" iPad">
         <attvalues>
@@ -3823,9 +3823,9 @@
           <attvalue for="Triangles" value="6"></attvalue>
           <attvalue for="eigencentrality" value="0.030584741197971742"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="369.4775" y="490.05756" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="253.0" label=" HTML">
         <attvalues>
@@ -3838,9 +3838,9 @@
           <attvalue for="Triangles" value="63"></attvalue>
           <attvalue for="eigencentrality" value="0.22960605560749384"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.025137"></viz:size>
         <viz:position x="337.77176" y="57.62831" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="254.0" label=" Packaging">
         <attvalues>
@@ -3855,7 +3855,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="366.785" y="-776.5028" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="255.0" label="Flyer Design">
         <attvalues>
@@ -3868,9 +3868,9 @@
           <attvalue for="Triangles" value="5"></attvalue>
           <attvalue for="eigencentrality" value="0.026748416218746615"></attvalue>
         </attvalues>
-        <viz:size value="12.303798"></viz:size>
+        <viz:size value="12.000715"></viz:size>
         <viz:position x="237.30121" y="-728.7392" z="0.0"></viz:position>
-        <viz:color r="217" g="38" b="37"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="256.0" label="Blackberry">
         <attvalues>
@@ -3883,9 +3883,9 @@
           <attvalue for="Triangles" value="71"></attvalue>
           <attvalue for="eigencentrality" value="0.25964014930014234"></attvalue>
         </attvalues>
-        <viz:size value="13.822784"></viz:size>
+        <viz:size value="12.94149"></viz:size>
         <viz:position x="252.7614" y="326.20743" z="0.0"></viz:position>
-        <viz:color r="228" g="104" b="84"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="257.0" label="Mac OS">
         <attvalues>
@@ -3898,9 +3898,9 @@
           <attvalue for="Triangles" value="174"></attvalue>
           <attvalue for="eigencentrality" value="0.39952442764709234"></attvalue>
         </attvalues>
-        <viz:size value="14.531646"></viz:size>
+        <viz:size value="12.265076"></viz:size>
         <viz:position x="105.70819" y="503.24976" z="0.0"></viz:position>
-        <viz:color r="234" g="135" b="106"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="258.0" label="Article Rewriting">
         <attvalues>
@@ -3913,9 +3913,9 @@
           <attvalue for="Triangles" value="0"></attvalue>
           <attvalue for="eigencentrality" value="0.013428207825423654"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.025196"></viz:size>
         <viz:position x="-221.65248" y="-129.45181" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="259.0" label="3D Rendering">
         <attvalues>
@@ -3928,9 +3928,9 @@
           <attvalue for="Triangles" value="38"></attvalue>
           <attvalue for="eigencentrality" value="0.06524955818436351"></attvalue>
         </attvalues>
-        <viz:size value="13.620254"></viz:size>
+        <viz:size value="13.1422"></viz:size>
         <viz:position x="131.40761" y="-908.95654" z="0.0"></viz:position>
-        <viz:color r="227" g="95" b="78"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="260.0" label=" Word">
         <attvalues>
@@ -3945,7 +3945,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-557.4061" y="173.51192" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="261.0" label="Website Testing">
         <attvalues>
@@ -3958,9 +3958,9 @@
           <attvalue for="Triangles" value="508"></attvalue>
           <attvalue for="eigencentrality" value="0.750153871025489"></attvalue>
         </attvalues>
-        <viz:size value="16.86076"></viz:size>
+        <viz:size value="12.718475"></viz:size>
         <viz:position x="24.493778" y="276.93393" z="0.0"></viz:position>
-        <viz:color r="251" g="236" b="178"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="262.0" label="Photoshop">
         <attvalues>
@@ -3973,9 +3973,9 @@
           <attvalue for="Triangles" value="237"></attvalue>
           <attvalue for="eigencentrality" value="0.3298959050415908"></attvalue>
         </attvalues>
-        <viz:size value="15.746836"></viz:size>
+        <viz:size value="14.160372"></viz:size>
         <viz:position x="229.58641" y="-544.9528" z="0.0"></viz:position>
-        <viz:color r="243" g="188" b="143"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="263.0" label=" J2EE">
         <attvalues>
@@ -3990,7 +3990,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="132.96751" y="690.3177" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="264.0" label="C# Programming">
         <attvalues>
@@ -4003,9 +4003,9 @@
           <attvalue for="Triangles" value="201"></attvalue>
           <attvalue for="eigencentrality" value="0.4350645541876806"></attvalue>
         </attvalues>
-        <viz:size value="14.43038"></viz:size>
+        <viz:size value="12.227128"></viz:size>
         <viz:position x="-227.22562" y="384.95908" z="0.0"></viz:position>
-        <viz:color r="233" g="130" b="103"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="265.0" label=" Flash">
         <attvalues>
@@ -4020,7 +4020,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="85.90354" y="-279.48618" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="266.0" label=" 3D Rendering">
         <attvalues>
@@ -4033,9 +4033,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.006018991400931668"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="180.22499" y="-960.72797" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="267.0" label=" .NET">
         <attvalues>
@@ -4048,9 +4048,9 @@
           <attvalue for="Triangles" value="71"></attvalue>
           <attvalue for="eigencentrality" value="0.22304218610990528"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="12.029747"></viz:size>
         <viz:position x="-225.63612" y="331.71024" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="268.0" label="Paypal API">
         <attvalues>
@@ -4063,9 +4063,9 @@
           <attvalue for="Triangles" value="28"></attvalue>
           <attvalue for="eigencentrality" value="0.1835760660427066"></attvalue>
         </attvalues>
-        <viz:size value="13.518988"></viz:size>
+        <viz:size value="13.164783"></viz:size>
         <viz:position x="-163.0436" y="-157.90074" z="0.0"></viz:position>
-        <viz:color r="226" g="91" b="74"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="269.0" label="eBay">
         <attvalues>
@@ -4080,7 +4080,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-235.45683" y="-197.3256" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="270.0" label="AJAX">
         <attvalues>
@@ -4093,9 +4093,9 @@
           <attvalue for="Triangles" value="65"></attvalue>
           <attvalue for="eigencentrality" value="0.25286866865899993"></attvalue>
         </attvalues>
-        <viz:size value="13.316456"></viz:size>
+        <viz:size value="12.035887"></viz:size>
         <viz:position x="139.86479" y="71.97346" z="0.0"></viz:position>
-        <viz:color r="224" g="82" b="68"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="271.0" label=" eBay">
         <attvalues>
@@ -4110,7 +4110,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-213.95903" y="-217.45897" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="272.0" label=" Excel">
         <attvalues>
@@ -4123,9 +4123,9 @@
           <attvalue for="Triangles" value="3"></attvalue>
           <attvalue for="eigencentrality" value="0.028797608733014318"></attvalue>
         </attvalues>
-        <viz:size value="12.202532"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="-463.22495" y="242.20168" z="0.0"></viz:position>
-        <viz:color r="216" g="33" b="34"></viz:color>
+        <viz:color r="230" g="112" b="89"></viz:color>
       </node>
       <node id="273.0" label=" Animation">
         <attvalues>
@@ -4138,9 +4138,9 @@
           <attvalue for="Triangles" value="8"></attvalue>
           <attvalue for="eigencentrality" value="0.039172943465658513"></attvalue>
         </attvalues>
-        <viz:size value="12.50633"></viz:size>
+        <viz:size value="12.02223"></viz:size>
         <viz:position x="-0.7013517" y="-574.3011" z="0.0"></viz:position>
-        <viz:color r="218" g="47" b="43"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="274.0" label=" Game Consoles">
         <attvalues>
@@ -4153,9 +4153,9 @@
           <attvalue for="Triangles" value="1"></attvalue>
           <attvalue for="eigencentrality" value="0.026504391921080856"></attvalue>
         </attvalues>
-        <viz:size value="12.101266"></viz:size>
+        <viz:size value="12.0"></viz:size>
         <viz:position x="295.5408" y="360.61508" z="0.0"></viz:position>
-        <viz:color r="215" g="29" b="31"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="275.0" label=" Android">
         <attvalues>
@@ -4168,9 +4168,9 @@
           <attvalue for="Triangles" value="40"></attvalue>
           <attvalue for="eigencentrality" value="0.11015512049334789"></attvalue>
         </attvalues>
-        <viz:size value="13.113924"></viz:size>
+        <viz:size value="12.031852"></viz:size>
         <viz:position x="330.95093" y="447.51187" z="0.0"></viz:position>
-        <viz:color r="223" g="73" b="62"></viz:color>
+        <viz:color r="215" g="25" b="28"></viz:color>
       </node>
       <node id="276.0" label=" Drupal">
         <attvalues>
@@ -4185,7 +4185,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="73.963684" y="-118.61611" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="44" g="123" b="182"></viz:color>
       </node>
       <node id="277.0" label="Banner Design">
         <attvalues>
@@ -4198,9 +4198,9 @@
           <attvalue for="Triangles" value="84"></attvalue>
           <attvalue for="eigencentrality" value="0.17989119958349367"></attvalue>
         </attvalues>
-        <viz:size value="13.721519"></viz:size>
+        <viz:size value="12.107865"></viz:size>
         <viz:position x="187.76175" y="-496.39026" z="0.0"></viz:position>
-        <viz:color r="228" g="100" b="81"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="278.0" label=" Windows Desktop">
         <attvalues>
@@ -4215,7 +4215,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="-114.19462" y="766.0163" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="245" g="199" b="151"></viz:color>
       </node>
       <node id="279.0" label=" Advertisement Design">
         <attvalues>
@@ -4228,9 +4228,9 @@
           <attvalue for="Triangles" value="7"></attvalue>
           <attvalue for="eigencentrality" value="0.03125076991449488"></attvalue>
         </attvalues>
-        <viz:size value="12.405064"></viz:size>
+        <viz:size value="12.002514"></viz:size>
         <viz:position x="247.11702" y="-646.93994" z="0.0"></viz:position>
-        <viz:color r="218" g="42" b="40"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
       <node id="280.0" label="Covers &amp;amp">
         <attvalues>
@@ -4245,7 +4245,7 @@
         </attvalues>
         <viz:size value="12.0"></viz:size>
         <viz:position x="386.84702" y="-751.7731" z="0.0"></viz:position>
-        <viz:color r="215" g="25" b="28"></viz:color>
+        <viz:color r="202" g="222" b="188"></viz:color>
       </node>
     </nodes>
     <edges>

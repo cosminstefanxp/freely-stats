@@ -210,7 +210,7 @@ def kcluster(rows,distance=pearson,k=4):
           avgs[j]/=len(bestmatches[i])
         clusters[i]=avgs
       
-  return bestmatches
+  return clusters,bestmatches
 
 def tanamoto(v1,v2):
   c1,c2,shr=0,0,0

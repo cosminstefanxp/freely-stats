@@ -50,15 +50,34 @@ def draw_dendogram():
     #clusters.printclust(clust,labels=jobnames)
     clusters.drawdendrogram(clust,jobnames,jpeg='jobclust.jpg')
     
-def kmeans():
+def kmeans(x):
     jobnames,projects,data=clusters.readfile('job_projects')
-    clust = clusters.kcluster(data, k=x)
+    cl, matches = clusters.kcluster(data, k=x)
+    #print cl
+    matches_with_names = []
     for i in range(x):
-        print [jobnames[r] for r in clust[i]]
+         matches_with_names.append([jobnames[r] for r in matches[i]])
+    return matches_with_names
 
 def multidim():
     jobnames,projects,data=clusters.readfile('job_projects')
     coords = clusters.scaledown(data)
     clusters.draw2d(coords,jobnames,jpeg='job_multidim.jpg')
-        
-multidim()
+
+
+
+fout = open("k-means(10-16)", "w")
+for x in [10, 11, 12, 13, 14, 15, 16]:      
+    print "X = ",
+    print x  
+    k_clusters = kmeans(x)
+    fout.write("%d,"%(x))
+    for cluster in k_clusters:
+        fout.write(";")
+        jobs  = ""
+        for job in cluster:
+            job = job.replace("&amp", "&")
+            jobs += job+"~"
+        fout.write(jobs[:-1])
+    fout.write("\n")
+fout.close()

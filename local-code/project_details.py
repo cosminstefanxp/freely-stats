@@ -17,11 +17,11 @@ class ProjectDetails:
     @staticmethod
     def fromCSV(csv_line):
         try:
-            pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username = csv_line.split(",", 10)
+            pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username, exchg = csv_line.split(",", 11)
         except ValueError:
             print csv_line
             return None
-        return ProjectDetails(pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username)
+        return ProjectDetails(pid, name, buyer_id, buyer_name, buyer_country, state, description, jobs, accepted_bidder_id, accepted_bidder_username, exchg)
        
           
     def to_dict(self):

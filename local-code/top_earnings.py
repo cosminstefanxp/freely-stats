@@ -64,8 +64,6 @@ hash_jobs = {'XSLT': 112, 'Embedded Software': 61, 'OpenGL': 142, 'Delphi': 96, 
              'PSD to HTML': 71, 'Joomla': 33, 'Linkedin': 151, 'Format &amp; Layout': 182, 'Visual Basic': 53, 'Linux': 34, 'Banner Design': 56, 
              'Volusion': 156}
 
-currencies = {1: 1.0, 2: 0.820805, 3: 1.042632, 4: 1.606971, 5: 0.12938, 6: 0.820412, 7: 0.024676, 8: 1.304714, 9: 1.007742, 10: 0.112861, 
-              11: 0.018292, 12: 0.010956, 13: 0.002083, 14: 0.077383, 15: 0.000104}
 
 def compute_pattern(job_list):
     bitVector = BitVector( size = 200 )
@@ -105,6 +103,7 @@ def compute_patterns():
                 avg_bid = -1
             if(avg_bid != -1):
                 avg_bid = float(avg_bid)
+                
                 tup = patterns[pattern.intValue()]
                 avg = tup[0] + avg_bid
                 max = tup[1] 
@@ -130,21 +129,20 @@ def compute_patterns():
 
 #compute_patterns()  
 foa = Foa()
-sellers = foa.load_users_from_csv("sellers.csv")
-details = foa.loadProjectDetailsFromCSV(filename="projects_details_uniq.csv")
+details = foa.loadProjectDetailsFromCSV(filename="full_projects_details.csv")
 patterns = {}
 projects = foa.loadProjectsFromCSVFile("spring_2012_599.csv")
 
 my = 0
 size = len(details)
 for detail in details.values():
-   # print my,
-   # print " of ",
-   # print size
+    #print my,
+    #print " of ",
+    #print size
     my += 1
     prj_id = str(detail.id)
-    print prj_id
-    if detail.buyer_id in sellers and prj_id in projects:
+#    print prj_id
+    if prj_id in projects:
 
         job_list = detail.jobs.split(";")
        # print "Job_list: ",
@@ -152,8 +150,11 @@ for detail in details.values():
         job_list = [job.strip() for job in job_list]
         pattern = compute_pattern(job_list)
         patterns.setdefault(pattern.intValue(), (0.0, 0.0, 0.0))
-        exch_rate =  currencies[int(sellers[detail.buyer_id].currency[:-1])] 
-        #print exch_rate    
+        
+        exch_rate =  float(detail.exchg)
+        if(exch_rate == -1):
+            continue
+        print exch_rate    
           
         avg_bid = projects[prj_id].avg_bid[:-1]
       #  print avg_bid 
@@ -163,9 +164,9 @@ for detail in details.values():
         if(avg_bid != -1):
             
             avg_bid = float(avg_bid) * exch_rate
-            if(avg_bid == 1375.0):
-                print "PROJECT ID:",
-                print prj_id
+            if(avg_bid == 26575):
+                    print "PROJECT ID:",
+                    print prj_id
             tup = patterns[pattern.intValue()]
             avg = tup[0] + avg_bid
             max = tup[1] 
@@ -173,8 +174,8 @@ for detail in details.values():
                 max = avg_bid
             count = tup[2] + 1.0
             patterns[pattern.intValue()] = (avg, max, count)
-
-
+        #if(my == 000):
+        #    break
 patterns = patterns.items()
 patterns.sort(key = lambda tup:tup[1][1], reverse = True)
 fout = open("earnings_by_pattern.dict", "w")

@@ -33,6 +33,7 @@
 		padding: 3px;
 		margin: 1px;
 		border: 1px solid #bbb;
+		line-height: 2.1em;
 	}
 </style>
  
@@ -86,11 +87,9 @@
 {% if recommendations != None %}
 <div id="recommendations" class="results-box">
 	<h2>Learning recommendations</h2>
-	<ul>
 	{% for rec in recommendations %}
-		<li>{{rec[1]}} - {{rec[0]}}</li>
+	<span class='match'>{{rec[1]}}</span> - {{rec[0]}}<br/>
 	{% endfor %}
-	</ul>
 </div>
 {% endif %}
 <div class="clear"></div>

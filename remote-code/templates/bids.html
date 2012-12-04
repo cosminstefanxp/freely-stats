@@ -116,6 +116,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 <p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
 <div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
 <hr/>
+<a id="results"></a>
 <p class="clear">Selected countries:</p>
 <div id="selected-list">
 	{% for country in countries %}
@@ -123,7 +124,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 	<div class="clear"></div>
 </div>
-<form action="bids.html" id="select-form"  data-filter='country'>
+<form action="#results" id="select-form"  data-filter='country'>
 	<input type="submit" value="Go!" /> 
 	{% for country in countries %} 
 	<input type='text' name='country' hidden='hidden' value='{{country}}'/>

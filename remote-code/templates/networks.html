@@ -1,0 +1,96 @@
+{% extends "templates/base.html" %} {% set active_page = "networks"
+%} {% block title %}Networks{% endblock %} 
+{% block head %} {{ super() }}
+<script type="text/javascript" src="js/sigma.min.js"></script>
+<script type="text/javascript" src="js/sigma.parseGexf.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		init();
+	});	
+	
+	function init() {
+		/**
+		 * First, let's instantiate sigma.js :
+		 */
+		var sigInst = sigma.init($('#jobs-network')[0]).drawingProperties({
+			defaultLabelColor : '#fff',
+			defaultEdgeType : 'curve',
+			labelThreshold : 6
+		}).graphProperties({
+			minNodeSize : 0.5,
+			maxNodeSize : 4
+		}).mouseProperties({
+			maxRatio : 32
+		});
+
+		// (requires "sigma.parseGexf.js" to be executed)
+		sigInst.parseGexf('data/jobs_network.gexf');
+
+		/**
+		 * Now, here is the code that shows the popup :
+		 */
+		(function() {
+			var popUp;
+
+			// This function is used to generate the attributes list from the node attributes.
+			// Since the graph comes from GEXF, the attibutes look like:
+			// [
+			//   { attr: 'Lorem', val: '42' },
+			//   { attr: 'Ipsum', val: 'dolores' },
+			//   ...
+			//   { attr: 'Sit',   val: 'amet' }
+			// ]
+			function attributesToString(attr) {
+				return '<ul>' + attr.map(function(o) {
+					return '<li>' + o.attr + ' : ' + o.val + '</li>';
+				}).join('') + '</ul>';
+			}
+
+			function showNodeInfo(event) {
+				popUp && popUp.remove();
+
+				var node;
+				sigInst.iterNodes(function(n) {
+					node = n;
+				}, [ event.content[0] ]);
+
+				popUp = $('<div class="node-info-popup"></div>').append(
+				// The GEXF parser stores all the attributes in an array named
+				// 'attributes'. And since sigma.js does not recognize the key
+				// 'attributes' (unlike the keys 'label', 'color', 'size' etc),
+				// it stores it in the node 'attr' object :
+				attributesToString(node['attr']['attributes'])).attr('id',
+						'node-info' + sigInst.getID()).css({
+					'display' : 'inline-block',
+					'border-radius' : 3,
+					'padding' : 5,
+					'background' : '#fff',
+					'color' : '#333',
+					'box-shadow' : '0 0 4px #666',
+					'position' : 'absolute',
+					'left' : node.displayX,
+					'top' : node.displayY + 15
+				});
+
+				$('#jobs-network').append(popUp);
+			}
+
+			function hideNodeInfo(event) {
+				popUp && popUp.remove();
+				popUp = false;
+			}
+
+			sigInst.bind('overnodes', showNodeInfo).bind('outnodes',
+					hideNodeInfo).draw();
+		})();
+	}
+</script>
+
+{% endblock %} {% block content %}
+<h2>Skills network</h2>
+<p>This page shows the network structure of Freelancer.com skills
+	and the communities that connect them.</p>
+  <div class="sigma-parent">
+    <div class="sigma-expand" id="jobs-network"></div>
+  </div>
+{% endblock %}

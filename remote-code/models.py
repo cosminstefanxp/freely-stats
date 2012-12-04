@@ -4,6 +4,7 @@ Created on Nov 24, 2012
 @author: cosmin
 '''
 from google.appengine.ext import db
+from BitVector import *
 
 TopJobs = [('PHP', 1855), ('Website Design', 1248), ('Graphic Design', 1132),
     ('HTML', 1081), ('Software Architecture', 875), ('MySQL', 750), ('Software Testing', 527),
@@ -74,7 +75,7 @@ class AcceptedBidderBehavior(db.Model):
         for accepted_entry in accepted_split:
             a_country, a_count = accepted_entry.split(":", 2)
             self.accepted_expanded.append((a_country, int(a_count)))
-            left-=int(a_count)
+            left -= int(a_count)
         if left > 0:
             self.accepted_expanded.append(('Others', left))    
 
@@ -130,4 +131,18 @@ class RecommendationPatterns(db.Model):
     ''' 
     Class used to store the patterns used for recommendations, in the Appengine datastore.
     '''
-    pattern = db.TextProperty()
+    patterns = db.TextProperty()
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        patterns = self.patterns.split(';')
+        self.patterns_expanded = []
+        self.projects_count = {}
+        for line in patterns:
+            patInt, count = line.split(":")
+            bv = BitVector(intVal=int(patInt), size=200)
+            self.patterns_expanded.append(bv)
+            self.projects_count[int(patInt)] = int(count)
+    def __str__(self):
+        return "%s: %d" % (self.patterns_expanded[0], self.projects_count[self.patterns_expanded[0].intValue()])
+

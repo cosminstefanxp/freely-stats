@@ -15,15 +15,17 @@
 {% set navigation_bar = [
     ('/', 'home', 'Home'),
     ('/jobs.html', 'jobs', 'Categories'),
-    ('/trends.html', 'trends', 'Monthly Trends'),
+    ('/trends.html', 'trends', 'Trends'),
     ('/bids.html', 'bids', 'Bids Stats'),
-    ('/country_stats.html', 'country_stats', "Statistics")
+    ('/country_stats.html', 'country_stats', 'Statistics'),
+    ('/networks.html', 'networks', 'Networks'),
+    ('/recommendations.html', 'recommendations','Recommendations')
 ] %}
 {% set active_page = active_page|default('index') %}
 
 <body>
 	<div id="header">
-		<div class="title center">Freely Stats</div>
+		<div class="title center"><a href='/'>Freely Stats</a></div>
 	</div>
 	<div id="top">
 		<div id="menu">
@@ -32,6 +34,7 @@
   				<a href="{{ href|e }}">{{ caption }}</a>
   			</div>
 			{% endfor %}
+			<div class="clear"></div>
 		</div>
 	</div>
 	<div id="content">{% block content %}{% endblock %}</div>

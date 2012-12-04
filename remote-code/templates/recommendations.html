@@ -1,0 +1,98 @@
+{% extends "templates/base.html" %} 
+{% set active_page = "recommendations" %}
+{% block title %}Recommendations{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+	$(document).ready(function() {
+		// Add the click handlers for selecting and deselecting the jobs for the filter
+		$("#selection-cloud .select-entry").click(on_select);
+		$("#selected-list .select-entry").click(on_deselect);
+	});
+</script>
+
+<style>
+	.results-box {
+		width: 45%;
+		margin: 15px;
+		border: 1px solid #888;
+		border-radius: 3px;
+		float: left;
+		padding: 15px;
+		height: 100%;
+	}
+	
+	#top-matches table tr {
+		height: 27px;
+	}
+	
+	.match {
+		background: #e1e1f9;
+		padding: 3px;
+		margin: 1px;
+		border: 1px solid #bbb;
+	}
+</style>
+ 
+
+{% endblock %} {% block content %}
+<p>This page gives recommendations regarding skills, based on a dataset from Freelancer.com.</p>
+<hr/>
+<p>For setting a new skill for getting recommendation, please select it in the following list:</p>
+<div id='selection-cloud'>
+	{% for job in jobs %}
+	{% if not job in selected_jobs %}
+	<div class="select-entry">{{job|e}}</div>
+	{% endif %}
+	{% endfor %}
+</div>
+<div class="clear"></div>
+<hr/>
+<a id="results"></a>
+<p>Selected job types:</p>
+<div id="selected-list">
+	{% for job in selected_jobs %}
+	<div class="select-entry">{{job|e}}</div>
+	{% endfor %}
+	<div class="clear"></div>
+</div>
+<form action="#results" id="select-form" data-filter='job'>
+	<input type="submit" value="Go!"/>
+	{% for job in selected_jobs %}
+	<input type='text' name='job' hidden='hidden' value='{{job}}'/>
+	{% endfor %}
+</form>
+
+<div class="clear"></div>
+<hr/>
+
+{% if top_matches != None %}
+<div id="top-matches" class="results-box">
+	<h2>Top Similar Patterns</h2>
+	<table style="width: 100%;">
+		<tr><th style="text-align: left">Jobs</th><th style="text-align: left">Projects Count</th></tr>
+		{% for match in top_matches %}
+			<tr>
+				<td>{% for job in match[2] %} <span class='match'>{{job}}</span>{%endfor%}</td>
+				<td>{{ match[1] }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endif %}
+
+{% if recommendations != None %}
+<div id="recommendations" class="results-box">
+	<h2>Learning recommendations</h2>
+	<ul>
+	{% for rec in recommendations %}
+		<li>{{rec[1]}} - {{rec[0]}}</li>
+	{% endfor %}
+	</ul>
+</div>
+{% endif %}
+<div class="clear"></div>
+
+{% endblock %}

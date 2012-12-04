@@ -11,6 +11,10 @@ handlers:
 - url: /js
   static_dir: js
 
+- url: /data
+  static_dir: data
+  mime_type: text
+
 - url: /.*
   script: main.app
 

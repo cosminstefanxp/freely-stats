@@ -86,6 +86,7 @@
 </div>
 <div class="clear"></div>
 <hr/>
+<a id="results"></a>
 <p>Selected job types:</p>
 <div id="selected-list">
 	{% for trend in trends_names %}
@@ -93,7 +94,7 @@
 	{% endfor %}
 	<div class="clear"></div>
 </div>
-<form action="trends.html" id="select-form" data-filter='job'>
+<form action="#results" id="select-form" data-filter='job'>
 	<input type="submit" value="Go!"/>
 	{% for trend in trends_names %}
 	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-select='{{trend}}'/>
@@ -102,7 +103,6 @@
 
 <div class="clear"></div>
 <hr/>
-
 <div id="chart_div"></div>
 
 {% endblock %}

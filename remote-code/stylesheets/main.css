@@ -1,26 +1,28 @@
 body {
 	background-color: #48c;
-	font-size: 16px;
 	margin: 0;
 	padding: 0;
 }
 
+
 #header {
 	background-color: #333;
-	height: 120px;
-	min-width: 300px;
+	min-width: 400px;
 }
 
 #header .title {
 	padding: 10px 25px 10px 25px;
-	font-size: 5em;
+}
+
+#header .title a {
+	text-decoration: none;
+	font-size: 4em;
 	color: white;
 }
 
 #top {
 	width: 100%;
 	background-color: #48c;
-	height: 50px;
 }
 
 #top #menu {
@@ -29,10 +31,10 @@ body {
 
 #top #menu .menu-item {
 	color: #333;
-	font-size: 2em;
+	font-size: 1.45em;
 	float: left;
 	font-weight: bold;
-	padding: 5px 25px;
+	padding: 5px 20px;
 	margin-left: 10px;
 	text-decoration: none;
 }
@@ -58,6 +60,7 @@ body {
 	height: auto !important; /* for modern browsers */
 	height: 600px; /* for IE5.x and IE6 */
 	padding: 5px 30px;
+	font-size:0.85em;
 }
 
 #footer {
@@ -101,7 +104,7 @@ body {
 
 .select-entry {
 	padding: 4px;
-	margin: 2px;
+	margin: 2px 3px;
 	font-size: 0.9em;
 	float: left;
 	background: #99c3ff;
@@ -109,6 +112,7 @@ body {
 	cursor: pointer;
 	height: 18px;
 	font-weight: bold;
+	color: #222;
 }
 
 .select-entry:HOVER {
@@ -142,20 +146,38 @@ body {
 	border-radius: 4px;
 }
 
-.country-entry .stats{
+.country-entry .stats {
 	float: left;
 	width: 40%;
 	padding: 25px 15px 15px 65px;
 }
 
-.country-entry .title{
+.country-entry .title {
 	margin: 25px 65px 5px 65px;
 }
 
-.country-entry .chart{
-	float:left;
+.country-entry .chart {
+	float: left;
 	padding: 0 0 20px 0;
 }
+
+.sigma-parent {
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background: #333;
+	height: 700px;
+}
+
+.sigma-expand {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
 
 .clear {
 	clear: both;

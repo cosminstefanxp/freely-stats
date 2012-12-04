@@ -118,6 +118,7 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 <p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
 <div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
 <hr/>
+<a id="results"></a>
 <p class="clear">Selected countries:</p>
 <div id="selected-list">
 	{% for country in countries %}
@@ -125,7 +126,7 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 	<div class="clear"></div>
 </div>
-<form action="country_stats.html" id="select-form"  data-filter='country'>
+<form action="#results" id="select-form"  data-filter='country'>
 	<input type="submit" value="Go!" /> 
 	{% for country in countries %} 
 	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
@@ -143,7 +144,8 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 			<li>Outbound bids: {{stat.bids_count}}</li>
 			<li>Word count: {{stat.word_count}}</li>
 			<li>Unique word count: {{stat.unique_word_count}}</li>
-			<li>Average rating: {{"%.2f"|format(stat.average_rating)}}</li>
+			<li>Lexical diversity: {{"%.2f"|format(stat.lexical_diversity)}}</li>
+			<li>Average rating: {{"%.2f"|format(stat.average_rating)}}</li>			
 		</ul>
 	</div>
 	<div id="bids-chart-{{loop.index}}" class="chart" style="width: 50%;"></div>

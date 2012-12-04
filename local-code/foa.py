@@ -108,7 +108,7 @@ class Foa:
            
            
             #id, name, buyer_id, buyer_name, buyer_country, state, short_descr, jobs, accepted_bidder_id, accepted_bidder_username)
-            file.write("%d, %s, %d, %s, %s, %s, %s, %s, %d, %s\n"%(project.id, name, project.buyer_id, buyer_name, buyer_country, project.state, description, jobs, project.accepted_bidder_id, accepted_bidder_username))
+            file.write("%d,%s,%d,%s,%s,%s,%s,%s,%d,%s,%s\n"%(project.id, name, project.buyer_id, buyer_name, buyer_country, project.state, description, jobs, project.accepted_bidder_id, accepted_bidder_username, project.exchg))
         file.close();  
     
     
@@ -219,6 +219,8 @@ class Foa:
         for line in lines:
             i += 1
             p = ProjectDetails.fromCSV(line)
+            if(p == None):
+                continue
             projects[p.id] = p
             if i % 5000 == 0:
                 print "Processed", i, "out of", nr

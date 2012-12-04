@@ -51,14 +51,14 @@ def draw_dendogram():
     clusters.drawdendrogram(clust,jobnames,jpeg='jobclust.jpg')
     
 def kmeans():
-    x = 2
-    0
     jobnames,projects,data=clusters.readfile('job_projects')
-    clust=clusters.kcluster(data, k=x)
-    fout = open("kclust.json", "w")
-    fout.write(json.dumps(clust, indent = 4))
-    fout.close()
+    clust = clusters.kcluster(data, k=x)
     for i in range(x):
         print [jobnames[r] for r in clust[i]]
+
+def multidim():
+    jobnames,projects,data=clusters.readfile('job_projects')
+    coords = clusters.scaledown(data)
+    clusters.draw2d(coords,jobnames,jpeg='job_multidim.jpg')
         
-kmeans()
+multidim()

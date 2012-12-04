@@ -17,6 +17,8 @@ class Manager:
         self.auth = freelance_auth.FreelanceOAuthClient() 
         self.parser = Parser()
         self.foa = FileOA.Foa()
+    
+    
         
     def write_jobs_to_json(self):
         url = "Job/getCategoryJobList.json"
@@ -88,22 +90,22 @@ class Manager:
         count = 0
         projects ={}
         for id in ids:
-            if count < 25100:
+            if count < 0:
                 count +=1
                 continue
             url = "Project/getProjectDetails.json?projectid="+id
             resp = self.auth.send_request(url)
-           # print resp
+            print resp
             project = self.parser.parseProjectDetails(resp);
             if project:
                 projects[project.id] = project
             count += 1
-            if count % 100 == 0:
-                self.foa.appendProjectsDetailsToCSVFile(projects)
+            if count % 10 == 0:
+                self.foa.appendProjectsDetailsToCSVFile(projects, file_name = "full_projects_details.csv")
                 projects = {}
-            if count % 1000 == 0:
-                dest = "projects_details_%d.csv"%(count)
-                copy_file("projects_details.csv", dest)
+            if count % 10 == 0:
+                dest = "full_projects_details_%d.csv"%(count)
+                copy_file("full_projects_details.csv", dest)
             print "%d of %d\n"%(count, len(ids))
         return projects
 
@@ -118,7 +120,8 @@ class Manager:
                 continue
             url = "Project/getBidsDetails.json?projectid="+id
             resp = self.auth.send_request(url)
-#            print resp
+           # print resp
+           
             bids = self.parser.parseBids(resp);
             if bids:
                 projects_bids[id] = bids
@@ -136,7 +139,7 @@ class Manager:
         count = 0
         users ={}
         for id in ids:
-            if count < 21630:
+            if count < 41380:
                 count +=1
                 continue
             val = int(id)
@@ -154,28 +157,73 @@ class Manager:
             if count % 1000 == 0:
                 dest = "users_%d.csv"%(count)
                 copy_file("users.csv", dest)
-            print "%d of %d\n"%(count, len(ids))
-           
+            print "%d of %d\n"%(count, len(ids))       
         return users
-        
+    
+    
+    def write_sellers(self, ids):
+        count = 0
+        sellers ={}
+        for id in ids:
+            if count < 29900:
+                count +=1
+                continue
+            val = int(id)
+            url = "User/getUserDetails.json?userid=%d"%(val)
+            resp = self.auth.send_request(url)
+           # print resp
+            seller = self.parser.parseUsers(resp);
+            if seller:
+                sellers[val] = seller
+            count += 1
+            if count % 100 == 0:
+                self.foa.appendUsersToCSVFile(sellers, file_name="sellers.csv")
+                sellers = {}
+            if count % 1000 == 0:
+                dest = "sellers_%d.csv"%(count)
+                copy_file("sellers.csv", dest)
+            print "%d of %d\n"%(count, len(ids))
+        self.foa.appendUsersToCSVFile(sellers, file_name="sellers.csv")
+    
+    def write_currency(self):
+        url = "Common/getCurrencies.json"
+        resp = self.auth.send_request(url)
+        currencies = self.parser.parseCurrencies(resp)
+        #print currencies
+    
 manager = Manager()
+#manager.write_currency()
+
+
+#details = manager.foa.loadProjectDetailsFromCSV("projects_details_uniq.csv")
+#ids = [proj.buyer_id for proj in details.values()]
+#manager.write_sellers(ids)
+
+
+
+
 #manager.write_jobs_to_csv()
 #manager.write_projects_for_main_categories()
 
-'''
-prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_599.csv")
-ids = []
-for elem in prj:
-    ids.append(prj[elem].id)
-#manager.write_projects_details(ids)
-manager.write_bids(ids)
+
+#prj = manager.foa.loadProjectsFromCSVFile(file_name="spring_2012_599.csv")
+#ids = []
+#for elem in prj:
+#    ids.append(prj[elem].id)
+fin = open("project_ids", "r")
+lines = fin.readlines()
+lines = [line[:-1] for line in lines]
+print lines
+manager.write_projects_details(lines)
+#manager.write_bids(ids)
+
+
 '''
 file = open("users.txt", "r")
 ids = file.readlines();
 file.close()
 manager.write_user(ids)
-
-
+'''
 
 #manager = Manager()
 ##manager.write_jobs_to_csv()

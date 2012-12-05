@@ -50,12 +50,12 @@ No data for the running the K-Means alghoritm with the given number of clusters.
 {% endblock %}
 
 {% block text_main %}
-<p>There are two methods of clustering presented in this section:
-	k-means and hierarchical clustering. The hierarchical clustering
-	algorithm is presented as a dendrogram where the user can approximate
-	how related two skills are(we have also emphasized the most important
-	clusters). The k-means algorithm was run for a number of clusters that
-	varied between 10 and 16.</p>
+<p>This section presents how the skills from freelancer.com can be grouped together. We have tried two approaches: one that uses the k-means algorithm and one that uses the hierarchical clustering algorthm.</p>
+
+<p>The <b>k-means algorithm</b> was run for a number of clusters that varied from 10 to 16 and from 18 to 26 skipping odd numbers. </p>
+
+<p>The <b>hierarchical clustering algorithm</b> is presented as a dendrogram where the user can approximate how related two skills are(we have also emphasized the most important clusters). </p>
+
 {% endblock %}
 
 {% block text_tech %}
@@ -70,9 +70,11 @@ No data for the running the K-Means alghoritm with the given number of clusters.
 	based on the number of clusters decided by the user. It is a fast
 	iterative algorithm which tries to gather the data around central
 	points of the space: centroids. We have run the k-means algorithm using
-	between 10 and 16 clusters. It can be seen that the one with X clusters
-	intuitively makes more sense because it gathers only the skills that go
-	together
+	various numbers of clusters. Due to the nature of the data, the results 
+	are not as good as expected, or as good as the ones from hierarchical 
+	clustering. As the feature vector is very large, the distances will not 
+	have high variations, which can cause problems when assigning a skill to 
+	a centroid.
 </p>
 
 <p>
@@ -86,10 +88,13 @@ No data for the running the K-Means alghoritm with the given number of clusters.
 {% endblock %}
 
 {% block text_analysis %}
-<p>As it can be seen from both clustering methods, the data can be
-	easily put into clusters that make sense. It can be seen in the
-	dendrogram that all the selected clusters are actually related to one
-	another from a technical perspective. For example, all the operating
-	systems are gather together, as well as most of the common programming
-	languages</p> 
+<p>As it can be seen the clusters from the hierarchical clustering are more 
+accurate and make more sense. This is cause by the fact k-means algorithm 
+uses a heuristic to split the data into groups and for this type of data, 
+the heuristic doesn't perform very well.</p>
+<p> The hierarchical clustering displayed in the dendogram shows that the
+clusters found by the algorithm contain skills that are really related to 
+each other from a technical perspective. For example, all the operating 
+systems are gather together, as well as most of the common programming
+languages</p> 
 {% endblock %}

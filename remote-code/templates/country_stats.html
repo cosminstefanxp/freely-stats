@@ -163,15 +163,15 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
     This page shows statistics about the bids submitted by freelancers of a given nationality. 
     Here, you can observe the number of bids from a  country, their distribution by country,
     the average rating of users from that country as well as some text analysis on their messages
-    (word count, unique word count and lexical diversity and most frequent words).
-    Also, this page can show you the world map: the selected countries are yellow 
-    and the countries for which we have loaded the data here are green
+    (word count, unique word count, lexical diversity and most frequent words).
+    Also, this page can show you the countries on the world map: the selected countries are yellow 
+    and the countries for which we have loaded the data here are green. To view the map, click on "Show map"
 </p>
 {% endblock %}
 
 {% block text_tech %}
 <p>
-    This statistics are based on 363883 bids from the most active 93 countries.
+    These statistics are based on 363883 bids from the most active 93 countries.
     The text analysis is done on all the bidding messages from a certain country.
     Before performing the lexical analysis, we cleaned the text of unnecessary
     characters and signs using regular expressions and we removed the stopwords.

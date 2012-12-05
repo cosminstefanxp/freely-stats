@@ -1,47 +1,6 @@
 /*
 Im reseting this style for optimal view using Eric Meyer's CSS Reset - http://meyerweb.com/eric/tools/css/reset/
 ------------------------------------------------------------------ */
-body,html {
-	height: 100%;
-}
-
-html,body,div,span,applet,object,iframe, /*h1, h2, h3, h4, h5, h6,*/
-	blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
-	{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-
-body {
-	line-height: 1;
-}
-
-ol,ul {
-	list-style: none;
-}
-
-blockquote,q {
-	quotes: none;
-}
-
-blockquote:before,blockquote:after,q:before,q:after {
-	content: '';
-	content: none;
-}
-
-:focus {
-	outline: 0;
-}
-
-del {
-	text-decoration: line-through;
-}
-
 table {
 	/* IMPORTANT, I REMOVED border-collapse: collapse; FROM THIS LINE IN ORDER TO MAKE THE OUTER BORDER RADIUS WORK */
 	border-spacing: 0;
@@ -76,7 +35,7 @@ a:active,table a:hover {
 }
 
 #header .title {
-	padding: 10px 25px 15px 25px;
+	padding: 25px 25px 15px 25px;
 }
 
 #header .title a {
@@ -126,8 +85,8 @@ a:active,table a:hover {
 	min-height: 600px; /* for modern browsers */
 	height: auto !important; /* for modern browsers */
 	height: 600px; /* for IE5.x and IE6 */
-	padding: 5px 30px;
-	font-size: 0.95em;
+	padding: 15px 30px;
+	font-size: 1em;
 	line-height: 27px;
 }
 
@@ -148,9 +107,9 @@ a:active,table a:hover {
 }
 
 .select-entry {
-	padding: 4px;
+	padding: 0 4px 8px 4px;
 	margin: 2px 3px;
-	font-size: 0.9em;
+	font-size: 0.95em;
 	float: left;
 	background: #99c3ff;
 	border: thin solid #888;
@@ -169,17 +128,23 @@ a:active,table a:hover {
 }
 
 #selected-list {
-	padding: 10px;
-	border: 1px solid #888;
-	border-radius: 4px;
-}
-
-#selected-list .select-entry {
-	
+	float: left;
 }
 
 #selected-list .select-entry:HOVER {
 	background: #d66;
+}
+
+form input.hidden {
+	display: none;
+}
+#selected-list form button {
+	float:left;
+}
+#select-form {
+	float: left;
+	margin: 0;
+	margin-top: 1px;
 }
 
 .country-entry {
@@ -229,7 +194,8 @@ a:active,table a:hover {
 }
 
 #text-section {
-	padding: 10px 20px 0px 50px;
+	padding: 0 20px 0px 50px;
+	margin: 10px;
 }
 
 #text-nav {
@@ -266,10 +232,10 @@ a:active,table a:hover {
 
 #text-content h4 {
 	color: #777;
-	margin: -5px 0;
+	margin: 5px 0;
 	text-shadow: 2px 2px 2px #fff;
 }
 
-.hidden{
+.hidden {
 	display: none;
 }

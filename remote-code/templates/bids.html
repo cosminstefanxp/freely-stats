@@ -110,25 +110,25 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 </div>
 <div class="clear"></div>
-<p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
+<p><i class="icon-globe"></i><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
 <div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
-<hr/>
 <a id="results"></a>
-<p class="clear">Selected countries:</p>
-<div id="selected-list">
-	{% for country in countries %}
-	<div class="select-entry">{{country|e}}</div>
-	{% endfor %}
+<strong>Selected:</strong>
+<div class="well well-small" >
+	<form action="#results" id="select-form" class="inline-form"  data-filter='country' >
+		<button class="btn" type="submit">Go!</button> 
+		{% for country in countries %} 
+		<input type='text' name='country' class="hidden" value='{{country}}'/>
+		{% endfor %}
+	</form>
+	<div id="selected-list" style="float:left">
+		{% for country in countries %}
+		<div class="select-entry">{{country|e}}</div>
+		{% endfor %}
+	</div>
 	<div class="clear"></div>
 </div>
-<form action="#results" id="select-form"  data-filter='country'>
-	<input type="submit" value="Go!" /> 
-	{% for country in countries %} 
-	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
-	{% endfor %}
-</form>
 
-<div class="clear"></div>
 <hr />
 {% for bid in accepted_bids %}
 <!-- Chart for accepted bids for {{bid.country}} -->

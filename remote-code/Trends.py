@@ -16,7 +16,8 @@ jinja_environment = jinja2.Environment(
 class SplitTrend:
     def __init__(self, job, values):
         self.job = job
-        self.values = values
+        logging.info(values)
+        self.values = [int(val) for val in values]
 
 class Trends(webapp.RequestHandler):
     
@@ -24,7 +25,7 @@ class Trends(webapp.RequestHandler):
         '''
         The class serving the page for the trends.
         '''
-        months = ["2012-11", "self.2012-10", "2012-09", "2012-08", "2012-07",
+        months = ["2012-11", "2012-10", "2012-09", "2012-08", "2012-07",
         "2012-06", "2012-05", "2012-04", "2012-03", "2012-02", "2012-01",
         "2011-12", "2011-11", "2011-10", "2011-09", "2011-08", "2011-07",
         "2011-06", "2011-05", "2011-04", "2011-03", "2011-02", "2011-01",
@@ -41,15 +42,28 @@ class Trends(webapp.RequestHandler):
         jobs = [j for j in jobs if len(j) > 0]
         logging.info("Trends for jobs: " + ','.join(jobs))
         
+        #Also get the total counts for months
+        jobs.append('total')
+        
         #Get the trends from the database
-        trends = Trend.all()
-        trends.filter("job IN", jobs)
         split_trends = []
-        for t in trends:
-            nt = SplitTrend(t.job, t.monthly_count.split(';'))
-            split_trends.append(nt)
-            logging.info(t);
-        trends_names = [t.job for t in trends]
+        if len(jobs) > 1:
+            trends = Trend.all()
+            trends.filter("job IN", jobs)
+            for t in trends:
+                nt = SplitTrend(t.job, t.monthly_count.split(';'))
+                if nt.job == 'total':
+                    total = nt
+                    logging.info("Total - " + str(t))
+                else:
+                    split_trends.append(nt)
+                    logging.info(t)
+        trends_names = [t.job for t in split_trends]
+        
+        #Compute percentages
+        for t in split_trends:
+            t.values = [val*100.0 / total.values[idx] for idx, val in enumerate(t.values)]
+            logging.info(str(t.values))
         
         #Generate the page
         template_values = { 'jobs': TopJobs, 'trends': split_trends, 'trends_names': trends_names, 'count': len(split_trends), 'months': months}

@@ -60,7 +60,9 @@
 		var options = {
 			'title' : 'Monthly Trends',
 		  	'height':700,
-		  	"backgroundColor": "transparent"
+		  	"backgroundColor": "transparent",
+		  	'vAxis': {title: "% of total projects"},
+			'hAxis': {title: "Month"}
 		};
 
 		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));

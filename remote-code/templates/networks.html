@@ -127,12 +127,16 @@
 	and the communities that connect them.</p>
 <p>Select the type of network visualization that you want used:</p>
 <select id="type-selector">
+	<option value="data/clustering_coef.gexf">Clustering Coefficient</option>
 	<option value="data/modularity.gexf">Modularity</option>
 	<option value="data/degree.gexf">Degree</option>
-	<option value="data/closeness.gexf">Closeness</option>
+	<option value="data/closeness.gexf">Closeness Centrality</option>
+	<option value="data/betweenness.gexf">Betweenness Centrality</option>
+	<option value="data/eigenv.gexf">Eigenvector Centrality</option>
 </select>
 <br/>
 <div class="sigma-parent">
   <div class="sigma-expand" id="jobs-network"></div>
 </div>
 {% endblock %}
+

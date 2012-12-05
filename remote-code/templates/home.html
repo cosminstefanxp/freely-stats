@@ -2,7 +2,6 @@
 {% set active_page = "home" %}
 {% block title %}Home{% endblock %}
 {% block head %} {{super()}}
-<link rel="stylesheet" type="text/css" href="/stylesheets/tables.css" />
 <style>
 	#navigation {
 		
@@ -14,7 +13,7 @@
 	Interaction course of 2012, at DTU. Below you can find our results:</p>
 
 <div id="navigation">
-	<table cellspacing='0'>
+	<table cellspacing='0' class="table table-striped table-hover">
 		<!-- cellspacing='0' is important, must stay -->
 		<tr>
 			<th>Section</th>

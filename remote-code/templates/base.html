@@ -6,7 +6,7 @@
 	<title>FreelyStats - {% block title %}{% endblock %}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-	<link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen"/>
+	<link rel="stylesheet" media="screen" href="/stylesheets/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
 	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
@@ -53,6 +53,7 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div id="content">
+	<noscript><div class="alert"><center><strong>Warning!</strong> This website requires Javascript to be enabled for full functionality!</center></div></noscript>
 	{% block content %}
 		<div id="text-section">
 			<div id="text-nav">

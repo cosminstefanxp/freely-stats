@@ -1,5 +1,5 @@
 import json
-file = open ("jobs_TOP100_in_main_categories.json", "r")
+file = open ("jobs_in_main_categories.json", "r")
 jobs_all = json.load(file)
 file.close()
 
@@ -18,14 +18,15 @@ for line in file.readlines():
     id = details[0]
     jobs = {}
     if details[7]:
-        jobs = details[7].split(";")
+        jobs = details[7].replace("&amp;", "&").split(";")
     else:
          continue
-    for job in jobs:
-        job = job.replace("&amp;", "&")
+     
+    for job in jobs:  
         job = job.strip()
         if(job in top_jobs):
             for linked_job in jobs:
+                linked_job = linked_job.strip()
                 if(job != linked_job):
                     links[job].setdefault(linked_job, 0.0)
                     links[job][linked_job] +=1
@@ -37,7 +38,7 @@ for job in top_jobs:
         if links[job][link] / count > 0.01:
             job_links[job].append(link)
 
-fout = open("job_links.json", "w")
+fout = open("job_all_links.json", "w")
 fout.write(json.dumps(job_links, indent=4))
 fout.close()
             

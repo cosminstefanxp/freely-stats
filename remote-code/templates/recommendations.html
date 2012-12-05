@@ -134,18 +134,28 @@ between them is represented by the bits that are different, which
 sometimes, when the user chooses few or unrelated features might cause 
 errors.</p>
 <p> The <b>recommendations</b> count the number of patterns where two 
-skills were found together so the number vary more and a more accurate 
-can be done.</p>
+skills were found together so the number vary more and more accurate suggestions can be showed.</p>
 {% endblock %}
 
 {% block text_main %}
-<p>In this section you should choose your skills and then the
-	application will present the most popular skills that are usually
-	demanded together as well as some recommendations on  what to learn.
-    <p>For setting a new skill for getting recommendation, please select it in the list below</p></p>
+<p>In this section we display the most popular skills on freelancer.com. 
+From these, you should choose your skills and then the application will 
+compute the most popular skills that are usually demanded together as well 
+as recommendations on what to learn , considering your current skills.
+	<p>For setting a new skill for getting recommendation, please select it in the list below</p>
+</p>
 {% endblock %}
 
 {% block text_analysis %}
-It can be seen that the top matches are not as reliable as the 
-recommandations as they are based just on the similarities.
+<p> The <b>recommendations</b> perform very well, suggesting skills that are highly related to the skills chosen by the user. For example, if the user chooses Cocoa  and iPhone, the application will suggest to learn iPhone, Mobile Phone and Objective C. </p>
+<p>The <b>top similar pattern</b> find the most similar job patterns to the 
+selected jobs. In case the user chooses Cocoa and iPhone, the first three 
+suggestions are iPhone, iPhone & iPad and PHP. The reason why PHP is there 
+is because there are no other patterns that have a higher similarity than 
+PHP. Even though some patterns might contain Cocoa, they also contain other 
+skills and this enlarges the distance. The patterns with the same 
+similarity score are ordered by the number of project and, as PHP has the 
+highest number of projects, it is displayed first. In cases where the user 
+chooses more unrelated skills or very few skills, the case with the PHP can 
+repeat and even be on the first position</p>
 {% endblock %}

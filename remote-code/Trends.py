@@ -62,8 +62,7 @@ class Trends(webapp.RequestHandler):
         
         #Compute percentages
         for t in split_trends:
-            t.values = [val*100.0 / total.values[idx] for idx, val in enumerate(t.values)]
-            logging.info(str(t.values))
+            t.values = [val * 100.0 / total.values[idx] for idx, val in enumerate(t.values)]
         
         #Generate the page
         template_values = { 'jobs': TopJobs, 'trends': split_trends, 'trends_names': trends_names, 'count': len(split_trends), 'months': months}

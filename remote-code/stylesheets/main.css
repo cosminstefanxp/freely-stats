@@ -229,21 +229,20 @@ a:active,table a:hover {
 }
 
 #text-section {
-	padding: 10px 20px 10px 50px;
+	padding: 10px 20px 0px 50px;
 }
 
 #text-nav {
 	padding: 10px 20px;
 	text-align: right;
 	margin: 10px 20px 10px 0;
-	border-right: 1px solid #bbb;
 	color: #666;
 	text-decoration: none;
 	font-size: 0.75em;
 	text-shadow: 2px 1px 0px #fff;
-	-moz-box-shadow: 2px 0px 1px -1px #bbb;
-	-webkit-box-shadow: 2px 0px 1px -1px #bbb;
-	box-shadow: 2px 0px 1px -1px #bbb;
+	-moz-box-shadow: 4px 0px 2px -3px #ccc;
+	-webkit-box-shadow: 4px 0px 2px -3px #ccc;
+	box-shadow: 4px 0px 2px -3px #ccc;
 	float: left;
 }
 
@@ -256,7 +255,7 @@ a:active,table a:hover {
 #text-content {
 	max-width: 1160px;
 	min-width: 50%;
-	padding: 10px 10px 0 165px;
+	padding: 10px 10px 1px 165px;
 	-moz-box-shadow: 0 1px 5px #e1e1e1;
 	-webkit-box-shadow: 0 1px 2px #e1e1e1;
 	box-shadow: 0 1px 2px #e1e1e1;
@@ -268,7 +267,7 @@ a:active,table a:hover {
 #text-content h4 {
 	color: #777;
 	margin: -5px 0;
-	text-shadow: 2px 1px 0px #fff;
+	text-shadow: 2px 2px 2px #fff;
 }
 
 .hidden{

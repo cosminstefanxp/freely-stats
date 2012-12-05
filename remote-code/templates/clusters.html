@@ -18,6 +18,30 @@
 </style>
 {% endblock %}
 {% block content %} {{super()}}
+<h2>K-Means Clustering</h2>
+<form target="#results">
+	<select name="clusters_count">
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+	</select>
+	<input type="submit" value="Go"/>
+</form>
+{% if clusters!=None %}
+{% for cluster in clusters.clusters_expanded %}
+	<p>Cluster {{loop.index}}: 
+	{% for job in cluster %}
+		{{job}},
+	{% endfor %}
+{% endfor %}
+{% else %}
+No data for the running the K-Means alghoritm with the given number of clusters. Please select a value between 10 and 16.
+{% endif %}
+	</p>
 <h2>Hierarchical clustering</h2>
 <div class="img-container">
 	<img src="/img/job_dendrogram.png"/>

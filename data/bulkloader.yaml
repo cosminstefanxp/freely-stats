@@ -98,3 +98,12 @@ transformers:
    - property: average_rating
      external_name: average_rating
      import_transform: float
+- kind: Clusters
+  connector: csv
+  property_map:
+   - property: count
+     external_name: count
+     import_transform: int
+   - property: clusters
+     external_name: clusters
+     import_transform: db.Text

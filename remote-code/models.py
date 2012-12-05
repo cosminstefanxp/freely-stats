@@ -143,6 +143,26 @@ class RecommendationPatterns(db.Model):
             bv = BitVector(intVal=int(patInt), size=200)
             self.patterns_expanded.append(bv)
             self.projects_count[int(patInt)] = int(count)
+   
     def __str__(self):
         return "%s: %d" % (self.patterns_expanded[0], self.projects_count[self.patterns_expanded[0].intValue()])
 
+class Clusters(db.Model):
+    '''
+    Class used to store the clusters resulted from k-means clustering, in the Appengine datastore.
+    '''
+    count = db.IntegerProperty()
+    clusters = db.TextProperty()
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        clusters_s = self.clusters.split(';')
+        self.clusters_expanded = []
+        for clust in clusters_s:
+            self.clusters_expanded.append(clust.split('~'))
+    
+    def __str__(self):
+        out = str(self.count) + ": "
+        for clust in self.clusters_expanded:
+            out += str(clust)
+        return out 

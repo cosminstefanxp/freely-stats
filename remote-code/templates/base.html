@@ -34,7 +34,8 @@ $(document).ready(function() {
     ('/country_stats.html', 'country_stats', 'Statistics','This page shows statistics about the bids submitted by freelancers of a given nationality.'),
     ('/networks.html', 'networks', 'Networks','This page shows the network structure of Freelancer.com skills and the communities that connect them.'),
     ('/clusters.html', 'clusters', 'Clusters','This page shows the clusters that have been formed, using K-means clustering and Hierarchical clustering algorithms.'),
-    ('/recommendations.html', 'recommendations','Recommendations','This page gives recommendations regarding skills, based on a dataset from Freelancer.com.')
+    ('/recommendations.html', 'recommendations','Recommendations','This page gives recommendations regarding skills, based on a dataset from Freelancer.com.'),
+    ('/earnings.html', 'earnings', 'Earnings', 'This page shows the average earnings for diferrent patterns of skills that usually go together.')
 ] %}
 {% set active_page = active_page|default('index') %}
 
@@ -74,8 +75,7 @@ $(document).ready(function() {
 	</div>
 	<div id="footer">
 		<center>
-		<p>&copy; Copyright 2012 by Marius Constantinescu | Ruxandra Nistor
-			 | Cosmin Stefan-Dobrin </p>
+		<p>&copy; Marius Constantinescu | Ruxandra Nistor | Cosmin Stefan-Dobrin </p>
 		<p>A project for the Web and Social Interaction class of 2012</p>
 		</center>
 	</div>

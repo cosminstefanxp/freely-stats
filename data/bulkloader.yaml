@@ -107,3 +107,10 @@ transformers:
    - property: clusters
      external_name: clusters
      import_transform: db.Text
+     
+- kind: Earnings
+  connector: csv
+  property_map:
+   - property: data
+     external_name: data
+     import_transform: db.Text

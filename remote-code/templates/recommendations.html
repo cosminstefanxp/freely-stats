@@ -124,17 +124,26 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block text_tech %}
-<p>The recommendations have been computed using a binary vector for
-	memorizing the most common combinations of jobs. To compute the top
-	matches, the similarities between the skills chosen by the user and
-	each of the vectors are computed and the most similar job patterns.
-	However, because the vectors are binary, the distance between them is
-	represented by the bits that are different, which sometimes, when the
-	user chooses few features might cause errors.</p>
+<p>The top matches and the recommendations have been computed using a 
+binary vector for memorizing the most common combinations of jobs.</p> 
+To compute the <b>top matches</b>, the similarities between the skills 
+chosen by the user and each of the vectors are computed and the most 
+similar job patterns.However, because the vectors are binary, the distance 
+between them is represented by the bits that are different, which 
+sometimes, when the user chooses few or unrelated features might cause 
+errors.</p>
+<p> The <b>recommendations</b> count the number of patterns where two 
+skills were found together so the number vary more and a more accurate 
+can be done.</p>
 {% endblock %}
 
 {% block text_main %}
 <p>In this section you should choose your skills and then the
 	application will present the most popular skills that are usually
-	demanded together as well as some recommendations for what to learn.</p>
+	demanded together as well as some recommendations on  what to learn.</p>
+{% endblock %}
+
+{% block text_analysis %}
+It can be seen that the top matches are not as reliable as the 
+recommandations as they are based just on the similarities.
 {% endblock %}

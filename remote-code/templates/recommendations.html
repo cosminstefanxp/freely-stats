@@ -70,7 +70,7 @@ $(document).ready(function() {
  
 
 {% endblock %} {% block content %} {{super()}}
-<p>For setting a new skill for getting recommendation, please select it in the following list:</p>
+
 <div id='selection-cloud'>
 	{% for job in jobs %}
 	{% if not job in selected_jobs %}
@@ -141,7 +141,8 @@ can be done.</p>
 {% block text_main %}
 <p>In this section you should choose your skills and then the
 	application will present the most popular skills that are usually
-	demanded together as well as some recommendations on  what to learn.</p>
+	demanded together as well as some recommendations on  what to learn.
+    <p>For setting a new skill for getting recommendation, please select it in the list below</p></p>
 {% endblock %}
 
 {% block text_analysis %}

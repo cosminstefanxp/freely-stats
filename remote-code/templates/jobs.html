@@ -67,6 +67,18 @@
 {% endblock %}
 
 {% block text_main %}
-<p>This page shows the job categories on Freelancer.com. Their text
-	size is proportional to their number of projects.</p>
+<p>This page shows the skill categories on Freelancer.com. Their text
+	size and color is proportional to number of projects that require 
+	them.</p>
 {% endblock %}
+
+{% block text_analysis %}
+<p> It can be seen that PHP is the most popular skill, followed by 
+WebDesign and Graphic Design. This means that the demand on the market
+for web technologies is increasing because people migrate from using 
+desktop applications to using web applications.</p>
+{% endblock %}
+
+{% block text_tech %}
+<p> The categories were computed for currently (at 23.11.2012) active 
+categories. We have counted the number of active projects and afterwards used a javascript for displayinga word cloud.</p>

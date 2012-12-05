@@ -230,7 +230,7 @@ a:active,table a:hover {
 }
 
 #text-section {
-	padding: 30px 20px 10px 50px;
+	padding: 10px 20px 10px 50px;
 }
 
 #text-nav {
@@ -258,7 +258,7 @@ a:active,table a:hover {
 	float: left;
 	max-width: 1000px;
 	min-width: 50%;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	-moz-box-shadow: 0 1px 5px #e1e1e1;
 	-webkit-box-shadow: 0 1px 2px #e1e1e1;
 	box-shadow: 0 1px 2px #e1e1e1;
@@ -269,7 +269,7 @@ a:active,table a:hover {
 
 #text-content h4 {
 	color: #777;
-	margin: 0;
+	margin: -5px 0;
 	text-shadow: 2px 1px 0px #fff;
 }
 

@@ -8,12 +8,12 @@ function on_select(name) {
 	});
 	// Add a new element to the selected area
 	newEntry = $("<div class='select-entry'>" + $(this).text() + "</div>");
-	newEntry.hide().prependTo($("#selected-list")).fadeIn('normal');
+	newEntry.hide().appendTo($("#selected-list")).fadeIn('normal');
 	newEntry.click(on_deselect);
 	
 	// Add the element to the form
 	$("#select-form").append(
-			"<input type='text' name='"+$("#select-form").attr("data-filter")+"' hidden value='" + $(this).text() +"']/>");
+			"<input type='text' name='"+$("#select-form").attr("data-filter")+"' class='hidden' value='" + $(this).text() +"']/>");
 }
 
 function on_deselect(){

@@ -18,23 +18,28 @@ class ClustersP(webapp.RequestHandler):
         '''
         The class serving the page for the clusters
         '''
+        selectable_counts=[10,11,12,13,14,15,16]
         
         # Get the selected clusters_count
         clusters_count = self.request.get("clusters_count")
         log.info("K-means clusters for %s clusters." % clusters_count)
 
-        #Get the clusters from the database    
+        #Get the clusters from the database
+        clusters=None   
         if clusters_count!='':
+            clusters_count=int(clusters_count)
             clusters =db.GqlQuery("SELECT * "
                                 "FROM Clusters "
                                 "WHERE count = :1",
-                                int(clusters_count))
+                                clusters_count)
             clusters=clusters.get()
             if clusters!=None:
                 clusters.expand()
             log.info(str(clusters))
+        else:
+            clusters_count=-1 
         
         #Generate the page
-        template_values = { 'clusters': clusters}    
+        template_values = { 'selectable': selectable_counts, 'clusters_count': clusters_count, 'clusters': clusters}    
         template = jinja_environment.get_template('templates/clusters.html')
         self.response.out.write(template.render(template_values))

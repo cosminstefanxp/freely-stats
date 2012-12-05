@@ -110,25 +110,25 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 </div>
 <div class="clear"></div>
-<p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
+<p><i class="icon-globe"></i><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
 <div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
-<hr/>
 <a id="results"></a>
-<p class="clear">Selected countries:</p>
-<div id="selected-list">
-	{% for country in countries %}
-	<div class="select-entry">{{country|e}}</div>
-	{% endfor %}
+<strong>Selected:</strong>
+<div class="well well-small" >
+	<form action="#results" id="select-form" class="inline-form"  data-filter='country' >
+		<button class="btn" type="submit">Go!</button> 
+		{% for country in countries %} 
+		<input type='text' name='country' class="hidden" value='{{country}}'/>
+		{% endfor %}
+	</form>
+	<div id="selected-list" style="float:left">
+		{% for country in countries %}
+		<div class="select-entry">{{country|e}}</div>
+		{% endfor %}
+	</div>
 	<div class="clear"></div>
 </div>
-<form action="#results" id="select-form"  data-filter='country'>
-	<input type="submit" value="Go!" /> 
-	{% for country in countries %} 
-	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
-	{% endfor %}
-</form>
 
-<div class="clear"></div>
 <hr />
 {% for bid in accepted_bids %}
 <!-- Chart for accepted bids for {{bid.country}} -->
@@ -145,21 +145,21 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 {% block text_main %}
 <p>This page shows the correlations between the nationality of the
 	buyers (people who submitted a project) and the nationality of the
-	accepted bidder. You can choose one or more countries and see where people that countries apply for projects and where people who apply for projects in that country are from. </p>
+	accepted bidder. You can choose one or more countries and see where people from that countries apply for projects and where people who apply for projects in that country are from. </p>
 {% endblock %}
 
 
 {% block text_analysis %}
 <p> If we look at the statistic of where different people from different 
 countries apply to, we can see that in top there are USA, Australia and 
-Canada. Because these three countries are in top for every country, it 
+Canada. Because these three countries are in top for every pther country, it 
 means that they post most of the projects, not necessarily that all the 
 other countries prefer them.</p>
-<p> The statistics of people accepted for a project are similar: they have 
-theree main countries on top: India, Pakistan and Bangladesh. Again, this 
+<p> The statistics of people accepted for a project are similar: there are 
+three main countries on top: India, Pakistan and Bangladesh. Again, this 
 doesn't mean that the people from this countries are necessarily the best, 
 but it means that a large number of people from these countries are 
-freelancers. An interesting observation is that in top 7 for countries of accepted bidders is Romania, which is a small country, compared to US or India. This means that there, the number of people working in the technical field is higher than the average. </p>
+freelancers. An interesting observation is that in the top 7 for countries of accepted bidders is Romania, which is a small country, compared to US or India. This means that there, the number of people working in the technical field is higher than the average. </p>
 {% endblock %}
 
 {% block text_tech %}

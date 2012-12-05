@@ -74,7 +74,6 @@
 
 
 {% endblock %} {% block content %} {{super()}}
-<p>For adding a new job on the graphs, please select it in the following list:</p>
 <div id='selection-cloud'>
 	{% for job in jobs %}
 	{% if not job[0] in trends_names %}
@@ -83,21 +82,23 @@
 	{% endfor %}
 </div>
 <div class="clear"></div>
-<hr/>
 <a id="results"></a>
-<p>Selected job types:</p>
-<div id="selected-list">
-	{% for trend in trends_names %}
-	<div class="select-entry">{{trend|e}}</div>
-	{% endfor %}
+<strong>Selected:</strong>
+<div class="well well-small" >
+	<form action="#results" id="select-form" data-filter='job'>
+		<input type="submit" value="Go!" class="btn"/>
+		{% for trend in trends_names %}
+		<input type='text' name='job' class='hidden' value='{{trend}}' data-select='{{trend}}'/>
+		{% endfor %}
+	</form>
+	<div id="selected-list">
+		{% for trend in trends_names %}
+		<div class="select-entry">{{trend|e}}</div>
+		{% endfor %}
+	</div>
 	<div class="clear"></div>
 </div>
-<form action="#results" id="select-form" data-filter='job'>
-	<input type="submit" value="Go!"/>
-	{% for trend in trends_names %}
-	<input type='text' name='job' hidden='hidden' value='{{trend}}' data-select='{{trend}}'/>
-	{% endfor %}
-</form>
+
 
 <div class="clear"></div>
 <hr/>
@@ -111,12 +112,14 @@
 	computed as percent out of the total number of projects. You can
 	compare the trends for different skills by selecting each of your
 	desired skills.</p>
+<p>For adding a new job on the graphs, please select it in the
+	following list.</p>
 {% endblock %}
 
 {% block text_tech %}
 <p>To compute the trends for a skill we computed, for every month,
 	the number of projects that require that skill. Also, we have computed
-	the total amount of projects regardess of their requirements. This
+	the total amount of projects regardless of their requirements. This
 	total will also be used to compute the percentage of projects that need
 	a particular skill.</p>
 {% endblock %}

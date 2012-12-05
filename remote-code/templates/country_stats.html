@@ -113,23 +113,25 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 	{% endfor %}
 </div>
 <div class="clear"></div>
-<p><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
+<p><i class="icon-globe"></i><i id="show-map" style="color: blue; cursor: pointer;">Show map...</i></p>
 <div id="map-chart" hidden="hidden" style="width:100%; margin: auto;"></div>
-<hr/>
 <a id="results"></a>
-<p class="clear">Selected countries:</p>
-<div id="selected-list">
-	{% for country in countries %}
-	<div class="select-entry">{{country|e}}</div>
-	{% endfor %}
+<strong>Selected:</strong>
+<div class="well well-small" >
+	<form action="#results" id="select-form" class="inline-form"  data-filter='country' >
+		<button class="btn" type="submit">Go!</button> 
+		{% for country in countries %} 
+		<input type='text' name='country' class="hidden" value='{{country}}'/>
+		{% endfor %}
+	</form>
+	<div id="selected-list" style="float:left">
+		{% for country in countries %}
+		<div class="select-entry">{{country|e}}</div>
+		{% endfor %}
+	</div>
 	<div class="clear"></div>
 </div>
-<form action="#results" id="select-form"  data-filter='country'>
-	<input type="submit" value="Go!" /> 
-	{% for country in countries %} 
-	<input type='text' name='country' hidden='hidden' value='{{country}}'/>
-	{% endfor %}
-</form>
+
 
 <div class="clear"></div>
 <hr />
@@ -138,16 +140,16 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 <!-- Chart for bids for {{stat.country}} -->
 <div class="country-entry">
 	<div class="stats">
-		<h2 class="title" style="margin-left:15px">{{stat.country}}</h2>
-		<ul>
-			<li>Outbound bids: {{stat.bids_count}}</li>
-			<li>Word count: {{stat.word_count}}</li>
-			<li>Unique word count: {{stat.unique_word_count}}</li>
-			<li>Lexical diversity: {{"%.2f"|format(stat.lexical_diversity)}}</li>
-			<li>Average rating: {{"%.2f"|format(stat.average_rating)}}</li>			
-		</ul>
+		<h2 class="title" style="margin-left:15px; margin-top:-5px">{{stat.country}}</h2>
+		<dl class="dl-horizontal">
+			<dt>Outbound bids:</dt><dd>{{stat.bids_count}}</dd>
+			<dt>Word count:</dt><dd> {{stat.word_count}}</dd>
+			<dt>Unique word count:</dt><dd> {{stat.unique_word_count}}</dd>
+			<dt>Lexical diversity:</dt><dd> {{"%.2f"|format(stat.lexical_diversity)}}</dd>
+			<dt>Average rating:</dt><dd> {{"%.2f"|format(stat.average_rating)}}</dd>			
+		</dl>
 	</div>
-	<div id="bids-chart-{{loop.index}}" class="chart" style="width: 50%;"></div>
+	<div id="bids-chart-{{loop.index}}" class="chart" style="margin-top:15px;width: 50%;"></div>
 	<div id="wordfreq-chart-{{loop.index}}" class="chart" style="width: 100%;"></div>
 
 </div>
@@ -161,15 +163,15 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
     This page shows statistics about the bids submitted by freelancers of a given nationality. 
     Here, you can observe the number of bids from a  country, their distribution by country,
     the average rating of users from that country as well as some text analysis on their messages
-    (word count, unique word count and lexical diversity and most frequent words).
-    Also, this page can show you the world map: the selected countries are yellow 
-    and the countries for which we have loaded the data here are green
+    (word count, unique word count, lexical diversity and most frequent words).
+    Also, this page can show you the countries on the world map: the selected countries are yellow 
+    and the countries for which we have loaded the data here are green. To view the map, click on "Show map"
 </p>
 {% endblock %}
 
 {% block text_tech %}
 <p>
-    This statistics are based on 363883 bids from the most active 93 countries.
+    These statistics are based on 363883 bids from the most active 93 countries.
     The text analysis is done on all the bidding messages from a certain country.
     Before performing the lexical analysis, we cleaned the text of unnecessary
     characters and signs using regular expressions and we removed the stopwords.

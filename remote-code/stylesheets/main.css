@@ -236,7 +236,7 @@ a:active,table a:hover {
 #text-nav {
 	padding: 10px 20px;
 	text-align: right;
-	margin: 0 20px 0 0;
+	margin: 10px 20px 0 0;
 	border-right: 1px solid #bbb;
 	color: #666;
 	text-decoration: none;
@@ -255,7 +255,6 @@ a:active,table a:hover {
 }
 
 #text-content {
-	float: left;
 	max-width: 1000px;
 	min-width: 50%;
 	padding: 10px 10px 0 10px;

@@ -20,10 +20,10 @@
 			<th>Section</th>
 			<th>Purpose</th>
 		</tr>
-		{% for href, id, caption in navigation_bar[1:] %}
+		{% for href, id, caption, short_desc in navigation_bar[1:] %}
 		<tr class="{{ loop.cycle('odd', 'even') }}">
 			<td><a href="{{ href|e }}">{{ caption }}</a></td>
-			<td>Bla-bla</td>
+			<td>{{ short_desc }}</td>
 		</tr>{% endfor %}
 	</table>
 </div>

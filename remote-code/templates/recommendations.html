@@ -123,13 +123,18 @@ $(document).ready(function() {
 
 {% endblock %}
 
-{% block text_main %}
-<p>This page gives recommendations regarding skills, based on a dataset from Freelancer.com.</p>
-{% endblock %}
 {% block text_tech %}
-<p> The recommendations have been computed using a binary vector for memorizing the most common combinations of jobs. To compute the top matches, the similarities between the skills chosen by the user and each of the vectors are computed and the most similar job patterns. However, because the vectors are binary, the distance between them is represented by the bits that are different, which sometimes, when the user chooses few features might cause errors. </p>
+<p>The recommendations have been computed using a binary vector for
+	memorizing the most common combinations of jobs. To compute the top
+	matches, the similarities between the skills chosen by the user and
+	each of the vectors are computed and the most similar job patterns.
+	However, because the vectors are binary, the distance between them is
+	represented by the bits that are different, which sometimes, when the
+	user chooses few features might cause errors.</p>
 {% endblock %}
 
 {% block text_main %}
-<p> In this section you should choose your skills and then the application will present the most popular skills that are usually demanded together as well as some recommendations for what to learn. </p>
+<p>In this section you should choose your skills and then the
+	application will present the most popular skills that are usually
+	demanded together as well as some recommendations for what to learn.</p>
 {% endblock %}

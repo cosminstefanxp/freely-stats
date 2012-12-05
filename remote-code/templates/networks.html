@@ -123,8 +123,6 @@
 
 {% endblock %} {% block content %} {{super()}}
 <h2>Skills network</h2>
-<p>This page shows the network structure of Freelancer.com skills
-	and the communities that connect them.</p>
 <p>Select the type of network visualization that you want used:</p>
 <select id="type-selector">
 	<option value="data/clustering_coef.gexf">Clustering Coefficient</option>
@@ -138,5 +136,10 @@
 <div class="sigma-parent">
   <div class="sigma-expand" id="jobs-network"></div>
 </div>
+{% endblock %}
+
+{% block text_main %}
+<p>This page shows the network structure of Freelancer.com skills
+	and the communities that connect them.</p>
 {% endblock %}
 

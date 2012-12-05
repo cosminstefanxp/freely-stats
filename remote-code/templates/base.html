@@ -10,6 +10,19 @@
 	<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/select_cloud.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
+<script src="/js/text_content.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#text-tech").hide();
+	$("#text-analysis").hide();
+	
+	$("#text-nav-main").click(newSelection);
+	$("#text-nav-tech").click(newSelection);
+	$("#text-nav-analysis").click(newSelection);
+});
+</script>
+
+
 </head>
 
 {% set navigation_bar = [
@@ -38,7 +51,24 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-	<div id="content">{% block content %}{% endblock %}</div>
+	<div id="content">
+	{% block content %}
+		<div id="text-section">
+			<div id="text-nav">
+				<div id="text-nav-main" class="text-nav-entry" data-target="#text-main">Description</div>
+				<div id="text-nav-tech" class="text-nav-entry" data-target="#text-tech">Technical Details</div>
+				<div id="text-nav-analysis" class="text-nav-entry" data-target="#text-analysis">Analysis</div>
+			</div>
+			<div id="text-content">
+				<div id="text-main"><h4>Description</h4>{% block text_main %} {% endblock %} </div>
+				<div id="text-tech"><h4>Technical Details</h4>{% block text_tech %}No details for this section. {% endblock %} </div>
+				<div id="text-analysis"><h4>Analysis</h4>{% block text_analysis %} No details for this section.{% endblock %} </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+	{% endblock %}
+	</div>
 	<div id="footer">
 		<center>
 		<p>&copy; Copyright 2012 by Marius Constantinescu | Ruxandra Nistor

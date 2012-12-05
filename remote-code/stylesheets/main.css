@@ -1,9 +1,75 @@
-body {
-	background-color: #48c;
-	margin: 0;
-	padding: 0;
+/*
+Im reseting this style for optimal view using Eric Meyer's CSS Reset - http://meyerweb.com/eric/tools/css/reset/
+------------------------------------------------------------------ */
+body,html {
+	height: 100%;
 }
 
+html,body,div,span,applet,object,iframe, /*h1, h2, h3, h4, h5, h6,*/
+	blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+table {
+	/* IMPORTANT, I REMOVED border-collapse: collapse; FROM THIS LINE IN ORDER TO MAKE THE OUTER BORDER RADIUS WORK */
+	border-spacing: 0;
+}
+
+/*----------------------* Starts from here *-------------------*/
+body {
+	background-color: #7bf;
+	background: url(background.jpg);
+	color: #444;
+}
+
+a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #999999;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:active,table a:hover {
+	color: #bd5a35;
+	text-decoration: underline;
+}
 
 #header {
 	background-color: #333;
@@ -11,13 +77,14 @@ body {
 }
 
 #header .title {
-	padding: 10px 25px 10px 25px;
+	padding: 10px 25px 15px 25px;
 }
 
 #header .title a {
 	text-decoration: none;
 	font-size: 4em;
 	color: white;
+	font-weight: normal;
 }
 
 #top {
@@ -34,7 +101,7 @@ body {
 	font-size: 1.45em;
 	float: left;
 	font-weight: bold;
-	padding: 5px 20px;
+	padding: 8px 20px;
 	margin-left: 10px;
 	text-decoration: none;
 }
@@ -55,12 +122,14 @@ body {
 }
 
 #content {
-	background-color: #efefff;
+	background-color: #f3f3ff;
+	background: url(/img/background.jpg);
 	min-height: 600px; /* for modern browsers */
 	height: auto !important; /* for modern browsers */
 	height: 600px; /* for IE5.x and IE6 */
 	padding: 5px 30px;
-	font-size:0.85em;
+	font-size: 0.95em;
+	line-height: 27px;
 }
 
 #footer {
@@ -179,7 +248,56 @@ body {
 	left: 0;
 }
 
-
 .clear {
 	clear: both;
+}
+
+#text-section {
+	padding: 40px 50px;
+}
+
+#text-nav {
+	padding: 10px 20px;
+	text-align: right;
+	margin: 0 20px 0 0;
+	border-right: 1px solid #bbb;
+	color: #666;
+	text-decoration: none;
+	font-size: 0.75em;
+	text-shadow: 2px 1px 0px #fff;
+	-moz-box-shadow: 2px 0px 1px -1px #bbb;
+	-webkit-box-shadow: 2px 0px 1px -1px #bbb;
+	box-shadow: 2px 0px 1px -1px #bbb;
+	float: left;
+}
+
+#text-nav .text-nav-entry:hover {
+	color: #bd5a35;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#text-content {
+	float: left;
+	max-width: 1000px;
+	min-width: 50%;
+	padding: 10px;
+	-moz-box-shadow: 0 1px 5px #e1e1e1;
+	-webkit-box-shadow: 0 1px 2px #e1e1e1;
+	box-shadow: 0 1px 2px #e1e1e1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#text-content h4 {
+	color: #777;
+	margin: 0;
+	text-shadow: 2px 1px 0px #fff;
+	-moz-box-shadow: 2px 0px 1px -1px #bbb;
+	-webkit-box-shadow: 2px 0px 1px -1px #bbb;	
+}
+
+.hidden{
+	display: none;
 }

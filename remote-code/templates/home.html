@@ -1,7 +1,31 @@
 {% extends "templates/base.html" %}
 {% set active_page = "home" %}
 {% block title %}Home{% endblock %}
+{% block head %} {{super()}}
+<link rel="stylesheet" type="text/css" href="/stylesheets/tables.css" />
+<style>
+	#navigation {
+		
+	}
+</style>
+{% endblock %}
 {% block content %}
+{{super()}}
 <p>Welcome on our page presenting the project for the Web and Social
 	Interaction course of 2012, at DTU. Below you can find our results:</p>
+
+<div id="navigation">
+	<table cellspacing='0'>
+		<!-- cellspacing='0' is important, must stay -->
+		<tr>
+			<th>Section</th>
+			<th>Purpose</th>
+		</tr>
+		{% for href, id, caption in navigation_bar[1:] %}
+		<tr class="{{ loop.cycle('odd', 'even') }}">
+			<td><a href="{{ href|e }}">{{ caption }}</a></td>
+			<td>Bla-bla</td>
+		</tr>{% endfor %}
+	</table>
+</div>
 {% endblock %}

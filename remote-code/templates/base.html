@@ -25,15 +25,16 @@ $(document).ready(function() {
 
 </head>
 
+
 {% set navigation_bar = [
-    ('/', 'home', 'Home'),
-    ('/jobs.html', 'jobs', 'Categories'),
-    ('/trends.html', 'trends', 'Trends'),
-    ('/bids.html', 'bids', 'Bids Stats'),
-    ('/country_stats.html', 'country_stats', 'Statistics'),
-    ('/networks.html', 'networks', 'Networks'),
-    ('/clusters.html', 'clusters', 'Clusters'),
-    ('/recommendations.html', 'recommendations','Recommendations')
+    ('/', 'home', 'Home','This is the home page.'),
+    ('/jobs.html', 'jobs', 'Categories','This page shows a word cloud of the job categories on Freelancer.com.'),
+    ('/trends.html', 'trends', 'Trends','The trends present the evolution in the demand of skills over the years, between 1st of January 2008 and 20th on November 2012.'),
+    ('/bids.html', 'bids', 'Bids Stats','This page shows the correlations between the nationality of the buyers and the nationality of the accepted bidder.'),
+    ('/country_stats.html', 'country_stats', 'Statistics','This page shows statistics about the bids submitted by freelancers of a given nationality.'),
+    ('/networks.html', 'networks', 'Networks','This page shows the network structure of Freelancer.com skills and the communities that connect them.'),
+    ('/clusters.html', 'clusters', 'Clusters','This page shows the clusters that have been formed, using K-means clustering and Hierarchical clustering algorithms.'),
+    ('/recommendations.html', 'recommendations','Recommendations','This page gives recommendations regarding skills, based on a dataset from Freelancer.com.')
 ] %}
 {% set active_page = active_page|default('index') %}
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
 	</div>
 	<div id="top">
 		<div id="menu">
-			{% for href, id, caption in navigation_bar %}
+			{% for href, id, caption, short_desc in navigation_bar %}
   			<div class = "menu-item {% if id == active_page %}active{% endif%}">
   				<a href="{{ href|e }}">{{ caption }}</a>
   			</div>
@@ -63,8 +64,9 @@ $(document).ready(function() {
 				<div id="text-main"><h4>Description</h4>{% block text_main %} {% endblock %} </div>
 				<div id="text-tech"><h4>Technical Details</h4>{% block text_tech %}No details for this section. {% endblock %} </div>
 				<div id="text-analysis"><h4>Analysis</h4>{% block text_analysis %} No details for this section.{% endblock %} </div>
+				<div class="clear"></div>
 			</div>
-			<div class="clear"></div>
+			
 		</div>
 		
 	{% endblock %}

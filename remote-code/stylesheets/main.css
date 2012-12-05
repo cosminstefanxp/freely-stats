@@ -236,7 +236,7 @@ a:active,table a:hover {
 #text-nav {
 	padding: 10px 20px;
 	text-align: right;
-	margin: 10px 20px 0 0;
+	margin: 10px 20px 10px 0;
 	border-right: 1px solid #bbb;
 	color: #666;
 	text-decoration: none;
@@ -255,9 +255,9 @@ a:active,table a:hover {
 }
 
 #text-content {
-	max-width: 1000px;
+	max-width: 1160px;
 	min-width: 50%;
-	padding: 10px 10px 0 10px;
+	padding: 10px 10px 0 165px;
 	-moz-box-shadow: 0 1px 5px #e1e1e1;
 	-webkit-box-shadow: 0 1px 2px #e1e1e1;
 	box-shadow: 0 1px 2px #e1e1e1;

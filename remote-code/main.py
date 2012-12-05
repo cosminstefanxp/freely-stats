@@ -9,6 +9,7 @@ from CountriesStats import CountriesStats
 from Networks import Networks
 from Recommendations import Recommendations
 from ClustersP import ClustersP
+from EarningsP import EarningsP
  
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -26,5 +27,6 @@ app = webapp2.WSGIApplication([('/', Home),
                                ('/country_stats.html', CountriesStats),
                                ('/networks.html', Networks),
                                ('/clusters.html', ClustersP),
-                               ('/recommendations.html', Recommendations)],
+                               ('/recommendations.html', Recommendations),
+                               ('/earnings.html', EarningsP)],
                               debug=True)

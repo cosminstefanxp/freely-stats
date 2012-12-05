@@ -76,7 +76,13 @@ def compute_pattern(job_list):
         bitVector[id] = 1
     return bitVector
         
-
+def get_jobs(vector): 
+        jobs = []
+        for i in range(200):
+            if(vector[i] == 1):
+                jobs.append(top_200[i])
+        return jobs
+    
 def compute_patterns():
     file = open("all_projects.csv", "r")
     patterns = {}
@@ -125,6 +131,75 @@ def compute_patterns():
         #pattern avg_bid max_bid
         fout.write("%s:%f:%f,\n"%(pattern[0], pattern[1][0]/pattern[1][2], pattern[1][1]))
     fout.close()
+
+'''
+luam project details: jobs, currency, accepted bidder id
+luam bidders: accepted bidder id - bid amount
+bid amount * currecy ptr pattern de joburi
+'''
+foa = Foa()
+details = foa.loadProjectDetailsFromCSV(filename="full_projects_details.csv")
+fin = open("projects_bids_uniq.csv", "r")
+bids = {}
+count = 0
+for line in fin.readlines():
+    print count
+    count += 1
+    bid = line.split(", ")
+    prj_id = int(bid[0])
+    #print "PRJ ",
+    #print type(prj_id),
+    #print "DETAL ",
+    #print type(details.keys()[0])
+    if(prj_id in details):
+        project = details[prj_id]
+        if (not project.accepted_bidder_id) or (int(bid[1]) != project.accepted_bidder_id):
+            continue
+        else:
+            bids[prj_id] = float(bid[3])
+fin.close()
+
+patterns = {}
+for detail in details.values():
+    if detail.id in bids:
+        bid = bids[detail.id]
+        exchg = detail.exchg
+        if(exchg == "False" and exchg == "-1"):
+            continue
+        exchg = float(exchg)
+        sum = bid * exchg
+        job_list = detail.jobs.split(";")
+        job_list = [job.strip() for job in job_list]
+        pattern = compute_pattern(job_list)
+        patterns.setdefault(pattern.intValue(), (0.0, 0.0, 0.0))
+        tup = patterns[pattern.intValue()]
+        sum = tup[0] + sum
+        max = tup[1] 
+        if max < bid * exchg:
+            max = bid * exchg
+        count = tup[2] + 1.0
+        patterns[pattern.intValue()] = (sum, max, count)
+
+for pattern in patterns:
+    tup = patterns[pattern]
+    if(tup[2]!=0):
+        avg = tup[0]/tup[2]
+        patterns[pattern] = (tup[0], avg, tup[2])
+patterns = patterns.items()
+patterns.sort(key = lambda tup:tup[1][1], reverse = True)
+fout = open("earnings.csv", "w")
+for pattern in patterns:
+    if pattern[1][2] != 0.0:
+        jobs = get_jobs(BitVector(intVal = pattern[0], size = 200))
+        concat = "%ld:"%(pattern[1][0]/pattern[1][2])
+        for job in jobs:
+            concat = concat + job+ ";"
+        concat = concat[:-1]
+        concat = concat + ","
+        fout.write(concat)
+fout.close()
+'''
+
 
 
 #compute_patterns()  
@@ -185,3 +260,4 @@ for pattern in patterns:
     if pattern[1][2] != 0.0:
         fout.write("%s:%f:%f,\n"%(pattern[0], pattern[1][0]/pattern[1][2], pattern[1][1]))
 fout.close()
+'''

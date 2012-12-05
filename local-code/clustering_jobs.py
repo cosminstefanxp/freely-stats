@@ -66,8 +66,8 @@ def multidim():
 
 
 
-fout = open("k-means(10-16)", "w")
-for x in [10, 11, 12, 13, 14, 15, 16]:      
+fout = open("k-means(16-26)", "w")
+for x in [16, 18, 20, 22, 24, 26]:      
     print "X = ",
     print x  
     k_clusters = kmeans(x)
@@ -76,7 +76,7 @@ for x in [10, 11, 12, 13, 14, 15, 16]:
         fout.write(";")
         jobs  = ""
         for job in cluster:
-            job = job.replace("&amp", "&")
+            job = job.replace("&amp;", "&")
             jobs += job+"~"
         fout.write(jobs[:-1])
     fout.write("\n")

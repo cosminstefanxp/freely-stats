@@ -18,7 +18,7 @@ class ClustersP(webapp.RequestHandler):
         '''
         The class serving the page for the clusters
         '''
-        selectable_counts=[10,11,12,13,14,15,16]
+        selectable_counts=[10,11,12,13,14,15,16,18,20,22,24,26]
         
         # Get the selected clusters_count
         clusters_count = self.request.get("clusters_count")

@@ -26,7 +26,7 @@ class Jobs(webapp.RequestHandler):
             count=int(countV)
             
         #check if randomize
-        if self.request.get("randomize",default_value=0) != '1':
+        if self.request.get("randomize",default_value=1) != '1':
             randomize=False;
         else:
             randomize=True;

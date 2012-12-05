@@ -166,3 +166,20 @@ class Clusters(db.Model):
         for clust in self.clusters_expanded:
             out += str(clust)
         return out 
+
+class Earnings(db.Model):
+    '''
+    Class used to store information about earnings, in the Appengine datastore.
+    '''
+    data = db.TextProperty()
+    
+    def expand(self):
+        ''' Expands the serialized data in the object '''
+        data_s = self.data.split('~')
+        self.data_expanded = []
+        for s in data_s:
+            cost, pattern = s.split(':',2)
+            self.clusters_expanded.append((cost,pattern))
+    
+    def __str__(self):
+        return str(self.data)

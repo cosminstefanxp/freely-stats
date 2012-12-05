@@ -1,14 +1,5 @@
-/*
-Im reseting this style for optimal view using Eric Meyer's CSS Reset - http://meyerweb.com/eric/tools/css/reset/
------------------------------------------------------------------- */
-table {
-	/* IMPORTANT, I REMOVED border-collapse: collapse; FROM THIS LINE IN ORDER TO MAKE THE OUTER BORDER RADIUS WORK */
-	border-spacing: 0;
-}
-
-/*----------------------* Starts from here *-------------------*/
 body {
-	background-color: #7bf;
+	background-color: #333;
 	color: #444;
 }
 
@@ -40,7 +31,7 @@ a:active,table a:hover {
 
 #header .title a {
 	text-decoration: none;
-	font-size: 4em;
+	font-size: 4.3em;
 	color: white;
 	font-weight: normal;
 }
@@ -94,6 +85,7 @@ a:active,table a:hover {
 	clear: both;
 	background-color: #333;
 	min-height: 100px;
+	height:100%;
 }
 
 #footer p {

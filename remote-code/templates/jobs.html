@@ -45,15 +45,22 @@
 	});	
 </script>
 {% endblock %} {% block content %} {{super()}}
-<p>For customizing the number of entries or setting the ordering
-	method, please use the following form.</p>
-<form action="/jobs.html" style="border: 1px solid #999; padding: 10px;">
-	<label for="count">Count: </label>
-	<input type="number" name="count" value="{{count}}" /><br />
-	<label for="randomize">Randomize: </label>
-	<input type="checkbox" name="randomize" value="1" {% if randomize==1 %} checked="checked" {%endif%} />
-	<input type="submit" value="Customize"/><br />
-</form>
+<div class="well well-small">
+	<form action="/jobs.html" class="form-inline" style="margin:0;">
+		<label for="count">Count: </label>
+		<div class="input-prepend">
+			<span class="add-on">1-566</span>
+			<input type="number" name="count" class="input-small" value="{{count}}" />
+		</div>
+		
+		
+		<label class="checkbox">
+			Randomize 
+			<input type="checkbox" name="randomize" value="1" {% if randomize==1 %} checked="checked" {%endif%} />
+		</label>
+		<button type="submit" class="btn">Customize</button>
+	</form>
+</div>
 
 <p>These are the job categories on Freelancer.com:</p>
 <div id='tagcloud'>
@@ -70,6 +77,8 @@
 <p>This page shows the skill categories on Freelancer.com. Their text
 	size and color is proportional to number of projects that require 
 	them.</p>
+<p>For customizing the number of entries or setting the ordering
+	method, please use the following form.</p>	
 {% endblock %}
 
 {% block text_analysis %}

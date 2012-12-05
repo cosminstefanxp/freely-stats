@@ -6,16 +6,19 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		init('data/modularity.gexf');
-		$('#type-selector').change(function () {
-	          $("#type-selector option:selected").each(function () {
-	                $('#jobs-network').empty();
-	                init($(this).val());
-
-	              });
-	        });
-
-	});	
+		$(".type-selector.start").attr('disabled','');
 	
+		$(".type-selector").click(function() {
+			$('.type-selector').removeAttr('disabled');
+			$(this).attr('disabled', '');
+			$('#jobs-network').empty();
+			init($(this).val());
+				
+
+			});
+
+	});
+
 	function init(filename) {
 		/**
 		 * First, let's instantiate sigma.js :
@@ -34,30 +37,34 @@
 		// (requires "sigma.parseGexf.js" to be executed)
 		sigInst.parseGexf(filename);
 
-		 // Bind events :
-		sigInst.bind('overnodes',function(event){
-			var nodes = event.content;
-			var neighbors = {};
-			sigInst.iterEdges(function(e){
-				if(nodes.indexOf(e.source)>=0 || nodes.indexOf(e.target)>=0){
-						neighbors[e.source] = 1;
-						neighbors[e.target] = 1;
-					}
-				}).iterNodes(function(n){
-						if(!neighbors[n.id]){
+		// Bind events :
+		sigInst.bind(
+				'overnodes',
+				function(event) {
+					var nodes = event.content;
+					var neighbors = {};
+					sigInst.iterEdges(
+							function(e) {
+								if (nodes.indexOf(e.source) >= 0
+										|| nodes.indexOf(e.target) >= 0) {
+									neighbors[e.source] = 1;
+									neighbors[e.target] = 1;
+								}
+							}).iterNodes(function(n) {
+						if (!neighbors[n.id]) {
 							n.hidden = 1;
-						}else{
+						} else {
 							n.hidden = 0;
-						}	
-					}).draw(2,2,2);
-				}).bind('outnodes',function(){
-						sigInst.iterEdges(function(e){
-							e.hidden = 0;
-						}).iterNodes(function(n){
-							n.hidden = 0;
-						}).draw(2,2,2);
-					});
-		
+						}
+					}).draw(2, 2, 2);
+				}).bind('outnodes', function() {
+			sigInst.iterEdges(function(e) {
+				e.hidden = 0;
+			}).iterNodes(function(n) {
+				n.hidden = 0;
+			}).draw(2, 2, 2);
+		});
+
 		/**
 		 * Now, here is the code that shows the popup :
 		 */
@@ -114,7 +121,7 @@
 				popUp = false;
 			}
 
-			graph=sigInst.bind('overnodes', showNodeInfo).bind('outnodes',
+			graph = sigInst.bind('overnodes', showNodeInfo).bind('outnodes',
 					hideNodeInfo);
 			graph.draw();
 		})();
@@ -124,14 +131,14 @@
 {% endblock %} {% block content %} {{super()}}
 <h2>Skills network</h2>
 <p>Select the type of network visualization that you want used:</p>
-<select id="type-selector">
-	<option value="data/clustering_coef.gexf">Clustering Coefficient</option>
-	<option value="data/modularity.gexf">Modularity</option>
-	<option value="data/degree.gexf">Degree</option>
-	<option value="data/closeness.gexf">Closeness Centrality</option>
-	<option value="data/betweenness.gexf">Betweenness Centrality</option>
-	<option value="data/eigenv.gexf">Eigenvector Centrality</option>
-</select>
+<div class="btn-group">
+	<button class="btn type-selector" value="data/clustering_coef.gexf">Clustering Coefficient</button>
+	<button class="btn type-selector start" value="data/modularity.gexf">Modularity</button>
+	<button class="btn type-selector" value="data/degree.gexf">Degree</button>
+	<button class="btn type-selector" value="data/closeness.gexf">Closeness Centrality</button>
+	<button class="btn type-selector" value="data/betweenness.gexf">Betweenness Centrality</button>
+	<button class="btn type-selector" value="data/eigenv.gexf">Eigenvector Centrality</button>
+</div>
 <br/>
 <div class="sigma-parent">
   <div class="sigma-expand" id="jobs-network"></div>

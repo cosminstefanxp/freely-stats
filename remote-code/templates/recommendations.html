@@ -79,21 +79,22 @@ $(document).ready(function() {
 	{% endfor %}
 </div>
 <div class="clear"></div>
-<hr/>
 <a id="results"></a>
-<p>Selected job types:</p>
-<div id="selected-list">
-	{% for job in selected_jobs %}
-	<div class="select-entry">{{job|e}}</div>
-	{% endfor %}
+<strong>Selected:</strong>
+<div class="well well-small" >
+	<form action="#results" id="select-form" data-filter='job'>
+		<button type="submit" class="btn">Go!</button>
+		{% for job in selected_jobs %}
+		<input type='text' name='job' class='hidden' value='{{job}}'/>
+		{% endfor %}
+	</form>
+	<div id="selected-list">
+		{% for job in selected_jobs %}
+		<div class="select-entry">{{job|e}}</div>
+		{% endfor %}
+	</div>
 	<div class="clear"></div>
 </div>
-<form action="#results" id="select-form" data-filter='job'>
-	<input type="submit" value="Go!"/>
-	{% for job in selected_jobs %}
-	<input type='text' name='job' hidden='hidden' value='{{job}}'/>
-	{% endfor %}
-</form>
 
 <div class="clear"></div>
 <hr/>

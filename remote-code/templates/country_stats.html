@@ -157,20 +157,35 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 {% endblock %}
 
 {% block text_main %}
-<p>This page shows statistics about the bids submitted by freelancers of a given nationality.</p>
+<p>
+    This page shows statistics about the bids submitted by freelancers of a given nationality. 
+    Here, you can observe the number of bids from a  country, their distribution by country,
+    the average rating of users from that country as well as some text analysis on their messages
+    (word count, unique word count and lexical diversity and most frequent words).
+    Also, this page can show you the world map: the selected countries are yellow 
+    and the countries for which we have loaded the data here are green
+</p>
 {% endblock %}
 
 {% block text_tech %}
 <p>
-	For each country, we show how many bids have been made by users from
-	this country (<b>Outbound bids</b>) and the average rating of the users
-	from that country (<b>Average rating</b>). Then, we analyse the
-	messages the users send to a project owner when bidding for a project.
-	On these texts, after removing the stopwords, we perform text analysis,
-	showing the <b>total number of words</b>, the number of <b>unique
-	words</b> and compute the <b>lexical diversity</b>. Also, we plot a bar
-	chart displaying the most frequent 50 words used by bidders from that
-	country. Finally, we plot a pie chart, showing what are the countries
-	in which people from the selected country bid most often.
+    This statistics are based on 363883 bids from the most active 93 countries.
+    The text analysis is done on all the bidding messages from a certain country.
+    Before performing the lexical analysis, we cleaned the text of unnecessary
+    characters and signs using regular expressions and we removed the stopwords.
+</p>
+{% endblock %}
+
+{% block text_analysis %}
+<p>
+    India is the most active country on Freelancer.com, with over 150.000 bids, 
+    followed by Bangladesh, Pakistan, USA, Vietnam and Romania.
+    When computing the lexical diversity and the frequency distributions for the countries, 
+    we were hoping to get relevant statistics regarding the diversity of the English 
+    volcabulary for each country. However, the data shows that users prefer to send the 
+    project owners a private messge with their details, and a very short bidding message, 
+    asking them to check their private messages. We showed that there is a specific pattern
+    that almost all freelancers use when bidding on a project.
+    
 </p>
 {% endblock %}

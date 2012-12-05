@@ -148,29 +148,6 @@ a:active,table a:hover {
 	margin-right: auto;
 }
 
-#tagcloud {
-	border: 1px solid #aaa;
-	padding: 10px;
-	border-radius: 5px;
-	-moz-box-shadow: 0px 0px 8px #888;
-	-webkit-box-shadow: 0px 0px 8px #888;
-	box-shadow: 0px 0px 8px #888;
-}
-
-#tagcloud .tag-entry {
-	text-decoration: none;
-	color: #33a;
-	padding: 4px;
-}
-
-#tagcloud .tag-entry:HOVER {
-	padding: 3px;
-	border: 1px solid #bbb;
-	-moz-box-shadow: 0px 0px 4px #888;
-	-webkit-box-shadow: 0px 0px 4px #888;
-	box-shadow: 0px 0px 4px #888;
-}
-
 .select-entry {
 	padding: 4px;
 	margin: 2px 3px;
@@ -253,7 +230,7 @@ a:active,table a:hover {
 }
 
 #text-section {
-	padding: 40px 50px;
+	padding: 30px 20px 10px 50px;
 }
 
 #text-nav {
@@ -294,8 +271,6 @@ a:active,table a:hover {
 	color: #777;
 	margin: 0;
 	text-shadow: 2px 1px 0px #fff;
-	-moz-box-shadow: 2px 0px 1px -1px #bbb;
-	-webkit-box-shadow: 2px 0px 1px -1px #bbb;	
 }
 
 .hidden{

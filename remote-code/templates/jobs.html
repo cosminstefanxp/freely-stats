@@ -4,12 +4,37 @@
 
 {% block head %}
     {{ super() }}
+<style>
+#tagcloud {
+	border: 1px solid #aaa;
+	padding: 25px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 0px 8px #888;
+	-webkit-box-shadow: 0px 0px 8px #888;
+	box-shadow: 0px 0px 8px #888;
+}
+
+#tagcloud .tag-entry {
+	text-decoration: none;
+	color: #33a;
+	padding: 4px;
+	font-weight: normal;
+}
+
+#tagcloud .tag-entry:HOVER {
+	padding: 3px;
+	border: 1px solid #bbb;
+	-moz-box-shadow: 0px 0px 4px #888;
+	-webkit-box-shadow: 0px 0px 4px #888;
+	box-shadow: 0px 0px 4px #888;
+}
+</style>
 <script>
 	$(document).ready(function() {
 		$("#tagcloud a").tagcloud({
 			size : {
 				start : 0.7,
-				end : 4,
+				end : 3,
 				unit : 'em'
 			},
 			color : {
@@ -20,9 +45,8 @@
 	});	
 </script>
 {% endblock %} {% block content %} {{super()}}
-<p>This page shows the job categories on Freelancer.com. Their text size
-	is proportional to their number of projects.</p>
-<p>For customizing the number of entries or setting the ordering method:</p>
+<p>For customizing the number of entries or setting the ordering
+	method, please use the following form.</p>
 <form action="/jobs.html" style="border: 1px solid #999; padding: 10px;">
 	<label for="count">Count: </label>
 	<input type="number" name="count" value="{{count}}" /><br />
@@ -40,4 +64,9 @@
 	{% endfor %}
 </div>
 
+{% endblock %}
+
+{% block text_main %}
+<p>This page shows the job categories on Freelancer.com. Their text
+	size is proportional to their number of projects.</p>
 {% endblock %}

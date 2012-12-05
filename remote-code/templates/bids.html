@@ -101,10 +101,7 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
  };
     </script>
 {% endblock %} {% block content %} {{ super() }}
-<p>This page shows the correlations between the nationality of the
-	buyers (people who submitted a project) and the nationality of the
-	accepted bidder.</p>
-<hr />
+
 <div id='selection-cloud'>
 	{% for country in selectable_countries %}
 	{% if not country in countries %}
@@ -143,4 +140,10 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 {% endfor%}
 <div class="clear"></div>
 
+{% endblock %}
+
+{% block text_main %}
+<p>This page shows the correlations between the nationality of the
+	buyers (people who submitted a project) and the nationality of the
+	accepted bidder.</p>
 {% endblock %}

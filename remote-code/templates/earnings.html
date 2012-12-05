@@ -56,10 +56,21 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block text_tech %}
+In order to compute the average earnings per pattern we downloaded the skills for each project (from the first 30.000), its currency and the amount of money that was actually payed to the person who was given the project. Afterwards, the job pattern was retained as a BitVector and each project was analysed and an average for each job pattern was computed.
+The first approach was to use the average bid on each project. Although at first it might seem like a good idea, it turns out that some bidders actually wanted huge amount of money for a project (one wanted $500.000 on a project with around $3000 budget) probably because of the currency differences.
 {% endblock %}
 
 {% block text_main %}
+This section presents the average earnings for different skill patterns. 
+Let's say a project needs PHP and HTML;in this case its skill patterns will 
+be PHP and HTML. The user chooses the desired skills and those skills 
+represent a pattern. The application searches for this pattern and shows 
+all the other patterns that contain it, ordered by the average amount of 
+money that was earned from it. For example PHP and HTML pattern is included 
+in PHP, HTML and MySQL pattern. 
 {% endblock %}
 
 {% block text_analysis %}
+It can be seen that the average sum payed for some projects is very high. 
+For example, if the user chooses only PHP, the first pattern worths $5000. The reason for this high average is that probably there is a single project in the first 30.000 that it was a big project which was payed very well. This means that the amount of money payed for a project depends not only on the skills, but on the size of the project and most likely on the delivery time(the shorter the time the higher the price)
 {% endblock %}

@@ -43,15 +43,23 @@ $(document).ready(function() {
 <hr/>
 
 {% if matching != None %}
-<table class="table">
+<h4>Search results</h4>
+<table class="table table-striped table-hover">
 	<tr><th>Skills required</th><th>Average accepted bids</th>
 	{% for m in matching %}
-	<tr><td>{% for j in m[1] %} <span class="badge badge-info">{{j}}</span>{%endfor%}</td><td>&#36; {{m[0]}}</td></tr>
+	<tr><td>{% for j in m[1] %} <span class="badge badge-info">{{j}}</span>{%endfor%}</td><td style="width:250px">&#36; {{m[0]}}</td></tr>
 	{% endfor %}
 </table>
 {% elif searched %}
 <div class="alert">No patterns found matching your search query!</div>
 {% endif %}
+<h4>Top paid</h4>
+<table class="table table-striped table-hover">
+	<tr><th>Skills required</th><th>Average accepted bids</th>
+	{% for m in top_paid %}
+	<tr><td>{% for j in m[1] %} <span class="badge badge-info">{{j}}</span>{%endfor%}</td><td style="width:250px">&#36; {{m[0]}}</td></tr>
+	{% endfor %}
+</table>
 
 {% endblock %}
 

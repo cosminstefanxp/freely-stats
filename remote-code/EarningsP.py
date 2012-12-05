@@ -27,17 +27,27 @@ class EarningsP(webapp.RequestHandler):
         selected_jobs = [j for j in selected_jobs if j in selectable]
         log.info("Earnings for selected jobs: " + str(selected_jobs))
         
-        #Build the list of matching patterns
-        matching=None
-        searched=False
+        
         if len(selected_jobs)>0:
-            searched=True
             # Read patterns from database
             earnings_db = Earnings.all()
             earnings1, earnings2 = earnings_db.fetch(2)
             earnings1.expand()
             earnings2.expand()
-    
+        else:
+            # Read patterns from database
+            earnings_db = Earnings.all()
+            earnings1 = earnings_db.get()
+            earnings1.expand()
+        
+        #Build top ten
+        top_paid=[(int(count), jobs.split(';')) for count, jobs in earnings1.data_expanded[:10]]
+
+        #Build the list of matching patterns    
+        matching=None
+        searched=False
+        if len(selected_jobs)>0:
+            searched=True
             # Find out matching patterns
             matching_temp=[]
             for data in earnings1.data_expanded:
@@ -56,7 +66,7 @@ class EarningsP(webapp.RequestHandler):
                 log.info("No matches found...")
                     
         #Generate the page
-        template_values = { 'selectable': selectable, 'selected_jobs':selected_jobs, 'matching':matching, 'searched':searched}
+        template_values = { 'selectable': selectable, 'selected_jobs':selected_jobs, 'matching':matching, 'searched':searched,'top_paid':top_paid}
             
         template = jinja_environment.get_template('templates/earnings.html')
         self.response.out.write(template.render(template_values))

@@ -13,36 +13,6 @@ $(document).ready(function() {
 	});
 </script>
 
-<style>
-	.results-box {
-		width: 31%;
-		margin: 15px 10px 15px 20px;
-		border: 1px solid #bbb;
-		border-radius: 3px;
-		float: left;
-		padding: 15px;
-		height: 100%;	
-		background-color: white;
-	}
-	
-	#recommendations {
-		width: 60%;
-	}
-	
-	#top-matches table tr {
-		height: 27px;
-	}
-	
-	.match {
-		background: #e1e1f9;
-		padding: 3px;
-		margin: 1px;
-		border: 1px solid #bbb;
-		line-height: 2.1em;
-	}
-</style>
- 
-
 {% endblock %} {% block content %} {{super()}}
 <div id='selection-cloud'>
 	{% for job in selectable %}
@@ -72,13 +42,17 @@ $(document).ready(function() {
 <div class="clear"></div>
 <hr/>
 
-{% if rec_enabled == True %}
-<div id="earnings" class="results-box">
-	<h2>Learning recommendations</h2>
-	<div id="chart-div"></div>
-</div>
+{% if matching != None %}
+<table class="table">
+	<tr><th>Skills required</th><th>Average accepted bids</th>
+	{% for m in matching %}
+	<tr><td>{% for j in m[1] %} <span class="badge badge-info">{{j}}</span>{%endfor%}</td><td>&#36; {{m[0]}}</td></tr>
+	{% endfor %}
+</table>
+{% elif searched %}
+<div class="alert">No patterns found matching your search query!</div>
 {% endif %}
-<div class="clear"></div>
+
 {% endblock %}
 
 {% block text_tech %}

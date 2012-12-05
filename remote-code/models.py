@@ -5,6 +5,7 @@ Created on Nov 24, 2012
 '''
 from google.appengine.ext import db
 from BitVector import BitVector
+import logging
 
 TopJobs = [('PHP', 1855), ('Website Design', 1248), ('Graphic Design', 1132),
     ('HTML', 1081), ('Software Architecture', 875), ('MySQL', 750), ('Software Testing', 527),
@@ -177,9 +178,11 @@ class Earnings(db.Model):
         ''' Expands the serialized data in the object '''
         data_s = self.data.split('~')
         self.data_expanded = []
+        logging.info(data_s)
         for s in data_s:
+            logging.info(s)
             cost, pattern = s.split(':',2)
-            self.clusters_expanded.append((cost,pattern))
+            self.data_expanded.append((cost,pattern))
     
     def __str__(self):
-        return str(self.data)
+        return str(self.data_expanded)

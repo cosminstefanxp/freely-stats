@@ -18,9 +18,6 @@
 </style>
 {% endblock %}
 {% block content %} {{super()}}
-<h2>Skills Clusters</h2>
-<p>This page shows the clusters that can be formed with the Freelancer.com skills.</p>
-
 <h2>Hierarchical clustering</h2>
 <div class="img-container">
 	<img src="/img/job_dendrogram.png"/>
@@ -29,15 +26,39 @@
 {% endblock %}
 
 {% block text_main %}
-<p> There are two methods of clustering presented in this section: k-means and hierarchical clustering. The hierarchical clustering algorithm is presented as a dendrogram where the user can approximate how related two skills are(we have also emphasized the most important clusters). The k-means algorithm was run for a number of clusters that varied between 10 and 16. </p>
+<p>There are two methods of clustering presented in this section:
+	k-means and hierarchical clustering. The hierarchical clustering
+	algorithm is presented as a dendrogram where the user can approximate
+	how related two skills are(we have also emphasized the most important
+	clusters). The k-means algorithm was run for a number of clusters that
+	varied between 10 and 16.</p>
 {% endblock %}
 
 {% block text_tech %}
-<p>We have presented two clustering methods applied on our skills set. Before feeding the data to the clustering algorithms we have computed the feature vectors for each skill This feature vector is a binary vector where an entry represents whether a project requires that skill. </p>
+<p>We have presented two clustering methods applied on our skills
+	set. Before feeding the data to the clustering algorithms we have
+	computed the feature vectors for each skill This feature vector is a
+	binary vector where an entry represents whether a project requires that
+	skill.</p>
 
-<p>The <b>k-means clustering algorithm </b>divides the data into clusters based on the number of clusters decided by the user. It is a fast iterative algorithm which tries to gather the data around central points of the space: centroids. We have run the k-means algorithm using between 10 and 16 clusters. It can be seen that the one with X clusters intuitively makes more sense because it gathers only the skills that go together</p>
+<p>
+	The <b>k-means clustering algorithm </b>divides the data into clusters
+	based on the number of clusters decided by the user. It is a fast
+	iterative algorithm which tries to gather the data around central
+	points of the space: centroids. We have run the k-means algorithm using
+	between 10 and 16 clusters. It can be seen that the one with X clusters
+	intuitively makes more sense because it gathers only the skills that go
+	together
+</p>
 
-<p>The <b>hierarchical clustering algorithm</b> takes longer, but the clusters are more accurate. The hierarchical clustering results are presented in a dendrogram, which also shows the links between clusters. This way, the user can see by the actual length of the links how close the clusters are. The most important clusters have been marked directly on the dendrogram. </p>
+<p>
+	The <b>hierarchical clustering algorithm</b> takes longer, but the
+	clusters are more accurate. The hierarchical clustering results are
+	presented in a dendrogram, which also shows the links between clusters.
+	This way, the user can see by the actual length of the links how close
+	the clusters are. The most important clusters have been marked directly
+	on the dendrogram.
+</p>
 {% endblock %}
 
 {% block text_analysis %}

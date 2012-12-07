@@ -124,35 +124,33 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block text_main %}
-<p>In this section we display the most popular job types found on
+<p>In this section we display the most popular skills found on
 	Freelancer.com. From these, you should choose your skills and then the
-	application will compute the most popular skills/job types that are
+	application will compute the most popular skills that are
 	usually demanded together as well as recommendations on what to learn,
-	considering your current skills. More skills/job types can be selected.
+	considering your current knowledge. More than one skill can be selected.
 </p>
 {% endblock %} {
 
 {% block text_tech %}
 <p>The top matches and the recommendations have been computed using
-	a binary vector for storing the most common combinations of jobs. We
-	have precomputed the binary vectors for 1.770.031 projects and the
-	results are then used as follows.</p>
+	a binary vector for storing the most common combinations of skills 
+	existing on the website. We have precomputed the binary vectors for each
+	combination of skills on 1.770.031 projects and the results were used to compute similarities beteen them a the skills the user chose.</p>
 <p>
 	To compute the <b>top matches</b>, the similarities between the skills
 	chosen by the user and each of the vectors are computed and the most
 	similar job patterns are obtained. However, because the vectors are
 	binary, the distance between them is represented by the bits that are
 	different, which has the effect that, sometimes, when the user chooses
-	few or unrelated features, errors might be caused. For example,
+	few or unrelated features, it might lead to errors. For example,
 	usually, by selecting only a skill, PHP will be displayed as a top
 	match, because it only differs by 2 bits (distance is 2). The patterns
 	with the same similarity score are ordered by the number of project
 	and, as PHP has the highest number of projects, it is displayed first.
 </p>
 <p>
-	The <b>recommendations</b> count the number of patterns where two
-	skills were found together so the numbers vary more and more accurate
-	suggestions can be shown.
+	The <b>recommendations</b> are based on how many times two skills appear together, also taking into account the similarity between the skill pattern of the user and each skills pattern. Because it takes more measurements into account, including the number of appearances, not only the similarities between vectors, the recommendations provide a more complete and accurate result.
 </p>
 {% endblock %}
 

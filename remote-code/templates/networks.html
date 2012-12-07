@@ -146,87 +146,119 @@
 {% endblock %}
 
 {% block text_main %}
-<p>
-    This page shows the network structure of Freelancer.com skills and their connections. 
-    You can choose from several types of visualisation. When hovering over a node, an 
-    info box appears in the top left corner of the canvas, displaying the various measurements
-    for that node. Also, when hovering over a node, only its neighbours are displayed.
-</p>
+<p>This page shows the network structure of Freelancer.com skills
+	and their connections. You can choose from several types of
+	vizualisations. When hovering over a node, an info box appears in the
+	top left corner of the canvas, displaying the various measurements for
+	that node. Also, when hovering over a node, only its neighbours are
+	displayed.</p>
 
 <p>
-    <b>Clustering Coefficient</b> measures the clustering for each node. The nodes with the highest 
-    clustering coefficient are blue, and as it decreases, the color changes through light blue, 
-    yellow, and orange to red.
-    <b>Modularity</b> shows the different communities in the network, each of them with a different color.
-    <b>Degree</b> colors the nodes according to their degree: the nodes with the most links are blue, 
-    and as the degree decreases, the color changes through light blue, yellow, and orange to red.
-    <b>Closeness centrality</b> shows how fast the information from a node spreads to another nodes 
-    sequentially. The nodes with high closeness centrality are blue, and as it decreases, 
-    the color changes through light blue, yellow, and orange to red.
-    <b>Betweenness centrality</b> measures how important a node is in a network, by using the number
-    of shortest paths from one node to another that go through that node. Nodes with high 
-    betweenness centrality are blue, and as it decreases, the color changes through light 
-    blue, yellow, and orange to red.
-    <b>Eigenvector centrality</b> is based on the intuition that a node is as important as its 
-    neighbours are. Nodes with high eigenvector centrality are blue, and as it decreases, 
-    the color changes through light blue, yellow, and orange to red.
+	<b>Clustering Coefficient</b> measures the clustering for each node.
+	The nodes with the highest clustering coefficient are blue, and, as it
+	decreases, the color changes through light blue, yellow, and orange to
+	red. <b>Modularity</b> shows the different communities in the network,
+	each of them with a different color. <b>Degree</b> colors the nodes
+	according to their degree: the nodes with the most links are blue and,
+	as the degree decreases, the color changes through light blue, yellow,
+	and orange to red. <b>Closeness centrality</b> shows how fast the
+	information from a node spreads to another nodes sequentially. The
+	nodes with high closeness centrality are blue and, as it decreases, the
+	color changes through light blue, yellow, and orange to red. <b>Betweenness
+	centrality</b> measures how important a node is in a network, by using the
+	number of shortest paths from one node to another that go through that
+	node. Nodes with high betweenness centrality are blue and, as it
+	decreases, the color changes through light blue, yellow, and orange to
+	red. <b>Eigenvector centrality</b> is based on the intuition that a
+	node is as important as its neighbours are. Nodes with high eigenvector
+	centrality are blue and, as it decreases, the color changes through
+	light blue, yellow, and orange to red.
 </p>
 {% endblock %}
 
 {% block text_tech %}
-<p> 
-    To build a network of the skills on Freelancer.com, an arc was drawn between two skills 
-    if they were required together in more than 1% of the total number of projects in which 
-    each of the skills is required. For example, an arc between PHP and MySQL was drawn, 
-    because MySQL was required in more than 1% of the projects that required PHP and PHP 
-    was required in more than 1% of the projects that required MySQL.
-</p>
+<p>To build the network of the job types on Freelancer.com, an arc
+	was created between two job types if they were required together in
+	more than 1% of the total number of projects in which each of the
+	skills is required. For example, an arc between PHP and MySQL was
+	drawn, because MySQL was required in more than 1% of the projects that
+	required PHP and PHP was required in more than 1% of the projects that
+	required MySQL.</p>
 <p>
-    The <b>clustering coefficient</b> of a node measures how complete the neighbourhood of 
-    a node is. Nodes have a maximum clustering coefficient if all its neighbours are 
-    connected to each other. For a node with a clustering coefficient of 0, none of its 
-    neighbours is connected to any other of his neighbours.
-    <br>Nodes with <b>high</b> clustering coefficient: Google Buzz, Palm, Telecommunications Engineering, Machine Learning, Prezi, Cartography & Maps, Business Catalyst, Data Mining, Electrical Engineering
-    <br>Nodes with <b>low</b> clustering coefficient: Project Management, Financial Research, DOS, Mechanical Engineering, Viral Marketing, Technical Support, Matlab & Mathematica, Product Design, Product Management
-</p>
-
-<p>
-    <b>Modularity</b> shows the communities detected in the network. The nodes have been 
-    divided in 6 communities, shown with different colors. 
-    <br><b>Red:</b> iPhone, iPad, Cocoa, Objective C, Android, Windows Mobile, Phone Gap, Flex, Java, Nokia, Kinect, Machine Learning, Algorithm, Game Design
-    <br><b>Orange:</b> Google+, Facebook, YouTube, Tumblr, SEO, Articles, Web Search, Research, Data Entry, LinkedIn, Advertising, Recruitment, Market Research
-    <br><b>Yellow:</b> 3D Animation, Logo Design, Photoshop Design, Banner Design, Word, Prezi, After Effects, T-Shirts, Flash, Photography
-    <br><b>Gray:</b> Delphi, Apache, ActionScript, XML, Windows Server, Mac OS, Linux, C#, System Admin, Shell Script
-    <br><b>Pink:</b> OCR, French, French (Canadian)
-    <br><b>Blue:</b> PHP, MySQL, Javascript, Ajax, HTML, e-Commerce, eLearning, Django, Joomla, Ruby & Ruby on Rails
+	The <b>clustering coefficient</b> of a node measures how complete the
+	neighbourhood of a node is. Nodes have a maximum clustering coefficient
+	if all its neighbours are connected to each other. For a node with a
+	clustering coefficient of 0, none of its neighbours are connected to
+	any other of its neighbours.
+	<br>Example of nodes with a<b>high</b> clustering coefficient: Google
+	Buzz, Palm, Telecommunications Engineering, Machine Learning, Prezi,
+	Cartography &amp; Maps, Business Catalyst, Data Mining, Electrical
+	Engineering
+	<br>Example of nodes with <b>low</b> clustering coefficient: Project
+	Management, Financial Research, DOS, Mechanical Engineering, Viral
+	Marketing, Technical Support, Matlab &amp; Mathematica, Product Design,
+	Product Management
 </p>
 
 <p>
-    The <b>degree</b> visualisation colors the nodes according to their degree. 
-    Degree centrality can be a measurement of how important a node is in a network. 
-    According to this measurement, we can see which nodes are the most and the least important.
-    <br>The nodes with the <b>highest</b> degree are: PHP, Website Design, Software Architecture, MySQL, Graphic Design, HTML, Javascript
-    <br>There are 36 nodes which have degree 1.
+	<b>Modularity</b> shows the communities detected in the network. The
+	nodes have been divided in 6 communities, shown with different colors.
+	Following, there are example of the most important nodes in each
+	community: <br /> <b>Red:</b> iPhone, iPad, Cocoa, Objective C,
+	Android, Windows Mobile, Phone Gap, Flex, Java, Nokia, Kinect, Machine
+	Learning, Algorithm, Game Design <br /> <b>Orange:</b> Google+,
+	Facebook, YouTube, Tumblr, SEO, Articles, Web Search, Research, Data
+	Entry, LinkedIn, Advertising, Recruitment, Market Research <br /> <b>Yellow:</b>
+	3D Animation, Logo Design, Photoshop Design, Banner Design, Word,
+	Prezi, After Effects, T-Shirts, Flash, Photography <br> <b>Gray:</b>
+	Delphi, Apache, ActionScript, XML, Windows Server, Mac OS, Linux, C#,
+	System Admin, Shell Script <br /> <b>Pink:</b> OCR, French, French
+	(Canadian) <br /> <b>Blue:</b> PHP, MySQL, Javascript, Ajax, HTML,
+	e-Commerce, eLearning, Django, Joomla, Ruby &amp; Ruby on Rails
 </p>
 
 <p>
-    <b>Closeness centrality</b> is a measurement of the importance of a node in a network. 
-    <br>Nodes with the <b>highest</b> closeness centrality: PHP, Website Design, Software Architecture, MySQL, Graphic Design, HTML, Javascript, Java
-    <br>Nodes with the <b>lowest</b> closeness centrality: Mechanical Engineering, Natural Language, Product Sourcing, Manufacturing, Civil Engineering
+	The <b>degree</b> visualisation colors the nodes according to their
+	degree. Degree centrality can be a measurement of how important a node
+	is in a network. According to this measurement, we can see which nodes
+	are the most and the least important.
+	<br />The nodes with the <b>highest</b> degrees are: PHP, Website
+	Design, Software Architecture, MySQL, Graphic Design, HTML, Javascript.
+	There are 36 nodes which have the degree of 1.
 </p>
 
 <p>
-    <b>Betweenness</b> is another measurement of the importance of a node in a network. 
-    For a node, it measures how many pairs of nodes in the network would be connected through
-    it in their shortest path from one to another. Being quite a large network, the betweenness
-    values for the nodes are relatively small. 
-    <br>Nodes with the <b>highest</b> betweenness centrality: PHP, Website Design, Graphic Design, Software Architecture, MySQL, Javascript, HTML
-    <br>Nodes with the <b>lowest</b> betweenness centrality: Mechanical Engineering, Natural Language, Product Sourcing, Manufacturing, Civil Engineering
+	<b>Closeness centrality</b> is a measurement of the importance of a
+	node in a network.
+	<br />Nodes with the <b>highest</b> closeness centrality: PHP, Website
+	Design, Software Architecture, MySQL, Graphic Design, HTML, Javascript,
+	Java
+	<br />Nodes with the <b>lowest</b> closeness centrality: Mechanical
+	Engineering, Natural Language, Product Sourcing, Manufacturing, Civil
+	Engineering.
+</p>
+
+<p>
+	<b>Betweenness</b> is another measurement of the importance of a node
+	in a network. For a node, it measures how many pairs of nodes in the
+	network would be connected through it in their shortest path from one
+	to another. Being quite a large network, the betweenness values for the
+	nodes are relatively small.
+	<br />Nodes with the <b>highest</b> betweenness centrality: PHP,
+	Website Design, Graphic Design, Software Architecture, MySQL,
+	Javascript, HTML
+	<br />Nodes with the <b>lowest</b> betweenness centrality: Mechanical
+	Engineering, Natural Language, Product Sourcing, Manufacturing, Civil
+	Engineering.
 </p>
 <p>
-    <b>Eigenvector centrality</b> also measure the importance of a node in a network.
-    <br>Nodes with the <b>highest</b> eigenvector centrality: PHP, Website Design, MySQL, Software Architecture, HTML, Javascript, Graphic Design
-    <br>Nodes with the <b>lowest</b> eigenvector centrality: Mechanical Engineering, Product Sourcing, Manufacturing, Natural Language, Civil Engineering
+	<b>Eigenvector centrality</b> also measure the importance of a node in
+	a network. <br>Nodes with the <b>highest</b> eigenvector centrality:
+	PHP, Website Design, MySQL, Software Architecture, HTML, Javascript,
+	Graphic Design
+	<br />Nodes with the <b>lowest</b> eigenvector centrality: Mechanical
+	Engineering, Product Sourcing, Manufacturing, Natural Language, Civil
+	Engineering.
 </p>
 {% endblock %}
 
@@ -246,8 +278,8 @@
     networks and online marketing, the yellow community is related to design, the gray 
     community is related to operating systems and the blue community is related to websites.
     There is, however, the gray community, which contains only three nodes: OVR, French and 
-    French (Canadian). These "skills" are not common and are not usually required together
-    with other skills, so they form their own community.
+    French (Canadian). These job types are not common and are not usually required together
+    with other job types, so they form their own community.
 </p>
 <p>    
     <b>Centrality</b><br>
@@ -258,7 +290,7 @@
 </p>
 <p>
     After analysing the network as a whole, we can say that the most required skills on 
-    Freelancer.com are the ones related to web development. This reault is also confirmed 
-    by the analysis done in the Categories and Trends pages.
+    Freelancer.com are the ones related to web development. This result is also confirmed 
+    by the analysis done in the <strong>Job Types</strong> and <strong>Trends</strong> pages.
 </p>
 {% endblock %}

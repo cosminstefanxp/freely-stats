@@ -143,25 +143,47 @@ block title %}Bids{% endblock %} {% block head %} {{ super() }}
 {% endblock %}
 
 {% block text_main %}
-<p>This page shows the correlations between the nationality of the
-	buyers (people who submitted a project) and the nationality of the
-	accepted bidder. You can choose one or more countries and see where people from that countries apply for projects and where people who apply for projects in that country are from. </p>
+<p>This page shows correlations between the nationality of the
+	buyers (people who submitted a project), the nationality of the
+	accepted bidders and the countries of projects to which bidders apply
+	most. Only the top 19 countries by number of projects submitted are
+	shown on this page (see Technical Details for the explanation).</p>
+<p>
+	You can choose one or more countries in the list below. You can also
+	use the map provided by clicking on <i>Show Map</i> to see more easily
+	which countries can be selected (green) and which are selected (orange;
+	but only after pressing the <i>Go!</i> button ).
+</p>
 {% endblock %}
 
 
 {% block text_analysis %}
-<p> If we look at the statistic of where different people from different 
-countries apply to, we can see that in top there are USA, Australia and 
-Canada. Because these three countries are in top for every pther country, it 
-means that they post most of the projects, not necessarily that all the 
-other countries prefer them.</p>
-<p> The statistics of people accepted for a project are similar: there are 
-three main countries on top: India, Pakistan and Bangladesh. Again, this 
-doesn't mean that the people from this countries are necessarily the best, 
-but it means that a large number of people from these countries are 
-freelancers. An interesting observation is that in the top 7 for countries of accepted bidders is Romania, which is a small country, compared to US or India. This means that there, the number of people working in the technical field is higher than the average. </p>
+<p>If we look at the statistics regarding where different people from
+	different countries apply to, we can see that in top there are USA,
+	Australia and Canada. Because these three countries are in top for
+	every other country, it means that they post most of the projects, not
+	necessarily that all the other countries prefer them.</p>
+<p>The statistics of people accepted for a project are similar: there
+	are three main countries on top: India, Pakistan and Bangladesh. Again,
+	this doesn't mean that the people from this countries are necessarily
+	the best, but it means that a large number of people from these
+	countries apply for freelancing jobs. An interesting observation is
+	that in the top 7 for countries of accepted bidders is Romania, which
+	is a small country, compared to US (about 8% of the population) or
+	India. This means that, for this country, the number of people working
+	in the technical field on freelancing jobs is much higher than the
+	average or the quality of the work is considered very good by the project
+	posters.</p>
 {% endblock %}
 
 {% block text_tech %}
-<p> </p>
+<p>For this section, we used a dataset containing 29.965 project
+	details, 28.640 sellers, 363.884 bids and 45.399 users.</p>
+<p>The data regarding accepted bidders is only presented for the top
+	19 countries by number of projects submitted by people of this
+	nationality. We had to limit the countries to this number as the
+	difference between the number of projects submitted (and contained in
+	our dataset), by the first country (United States - 4744) and the
+	following countries was increasing exponentially (e.g. Germany, 6th,
+	293 projects or Denmark, 15th, 127 projects).</p>
 {% endblock %}

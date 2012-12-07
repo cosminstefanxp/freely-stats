@@ -10,12 +10,17 @@ from Networks import Networks
 from Recommendations import Recommendations
 from ClustersP import ClustersP
 from EarningsP import EarningsP
+import logging
  
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class Home(webapp2.RequestHandler):
     def get(self):
+        try:
+            logging.info("New request from %s: %s/%s - %s " %(self.request.remote_addr,self.request.headers.get('X-AppEngine-Country'),self.request.headers.get('X-AppEngine-Country'), str(self.request.headers)))
+        except KeyError:
+            logging.info("New request from %s" %(self.request.url))
         template = jinja_environment.get_template('templates/home.html')
         self.response.out.write(template.render())
 

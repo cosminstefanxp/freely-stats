@@ -25,21 +25,21 @@ class Jobs(webapp.RequestHandler):
         else:
             count=int(countV)
             
-        #check if randomize
-        if self.request.get("randomize",default_value=1) != '1':
-            randomize=False;
+        #check if order
+        if self.request.get("order",default_value=0) != '1':
+            order=False;
         else:
-            randomize=True;
+            order=True;
             
         # Get jobs
         q = db.GqlQuery("SELECT * FROM Job ORDER BY project_count DESC");
         jobs=q.fetch(count)
         
-        if randomize:
+        if not order:
             random.shuffle(jobs)
             
         #Generate the page
-        template_values = { 'jobs': jobs, 'count': count, 'randomize':  randomize}
+        template_values = { 'jobs': jobs, 'count': count, 'order':  order}
         
         template = jinja_environment.get_template('templates/jobs.html')
         self.response.out.write(template.render(template_values))

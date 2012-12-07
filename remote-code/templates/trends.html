@@ -108,28 +108,51 @@
 
 {% block text_main %}
 <p>The trends present the evolution in the demand of skills over the
-	years, between 1st of January 2008 and 20th on November 2012. They are
-	computed as percent out of the total number of projects. You can
-	compare the trends for different skills by selecting each of your
-	desired skills.</p>
-<p>For adding a new job on the graphs, please select it in the
-	following list.</p>
+	months, between 1st of January 2008 and 20th on November 2012. They are
+	computed as the percentage of the projects requiring the selected job
+	type out of the total number of projects, in each month.</p>
+<p>
+	You can compare the trends for different skills by selecting each of
+	your desired skills. For adding a new job type on the graph, please
+	select it in the following list and press <strong>Go!</strong>.
+	Multiple job types can be selected at the same time for an easier
+	comparison. An example for comparing the mobile development
+	technologies can be found
+	<a
+		href="/trends.html?job=Blackberry&job=iPad&job=Objective+C&job=Mobile+Phone&job=iPhone&job=Android#results">here</a>.
+</p>
+<p>Job types are ordered and displayed based on the number of
+	projects on which they are required.</p>
 {% endblock %}
 
 {% block text_tech %}
-<p>To compute the trends for a skill we computed, for every month,
-	the number of projects that require that skill. Also, we have computed
-	the total amount of projects regardless of their requirements. This
-	total will also be used to compute the percentage of projects that need
-	a particular skill.</p>
+<p>To obtain the trends for a job type we computed, for every month,
+	the number of projects that require that skill. Also, we counted the
+	total amount of projects, regardless of their requirements, in each
+	month. This total was used to compute the percentage of projects that
+	require a particular skill, in each month.</p>
+<p>
+	In order to present a good overview of the market, we focused our
+	project search on projects requiring the 100 most used job types from
+	the <i>Websites, IT &amp; Software</i>, <i>Mobile Phones &amp;
+		Computing</i> and <i>Design, Media &amp; Architecture</i> categories. The
+	dataset included 1.770.031 projects posted between 01.01.2008 and
+	20.11.2012.
+</p>
 {% endblock %}
 
 {% block text_analysis %}
-<p>We can see that there are some skills for which the demand is
-	slightly decreasing( for example Visual Basic) and others that are high
-	in demand - usually skills related to new technologies(like Facebook or
-	HTML5) It is easy to see what the evolution of a skill is by observing 
+<p>We can notice that there are some skills for which the demand is
+	slightly decreasing( for example Visual Basic) and others that are in high
+	demand - usually skills related to new technologies(like Facebook or
+	HTML5). It is easy to see what the evolution of a skill is by observing 
 	the slope of its graphic.</p>
-<p>The trends are computed for a number of 1.770.031 million
-	projects so that they present a good overview of the market</p>
+<p>
+	Another interesting aspect we can observe is that, for some job types,
+	projects started to appear only at a given date, probably due to the
+	fact that either the technology appeared then or the job type was
+	introduced to Freelancer.com at that point. A good example in first
+	case is the <i>Facebook</i> job type and in the latter case is the 
+	<i>PSD to HTML</i> job type: <a href="/trends.html?job=PSD+to+HTML&job=Facebook#results">example</a>.
+</p>
 {% endblock %}

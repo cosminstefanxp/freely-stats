@@ -46,15 +46,23 @@
 {% endblock %}
 
 {% block text_main %}
-<p>This section presents how the skills from freelancer.com can be grouped together. We have tried two approaches: one that uses the k-means algorithm and one that uses the hierarchical clustering algorthm.</p>
+<p>This section presents how the skills from freelancer.com can be
+	grouped together. We have tried two approaches: one that uses the
+	k-means algorithm and one that uses the hierarchical clustering
+	algorthm.</p>
 
-<p>The <b>k-means algorithm</b> was run for a number of clusters that varied from 10 to 16 and from 18 to 26 skipping odd numbers. </p>
+<p>
+	The <b>K-means algorithm</b> was run for a number of clusters that
+	varied from 10 to 16 and from 18 to 26 skipping odd numbers.
+</p>
 
-<p>The <b>hierarchical clustering algorithm</b> is presented as a dendrogram where the user can approximate how related two skills are(we have also emphasized the most important clusters). </p>
+<p>
+	The <b>hierarchical clustering algorithm</b> is presented as a
+	dendrogram where the user can approximate how related two skills are (we
+	have also emphasized the most important clusters).
+</p>
 
-{% endblock %}
-
-{% block text_tech %}
+{% endblock %} {% block text_tech %}
 <p>We have presented two clustering methods applied on our skills
 	set. Before feeding the data to the clustering algorithms we have
 	computed the feature vectors for each skill This feature vector is a
@@ -67,7 +75,7 @@
 	iterative algorithm which tries to gather the data around central
 	points of the space: centroids. We have run the k-means algorithm using
 	various numbers of clusters. Due to the nature of the data, the results 
-	are not as good as expected, or as good as the ones from hierarchical 
+	are not as good as expected or as good as the ones from hierarchical 
 	clustering. As the feature vector is very large, the distances will not 
 	have high variations, which can cause problems when assigning a skill to 
 	a centroid.
@@ -77,20 +85,20 @@
 	The <b>hierarchical clustering algorithm</b> takes longer, but the
 	clusters are more accurate. The hierarchical clustering results are
 	presented in a dendrogram, which also shows the links between clusters.
-	This way, the user can see by the actual length of the links how close
+	This way, the user can see, by the actual length of the links, how close
 	the clusters are. The most important clusters have been marked directly
 	on the dendrogram.
 </p>
 {% endblock %}
 
 {% block text_analysis %}
-<p>As it can be seen the clusters from the hierarchical clustering are more 
-accurate and make more sense. This is cause by the fact k-means algorithm 
-uses a heuristic to split the data into groups and for this type of data, 
-the heuristic doesn't perform very well.</p>
-<p> The hierarchical clustering displayed in the dendogram shows that the
-clusters found by the algorithm contain skills that are really related to 
-each other from a technical perspective. For example, all the operating 
-systems are gather together, as well as most of the common programming
-languages</p> 
+<p>As it can be seen the clusters from the hierarchical clustering
+	are more accurate and make more sense. This is cause by the fact
+	k-means algorithm uses a heuristic to split the data into groups and
+	for this type of data, the heuristic doesn't perform very well.</p>
+<p>The hierarchical clustering displayed in the dendogram shows that
+	the clusters found by the algorithm contain skills that are really
+	related to each other from a technical perspective. For example, all
+	the operating systems are gather together, as well as most of the
+	common programming languages.</p>
 {% endblock %}

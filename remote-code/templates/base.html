@@ -28,14 +28,14 @@ $(document).ready(function() {
 
 {% set navigation_bar = [
     ('/', 'home', 'Home','This is the home page.'),
-    ('/jobs.html', 'jobs', 'Categories','This page shows a word cloud of the job categories on Freelancer.com.'),
-    ('/trends.html', 'trends', 'Trends','The trends present the evolution in the demand of skills over the years, between 1st of January 2008 and 20th on November 2012.'),
-    ('/bids.html', 'bids', 'Bids Stats','This page shows the correlations between the nationality of the buyers and the nationality of the accepted bidder.'),
-    ('/country_stats.html', 'country_stats', 'Statistics','This page shows statistics about the bids submitted by freelancers of a given nationality.'),
-    ('/networks.html', 'networks', 'Networks','This page shows the network structure of Freelancer.com skills and the communities that connect them.'),
-    ('/clusters.html', 'clusters', 'Clusters','This page shows the clusters that have been formed, using K-means clustering and Hierarchical clustering algorithms.'),
-    ('/recommendations.html', 'recommendations','Recommendations','This page gives recommendations regarding skills, based on a dataset from Freelancer.com.'),
-    ('/earnings.html', 'earnings', 'Earnings', 'This page shows the average earnings for diferrent patterns of skills that usually go together.')
+    ('/jobs.html', 'jobs', 'Job Types','Shows the job categories present on Freelancer.com, in the form of a word cloud.'),
+    ('/trends.html', 'trends', 'Trends','Presents the evolution in the demand of skills for projects between 1st of January 2008 and 20th of November 2012.'),
+    ('/bids.html', 'bids', 'Bids Stats','Shows correlations between the nationalities of buyers, bidders and the accepted bidders for projects.'),
+    ('/country_stats.html', 'country_stats', 'Statistics','Shows various statistics about the bids submitted by freelancers of a given nationality.'),
+    ('/networks.html', 'networks', 'Networks','Displays the network structure of Freelancer.com\'s skills and the communities that are formed them.'),
+    ('/clusters.html', 'clusters', 'Clusters','Presents the clusters that have been formed, using the K-means clustering and Hierarchical clustering algorithms.'),
+    ('/recommendations.html', 'recommendations','Recommendations','Provides learning recommendations to the user regarding his set of skills, based on a dataset from Freelancer.com.'),
+    ('/earnings.html', 'earnings', 'Earnings', 'Shows the average earnings for diferrent patterns of skills that usually go together in the same projects.')
 ] %}
 {% set active_page = active_page|default('index') %}
 

@@ -159,35 +159,55 @@ block title %}Country Statistics{% endblock %} {% block head %} {{ super() }}
 {% endblock %}
 
 {% block text_main %}
+<p>This page shows statistics about the bids submitted by
+	freelancers of a given nationality. You can observe the number of
+	bids by people of a given nationality, their distribution by country of
+	target project, the average rating of users from that country as well
+	as some text analysis on the messages used when bidding (word count,
+	unique word count, lexical diversity and most frequent words).</p>
 <p>
-    This page shows statistics about the bids submitted by freelancers of a given nationality. 
-    Here, you can observe the number of bids from a  country, their distribution by country,
-    the average rating of users from that country as well as some text analysis on their messages
-    (word count, unique word count, lexical diversity and most frequent words).
-    Also, this page can show you the countries on the world map: the selected countries are yellow 
-    and the countries for which we have loaded the data here are green. To view the map, click on "Show map"
+	You can choose one or more countries in the list below. You can also
+	use the map provided by clicking on <i>Show Map</i> to see more easily
+	which countries can be selected (green) and which are selected (orange;
+	but only after pressing the <i>Go!</i> button ).
 </p>
 {% endblock %}
 
 {% block text_tech %}
-<p>
-    These statistics are based on 363883 bids from the most active 93 countries.
-    The text analysis is done on all the bidding messages from a certain country.
-    Before performing the lexical analysis, we cleaned the text of unnecessary
-    characters and signs using regular expressions and we removed the stopwords.
-</p>
+<p>These statistics are based on 363.884 bids and 29.965 project
+	details.</p>
+<p>The data is only presented for the most active 93 countries by
+	number of projects submitted by people with that nationality. It has to
+	be mentioned that some inaccuracies may appear as, due to the fact
+	that, on Freelancer.com, the countries/cities of the users are inserted as
+	text, many users input information wrongly (e.g region or city instead
+	of country). For example, in the top 50 we could have found cases such
+	as Ahmedabad (329 projects), a region in India. Some of these cases
+	have been manually cleaned by us.</p>
+<p>The text analysis is done on all the bidding messages for users
+	from a certain country. Before performing the lexical analysis, we
+	cleaned the text of unnecessary characters and signs using regular
+	expressions and we removed the stopwords.</p>
 {% endblock %}
 
 {% block text_analysis %}
 <p>
     India is the most active country on Freelancer.com, with over 150.000 bids, 
-    followed by Bangladesh, Pakistan, USA, Vietnam and Romania.
+    followed by Bangladesh, Pakistan, USA and Vietnam.
     When computing the lexical diversity and the frequency distributions for the countries, 
     we were hoping to get relevant statistics regarding the diversity of the English 
-    volcabulary for each country. However, the data shows that users prefer to send the 
-    project owners a private messge with their details, and a very short bidding message, 
-    asking them to check their private messages. We showed that there is a specific pattern
-    that almost all freelancers use when bidding on a project.
-    
+    vocabulary for each country. However, the results show that users prefer to send the 
+    project owners a private message with their details, and a very short bidding message, 
+    asking them to check their private messages. This has showed that there is a specific pattern
+    that almost all freelancers use when bidding on a project.    
+</p>
+<p>
+	Some other interesting findings can be noticed when checking countries
+	with a low number of bids with only 1 or 2 people who bid. For <a
+		href="/country_stats.html?country=Florida&country=El+Salvador#results">example</a>,
+	for El Salvador and Florida, the word frequency of the most used words
+	is relatively constant, showing that, most likely, only 1 or 2 people
+	from these countries/regions applied for projects, most of the time
+	with the same message.
 </p>
 {% endblock %}

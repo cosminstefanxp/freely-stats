@@ -1,48 +1,74 @@
-{% extends "templates/base.html" %}
-{% set active_page = "home" %}
-{% block title %}Home{% endblock %}
-{% block head %} {{super()}}
+{% extends "templates/base.html" %} {% set active_page = "home" %} {%
+block title %}Home{% endblock %} {% block head %} {{super()}}
 <style>
-	#navigation {
-		
-	}
+#navigation {
+	
+}
 </style>
-{% endblock %}
-{% block content %}
-<div id = "text-content" style="padding:25px">
-    <h4>Motivation</h4>
-    <p>
-        Market analysis for the work market has been a highly researched domain for many years now. 
-        People have tried to find answers to questions such as: <i>'What is the link between what you know 
-        and how much you earn?'</i>, <i>'Does the country you live in influence employers to choose you?'</i>, <i>'Is it the
-        way you express yourself that makes you a good choice for a project?'</i>, <i>'What skills can you 
-        learn to be more successful?'</i>. Our project aims to answer exactly these types of questions,
-        regarding the market of online freelancing. This webpage displays our results.
-    </p>
-    <h4>Dataset</h4>
-    <p>
-        We have picked <a href = "http://freelancer.com" target = "_blank">Freelancer.com</a> 
-        to be the platform that provides the dataset. It is a web 
-        platform that allows employers to post projects and find people that can work on them 
-        and helps freelancers find projects to work on. The reason why we chose to work with data from
-        a freelancing website is because analyzing the projects and the skills required on the 
-        freelancing market also provides a better understanding of where the entire market is heading.
-    </p>
-    <p>
-        We decided to work with projects from only three categories so that we have a more connected 
-        network and thus, a more speciffic analysis. The three chosen categories belong to the field of
-        Computer Science and are: <i>Websites, IT & Software</i>, <i>Mobile Phones & Computing</i> and <i>Design, 
-        Media & Architecture</i>.
-        The data was gathered during 5 days. We have downloaded 1.770.031 projects, 29.965 project details,
-        28.640 sellers, 363.884 bids and 45.399 users.
-    </p>
-    <p>
-        Below you can find the table of contents of our webpage, with the sections presenting our analysis:
-    </p>
+{% endblock %} {% block content %}
+<div id="text-content" style="padding: 25px">
+	<p class="lead">
+		<strong>FreelyStats</strong> is a web-application that provides a
+		simple and interactive interface allowing the users to get relevant
+		information according to their interests, regarding the projects,
+		skills, freelancers, bids and others on the <i>freelancing</i> market.
+	</p>
+	<h4>Motivation</h4>
+	<p>Market analysis for the work market has been a highly researched
+		domain for many years now. People have tried to find answers to
+		questions such as:
+	<blockquote>
+		<i>What is the link between what you know and how much you earn?</i><br />
+		<i>Does the country you live in influence employers to choose you?</i><br />
+		<i>Is it the way you express yourself that makes you a good choice
+			for a project?</i><br /> <i>What skills can you learn to be more
+			successful?</i>
+	</blockquote>
+	<p>
+		<strong>FreelyStats</strong> aims to help answering exactly these
+		types of questions, regarding the market of online freelancing.
+	</p>
+	<h4>Dataset</h4>
+	<p>
+		We have picked <a href="http://www.freelancer.com" target="_blank">Freelancer.com</a>
+		as the platform that provides the dataset. It is a web platform that
+		allows employers to post projects and find people that can work on
+		them and helps freelancers find projects to work on. The reason why we
+		chose to work with data from a freelancing website is because
+		analyzing the projects and the skills required on the freelancing
+		market also provides a better understanding of where the entire market
+		is heading.
+	</p>
+	<p>
+		We have decided to work with projects from only three <a
+			href="http://www.freelancer.com/sellers/">categories</a> from
+		Freelancer.com so that we have a more connected network and thus, a
+		more specific analysis. The three chosen categories belong to the
+		field of Computer Science and are: <i>Websites, IT &amp; Software</i>,
+		<i>Mobile Phones &amp; Computing</i> and <i>Design, Media &amp;
+			Architecture</i>. The results have been computed based on 1.770.031
+		projects, 29.965 project details, 28.640 sellers, 363.884 bids and
+		45.399 users.
+	</p>
+	<h4>How to use the website</h4>
+	<p>For each of the sections of the website, on its page, three types of descriptive texts can be found:</p>
+	<dl class="dl-horizontal">
+		<dt>Description</dt>
+		<dd>Presents the general details about the contents of the page
+			and about how to use it.</dd>
+		<dt>Technical Details</dt>
+		<dd>Presents the details of how the data was obtained, what
+			algorithms have been run or other relevant technical information.</dd>
+		<dt>Analysis</dt>
+		<dd>Presents the some interesting aspects that were identified regarding the data.</dd>
+	</dl>
+	<p>Below you can find the table of contents of our webpage, with
+		a short description presenting each section.</p>
 </div>
- <hr/>
+<hr />
 <div id="navigation">
-	<table cellspacing='0' style="margin-left:20px"class="table table-striped table-hover">
+	<table cellspacing='0' style="margin-left: 20px"
+		class="table table-striped table-hover">
 		<!-- cellspacing='0' is important, must stay -->
 		<tr>
 			<th>Section</th>
@@ -52,7 +78,8 @@
 		<tr class="{{ loop.cycle('odd', 'even') }}">
 			<td><a href="{{ href|e }}">{{ caption }}</a></td>
 			<td>{{ short_desc }}</td>
-		</tr>{% endfor %}
+		</tr>
+		{% endfor %}
 	</table>
 </div>
 {% endblock %}

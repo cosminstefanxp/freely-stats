@@ -64,21 +64,43 @@ $(document).ready(function() {
 {% endblock %}
 
 {% block text_tech %}
-In order to compute the average earnings per pattern we downloaded the skills for each project (from the first 30.000), its currency and the amount of money that was actually payed to the person who was given the project. Afterwards, the job pattern was retained as a BitVector and each project was analysed and an average for each job pattern was computed.
-The first approach was to use the average bid on each project. Although at first it might seem like a good idea, it turns out that some bidders actually wanted huge amount of money for a project (one wanted $500.000 on a project with around $3000 budget) probably because of the currency differences.
+<p>In order to compute the average earnings per pattern we obtained the
+	skills for each project (29.965), its currency and the amount of money
+	that was actually payed to the person who was given the project - the
+	accepted bidder. Afterwards, the job pattern was retained as a
+	BitVector and each project was analysed and an average for each job
+	pattern was computed. All foreign currencies were converted to US
+	Dollars.</p>
+<p>When working on this section, the first approach was to use the
+	average bid on each project. Although at first it might seem like a
+	good idea, it turns out that some bidders actually wanted huge amount
+	of money for a project (for example, one wanted $500.000 on a project
+	with around $3000 budget) probably because of the currency differences
+	(he might have confused US Dollars with his own currency).</p>
 {% endblock %}
 
 {% block text_main %}
-This section presents the average earnings for different skill patterns. 
-Let's say a project needs PHP and HTML;in this case its skill patterns will 
-be PHP and HTML. The user chooses the desired skills and those skills 
-represent a pattern. The application searches for this pattern and shows 
-all the other patterns that contain it, ordered by the average amount of 
-money that was earned from it. For example PHP and HTML pattern is included 
-in PHP, HTML and MySQL pattern. 
+<p>This section presents the average earnings for different job
+	types patterns.</p>
+<p>
+	Let's say a project needs PHP and HTML; in this case its skill patterns
+	will be PHP and HTML. The user chooses the desired skills and those
+	skills represent a pattern. <b>FreelyStats</b> searches for this
+	pattern and shows all the other patterns that contain it, ordered by
+	the average amount of money that was earned from it. For example, PHP
+	and HTML pattern is included in PHP, HTML and MySQL pattern.
+</p>
+<p>The top 10 patterns regarding the money that can be earned are
+	also displayed at the bottom of the page.</p>
 {% endblock %}
 
 {% block text_analysis %}
-It can be seen that the average sum payed for some projects is very high. 
-For example, if the user chooses only PHP, the first pattern worths $5000. The reason for this high average is that probably there is a single project in the first 30.000 that it was a big project which was payed very well. This means that the amount of money payed for a project depends not only on the skills, but on the size of the project and most likely on the delivery time(the shorter the time the higher the price)
+<p>It can be observed that the average sum payed for some projects is
+	very high. For example, if the user chooses only PHP, the first pattern
+	is worth $5000. The reason for this high average is that probably there
+	is a single project in the analyzed dataset which was a big project
+	which was payed very well. Thus we can see that the amount of money
+	payed for a project depends not only on the skills, but on the size of
+	the project and most likely on the delivery time (the shorter the time
+	the higher the price).</p>
 {% endblock %}

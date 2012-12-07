@@ -121,41 +121,60 @@ $(document).ready(function() {
 </div>
 {% endif %}
 <div class="clear"></div>
-
-{% endblock %}
-
-{% block text_tech %}
-<p>The top matches and the recommendations have been computed using a 
-binary vector for memorizing the most common combinations of jobs.</p> 
-To compute the <b>top matches</b>, the similarities between the skills 
-chosen by the user and each of the vectors are computed and the most 
-similar job patterns.However, because the vectors are binary, the distance 
-between them is represented by the bits that are different, which 
-sometimes, when the user chooses few or unrelated features might cause 
-errors.</p>
-<p> The <b>recommendations</b> count the number of patterns where two 
-skills were found together so the number vary more and more accurate suggestions can be showed.</p>
 {% endblock %}
 
 {% block text_main %}
-<p>In this section we display the most popular skills on freelancer.com. 
-From these, you should choose your skills and then the application will 
-compute the most popular skills that are usually demanded together as well 
-as recommendations on what to learn , considering your current skills.
-	<p>For setting a new skill for getting recommendation, please select it in the list below</p>
+<p>In this section we display the most popular job types found on
+	Freelancer.com. From these, you should choose your skills and then the
+	application will compute the most popular skills/job types that are
+	usually demanded together as well as recommendations on what to learn,
+	considering your current skills. More skills/job types can be selected.
+</p>
+{% endblock %} {
+
+{% block text_tech %}
+<p>The top matches and the recommendations have been computed using
+	a binary vector for storing the most common combinations of jobs. We
+	have precomputed the binary vectors for 1.770.031 projects and the
+	results are then used as follows.</p>
+<p>
+	To compute the <b>top matches</b>, the similarities between the skills
+	chosen by the user and each of the vectors are computed and the most
+	similar job patterns are obtained. However, because the vectors are
+	binary, the distance between them is represented by the bits that are
+	different, which has the effect that, sometimes, when the user chooses
+	few or unrelated features, errors might be caused. For example,
+	usually, by selecting only a skill, PHP will be displayed as a top
+	match, because it only differs by 2 bits (distance is 2). The patterns
+	with the same similarity score are ordered by the number of project
+	and, as PHP has the highest number of projects, it is displayed first.
+</p>
+<p>
+	The <b>recommendations</b> count the number of patterns where two
+	skills were found together so the numbers vary more and more accurate
+	suggestions can be shown.
 </p>
 {% endblock %}
 
 {% block text_analysis %}
-<p> The <b>recommendations</b> perform very well, suggesting skills that are highly related to the skills chosen by the user. For example, if the user chooses Cocoa  and iPhone, the application will suggest to learn iPhone, Mobile Phone and Objective C. </p>
-<p>The <b>top similar pattern</b> find the most similar job patterns to the 
-selected jobs. In case the user chooses Cocoa and iPhone, the first three 
-suggestions are iPhone, iPhone & iPad and PHP. The reason why PHP is there 
-is because there are no other patterns that have a higher similarity than 
-PHP. Even though some patterns might contain Cocoa, they also contain other 
-skills and this enlarges the distance. The patterns with the same 
-similarity score are ordered by the number of project and, as PHP has the 
-highest number of projects, it is displayed first. In cases where the user 
-chooses more unrelated skills or very few skills, the case with the PHP can 
-repeat and even be on the first position</p>
+<p>
+	The <b>recommendations</b> perform very well, suggesting skills that
+	are highly related to the skills chosen by the user. For
+	<a href="/recommendations.html?job=Cocoa&job=iPhone#results">example</a>,
+	if the user chooses Cocoa and iPhone, the application will suggest to
+	learn iPhone, Mobile Phone and Objective C.
+</p>
+<p>
+	The <b>top similar pattern</b> find the most similar job patterns to
+	the selected jobs. In case the user chooses Cocoa and iPhone, the first
+	three suggestions are iPhone, iPhone &amp; iPad and PHP. The reason why PHP
+	is there is because there are no other patterns that have a higher
+	similarity than PHP. Even though some patterns might contain Cocoa,
+	they also contain other skills and this enlarges the distance. The
+	patterns with the same similarity score are ordered by the number of
+	project and, as PHP has the highest number of projects, it is displayed
+	first. In cases where the user chooses more unrelated skills or very
+	few skills, the case with the PHP can repeat and even be on the first
+	position
+</p>
 {% endblock %}
